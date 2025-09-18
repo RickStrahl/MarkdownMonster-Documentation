@@ -1,0 +1,1 @@
+﻿https://markdownmonster.west-wind.com/purchase#License

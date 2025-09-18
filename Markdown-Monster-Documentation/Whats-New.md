@@ -1,0 +1,1 @@
+https://github.com/RickStrahl/MarkdownMonster/blob/main/Changelog.md
