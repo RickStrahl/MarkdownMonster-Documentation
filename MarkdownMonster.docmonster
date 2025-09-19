@@ -164,7 +164,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 100,
-      "updated": "2025-09-15T10:25:52.0962151-07:00",
+      "updated": "2025-09-19T14:23:14.3222431-07:00",
       "helpId": "356",
       "classInfo": {
         "assembly": "",
@@ -1370,7 +1370,6 @@
       "remarks": "",
       "example": "",
       "sortOrder": 60,
-      "isExpanded": true,
       "updated": "2025-06-24T09:46:59.5459845-07:00",
       "helpId": "16445",
       "classInfo": {
@@ -1605,7 +1604,7 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "updated": "2025-06-23T20:31:55.6234833-07:00",
+          "updated": "2025-09-18T10:19:44.3805467-07:00",
           "helpId": "8938",
           "classInfo": {
             "assembly": "",
@@ -2112,7 +2111,6 @@
       "remarks": "",
       "example": "",
       "sortOrder": 20,
-      "isExpanded": true,
       "updated": "2025-05-27T13:21:27.0667159-07:00",
       "helpId": "3",
       "classInfo": {
@@ -2432,7 +2430,6 @@
       "remarks": "",
       "example": "",
       "sortOrder": 10,
-      "isExpanded": true,
       "updated": "2025-09-17T10:49:16.4539442-07:00",
       "helpId": "369",
       "classInfo": {
@@ -2842,6 +2839,6 @@
       "username": "rstrahl",
       "maxUploadConnections": 10
     },
-    "lastTopicId": "_5GS0UC49H"
+    "lastTopicId": "_INDEX"
   }
 }

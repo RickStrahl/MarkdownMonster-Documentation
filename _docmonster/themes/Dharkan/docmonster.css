@@ -139,9 +139,9 @@ hr {
 }
 
 .syntaxbox {
-    font-size: 1.03em;
-    border: solid 1px #ccc;
+    font-size: 1.03em;    
     background: #f2f2f2;
+    border: solid 1px #ddd;
     color: black;
     padding: 7px;
     margin: 15px 5px;    
