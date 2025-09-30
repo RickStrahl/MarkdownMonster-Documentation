@@ -15,7 +15,8 @@
       "remarks": "",
       "example": "",
       "sortOrder": 110,
-      "updated": "2025-09-16T10:04:56.4595625-07:00",
+      "isExpanded": true,
+      "updated": "2025-09-23T11:20:34.6349926-07:00",
       "helpId": "2",
       "classInfo": {
         "assembly": "",
@@ -58,7 +59,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 40,
-          "updated": "2025-07-15T10:58:02.5801226-07:00",
+          "updated": "2025-09-27T13:23:39.3451899-07:00",
           "helpId": "366",
           "classInfo": {
             "assembly": "",
@@ -1626,6 +1627,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 50,
+      "isExpanded": true,
       "updated": "2025-05-27T13:08:51.1537982-07:00",
       "helpId": "13645",
       "classInfo": {
@@ -1647,7 +1649,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 40,
-          "updated": "2025-02-24T00:00:00Z",
+          "updated": "2025-09-27T13:23:03.7945976-07:00",
           "helpId": "1967",
           "classInfo": {
             "assembly": "",
@@ -2776,6 +2778,17 @@
           }
         },
         {
+          "id": "_tmimcncja9",
+          "parentId": "_4SD0LXFQ0",
+          "title": "Allow Host Input Processing Setting for WebView Behaviors",
+          "slug": "FAQ/Allow-Host-Input-Processing-Setting",
+          "link": "FAQ/Allow-Host-Input-Processing-Setting.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "updated": "2025-09-23T10:34:39.7064823-07:00",
+          "classInfo": {}
+        },
+        {
           "id": "_g89sipreay",
           "parentId": "_4SD0LXFQ0",
           "title": "Custom Styling for Markdown Elements",
@@ -2839,6 +2852,6 @@
       "username": "rstrahl",
       "maxUploadConnections": 10
     },
-    "lastTopicId": "_INDEX"
+    "lastTopicId": "_4S0144W3G"
   }
 }

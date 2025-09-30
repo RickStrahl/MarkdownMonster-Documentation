@@ -1,4 +1,4 @@
-﻿Preview Themes control how the Preview Window renders your Markdown text into HTML. Because Markdown is a text representation of an HTML document, some sort of engine has to render the Markdown into HTML and then apply HTML and CSS styling to render that HTML into what you see in the browser.
+Preview Themes control how the Preview Window renders your Markdown text into HTML. Because Markdown is a text representation of an HTML document, some sort of engine has to render the Markdown into HTML and then apply HTML and CSS styling to render that HTML into what you see in the browser.
 
 This process **may vary significantly** depending on where you display your Markdown. For example, GitHub renders Markdown very differently than BitBucket. If you're using Markdown on your blog, you probably also have some very custom styling and potentially use a completely different Markdown parser to parse Markdown into HTML.
 
@@ -59,31 +59,29 @@ The HTML in this file is minimal as most of the HTML comes from the rendered Mar
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <base href="{$docPath}"/>
+    <base href="{$docPath}" />
     <title>{$docTitle}</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8" />
 
-    <link href="{$themePath}..\scripts\fontawesome\css\font-awesome.min.css" rel="stylesheet"/>
-    <link href="{$themePath}Theme.css" rel="stylesheet"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="{$scriptPath}fontawesome\css\font-awesome.min.css" rel="stylesheet" />
+    <link href="{$themePath}Theme.css" rel="stylesheet" />
 
-    <script src="{$themePath}..\scripts\jquery.min.js"></script>
-    <link href="{$themePath}..\scripts\highlightjs\styles\vs2015.css" rel="stylesheet"/>
-    <script src="{$themePath}..\scripts\highlightjs\highlight.pack.js"></script>
-    <script src="{$themePath}..\scripts\highlightjs-badge.js"></script>
-    <script src="{$themePath}..\scripts\preview.js" id="PreviewScript"></script>
-
+    <script src="{$scriptPath}jquery.min.js"></script>
+    <link href="{$scriptPath}highlightjs/styles/vs2015.css" rel="stylesheet" />
+    <script src="{$scriptPath}highlightjs/highlight.pack.js"></script>
+    <script src="{$scriptPath}highlightjs-badge.js"></script>
+    <script src="{$scriptPath}preview.js" id="PreviewScript"></script>
     {$extraHeaders}
-
 </head>
 <body>
 <div id="MainContent">
-  <!-- Markdown Monster Content -->
-  {$markdownHtml}
-  <!-- End Markdown Monster Content -->
+    <!-- Markdown Monster Content -->
+    {$markdownHtml}
+    <!-- End Markdown Monster Content -->
 </div>
-
-</body> 
+</body>
 </html>
 ```
 

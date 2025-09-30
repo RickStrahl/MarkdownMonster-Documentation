@@ -9,8 +9,6 @@ The Markdown Monster **Github repository** can be used to report bugs, feature r
 * [General Questions](https://support.west-wind.com/thread4nm0m17rc.wwt) <small>(Message Board)</small>  
 For more general questions about how things work, or open ended discussion of features, licensing or perhaps questions about creating your own add-ins for Markdown Monster, the support forum provides a more open ended discussion forum. It's best suited to longer discussions or indirectly related issues to Markdown Monster's core feature set.
 
-* [Discord Server](https://discord.gg/fJNDQwppmR)  
-For more interactive discussions come and visit our Discord Server.
 
 > #### @icon-info-circle Please provide Version Information
 > When reporting a bug, please provide Markdown Monster version information. You can get all the information into the clipboard from **Help -> About** and clicking on the info icon:
