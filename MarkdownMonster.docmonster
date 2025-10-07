@@ -15,7 +15,6 @@
       "remarks": "",
       "example": "",
       "sortOrder": 110,
-      "isExpanded": true,
       "updated": "2025-09-23T11:20:34.6349926-07:00",
       "helpId": "2",
       "classInfo": {
@@ -1105,6 +1104,18 @@
           }
         },
         {
+          "id": "_dhmcg656iw",
+          "parentId": "_4XS11S2GW",
+          "title": "Customizing Editor CSS Styling and JS Overrides",
+          "slug": "Common-Tasks/Customizing-Editor-CSS-Styling-and-JS-Overrides",
+          "link": "Common-Tasks/Customizing-Editor-CSS-Styling-and-JS-Overrides.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "sortOrder": 121,
+          "updated": "2025-10-06T12:16:08.1919082-07:00",
+          "classInfo": {}
+        },
+        {
           "id": "_4NN17BFIC",
           "parentId": "_4XS11S2GW",
           "title": "Switching and Customizing Preview Themes",
@@ -1627,7 +1638,6 @@
       "remarks": "",
       "example": "",
       "sortOrder": 50,
-      "isExpanded": true,
       "updated": "2025-05-27T13:08:51.1537982-07:00",
       "helpId": "13645",
       "classInfo": {
@@ -2852,6 +2862,6 @@
       "username": "rstrahl",
       "maxUploadConnections": 10
     },
-    "lastTopicId": "_4S0144W3G"
+    "lastTopicId": "_4NN17BFIC"
   }
 }
