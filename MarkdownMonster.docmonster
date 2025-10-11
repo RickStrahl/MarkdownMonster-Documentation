@@ -15,6 +15,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 110,
+      "isExpanded": true,
       "updated": "2025-09-23T11:20:34.6349926-07:00",
       "helpId": "2",
       "classInfo": {
@@ -58,7 +59,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 40,
-          "updated": "2025-10-03T10:45:20.4966789-07:00",
+          "updated": "2025-10-11T11:04:57.7554685-07:00",
           "helpId": "366",
           "classInfo": {
             "assembly": "",
@@ -1128,7 +1129,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 120,
-          "updated": "2025-04-17T17:08:04.830136-07:00",
+          "updated": "2025-10-11T10:58:25.0315583-07:00",
           "helpId": "354",
           "classInfo": {
             "assembly": "",
@@ -2862,6 +2863,6 @@
       "username": "rstrahl",
       "maxUploadConnections": 10
     },
-    "lastTopicId": "_4NN17BFIC"
+    "lastTopicId": "_4S0144W3G"
   }
 }

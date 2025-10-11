@@ -6,6 +6,9 @@ For technical support, bugs, feature requests or general usage discussion, there
 * [Bugs and Feature Requests](https://github.com/RickStrahl/MarkdownMonster/issues) <small>(GitHub Issues)</small>   
 The Markdown Monster **Github repository** can be used to report bugs, feature requests and any focused usability questions. GitHub Issues provide our official bug tracking mechanism, so you can also see what issues are open and what we're working on.
 
+* [License Retrieval](#find-your-license)  
+If you need to find your license keys you can access your [user profile in our Web Store](https://store.west-wind.com/profile) and look at individual invoices. Each invoice displays your license key(s).
+
 * [General Questions](https://support.west-wind.com/thread4nm0m17rc.wwt) <small>(Message Board)</small>  
 For more general questions about how things work, or open ended discussion of features, licensing or perhaps questions about creating your own add-ins for Markdown Monster, the support forum provides a more open ended discussion forum. It's best suited to longer discussions or indirectly related issues to Markdown Monster's core feature set.
 
@@ -24,8 +27,8 @@ License information is stored with your orders in your West Wind Store account:
 
 Orders are listed at the bottom of your profile, drill into the specific order to display the license information for the line item.
 
-### How Licensing works
-Licenses are **machine registered** which means the software needs to be registered on each machine. A machine specific key is created when you register your license on a machine, and it only works on the machine that it was created on - each additional machine you register on, requires its own license activation using the provided registration key and registration email address.
+### How Licensing works in Markdown Monster
+Licenses are **machine registered** which means the software needs to be registered on each machine that you use. A machine specific key is created when you register your license on a machine, and it only works on the machine that it was created on - each additional machine you register on, requires its own license activation using the provided registration key and registration email address.
 
 If you need to find your registration key for Markdown Monster, it can be found in one of the following:
 
