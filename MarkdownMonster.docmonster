@@ -15,8 +15,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 110,
-      "isExpanded": true,
-      "updated": "2025-09-23T11:20:34.6349926-07:00",
+      "updated": "2025-10-28T11:10:44.2698123-10:00",
       "helpId": "2",
       "classInfo": {
         "assembly": "",
@@ -38,7 +37,7 @@
           "example": "",
           "isLink": true,
           "sortOrder": 50,
-          "updated": "2025-07-23T09:54:56.1146524-07:00",
+          "updated": "2025-10-28T13:22:31.8366676-10:00",
           "helpId": "1124",
           "classInfo": {
             "assembly": "",
@@ -59,7 +58,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 40,
-          "updated": "2025-10-11T11:04:57.7554685-07:00",
+          "updated": "2025-10-11T08:04:57.7554685-10:00",
           "helpId": "366",
           "classInfo": {
             "assembly": "",
@@ -81,7 +80,7 @@
           "example": "",
           "isLink": true,
           "sortOrder": 30,
-          "updated": "2025-06-26T15:50:49.1697677-07:00",
+          "updated": "2025-06-26T12:50:49.1697677-10:00",
           "helpId": "367",
           "classInfo": {
             "assembly": "",
@@ -102,7 +101,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 20,
-          "updated": "2025-07-05T16:19:28.0821027-07:00",
+          "updated": "2025-10-28T13:12:15.2418762-10:00",
           "helpId": "375",
           "classInfo": {
             "assembly": "",
@@ -123,7 +122,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 10,
-          "updated": "2025-06-02T12:37:45.2183082-07:00",
+          "updated": "2025-06-02T09:37:45.2183082-10:00",
           "helpId": "13648",
           "classInfo": {
             "assembly": "",
@@ -143,7 +142,7 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "updated": "2025-07-04T12:33:19.0770855-07:00",
+          "updated": "2025-07-04T09:33:19.0770855-10:00",
           "helpId": "16912",
           "classInfo": {
             "assembly": "",
@@ -165,7 +164,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 100,
-      "updated": "2025-09-19T14:23:14.3222431-07:00",
+      "updated": "2025-09-19T11:23:14.3222431-10:00",
       "helpId": "356",
       "classInfo": {
         "assembly": "",
@@ -187,7 +186,7 @@
           "example": "",
           "sortOrder": 150,
           "isExpanded": true,
-          "updated": "2025-07-21T23:01:33.997797-07:00",
+          "updated": "2025-07-21T20:01:33.997797-10:00",
           "helpId": "349",
           "classInfo": {
             "assembly": "",
@@ -208,7 +207,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 140,
-          "updated": "2025-07-04T12:32:46.0529324-07:00",
+          "updated": "2025-07-04T09:32:46.0529324-10:00",
           "helpId": "365",
           "classInfo": {
             "assembly": "",
@@ -229,7 +228,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 130,
-          "updated": "2025-06-02T14:01:54.0564455-07:00",
+          "updated": "2025-06-02T11:01:54.0564455-10:00",
           "helpId": "1965",
           "classInfo": {
             "assembly": "",
@@ -250,7 +249,7 @@
               "remarks": "This is a **note**. ou as you save it soassdasdasd asasdasddsa",
               "example": "",
               "sortOrder": 10,
-              "updated": "2025-05-27T11:45:00.6166132-07:00",
+              "updated": "2025-05-27T08:45:00.6166132-10:00",
               "helpId": "16444",
               "classInfo": {
                 "assembly": "",
@@ -273,7 +272,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 120,
-          "updated": "2025-05-27T11:45:05.6169837-07:00",
+          "updated": "2025-05-27T08:45:05.6169837-10:00",
           "helpId": "360",
           "classInfo": {
             "assembly": "",
@@ -294,7 +293,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 110,
-          "updated": "2025-05-27T11:45:08.86331-07:00",
+          "updated": "2025-05-27T08:45:08.86331-10:00",
           "helpId": "5212",
           "classInfo": {
             "assembly": "",
@@ -315,7 +314,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 100,
-          "updated": "2025-06-02T13:35:21.4916412-07:00",
+          "updated": "2025-06-02T10:35:21.4916412-10:00",
           "helpId": "16918",
           "classInfo": {
             "assembly": "",
@@ -336,7 +335,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 80,
-          "updated": "2025-07-04T12:35:07.066945-07:00",
+          "updated": "2025-07-04T09:35:07.066945-10:00",
           "helpId": "350",
           "classInfo": {
             "assembly": "",
@@ -357,7 +356,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 70,
-          "updated": "2025-05-27T11:45:28.3060005-07:00",
+          "updated": "2025-05-27T08:45:28.3060005-10:00",
           "helpId": "1969",
           "classInfo": {
             "assembly": "",
@@ -378,7 +377,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 60,
-          "updated": "2025-05-27T11:45:29.0569255-07:00",
+          "updated": "2025-05-27T08:45:29.0569255-10:00",
           "helpId": "8941",
           "classInfo": {
             "assembly": "",
@@ -399,7 +398,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 50,
-          "updated": "2025-05-27T11:45:30.6424713-07:00",
+          "updated": "2025-10-30T14:16:11.5185809-10:00",
           "helpId": "6635",
           "classInfo": {
             "assembly": "",
@@ -420,7 +419,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 40,
-          "updated": "2025-05-27T11:45:32.093252-07:00",
+          "updated": "2025-05-27T08:45:32.093252-10:00",
           "helpId": "6629",
           "classInfo": {
             "assembly": "",
@@ -441,7 +440,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 30,
-          "updated": "2025-09-13T17:56:11.7890388-07:00",
+          "updated": "2025-09-13T14:56:11.7890388-10:00",
           "helpId": "357",
           "classInfo": {
             "assembly": "",
@@ -462,7 +461,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 20,
-          "updated": "2025-07-04T12:36:32.0842668-07:00",
+          "updated": "2025-07-04T09:36:32.0842668-10:00",
           "helpId": "6636",
           "classInfo": {
             "assembly": "",
@@ -484,7 +483,7 @@
           "example": "",
           "sortOrder": 10,
           "isExpanded": true,
-          "updated": "2025-08-20T14:41:16.0683397-07:00",
+          "updated": "2025-08-20T11:41:16.0683397-10:00",
           "helpId": "8942",
           "classInfo": {
             "assembly": "",
@@ -501,7 +500,7 @@
           "displayType": "topic",
           "type": "markdown",
           "isExpanded": true,
-          "updated": "2025-05-27T11:45:40.2445635-07:00",
+          "updated": "2025-05-27T08:45:40.2445635-10:00",
           "classInfo": {}
         }
       ]
@@ -519,7 +518,7 @@
       "remarks": "\t",
       "example": "",
       "sortOrder": 90,
-      "updated": "2025-09-13T18:13:56.7217092-07:00",
+      "updated": "2025-09-13T15:13:56.7217092-10:00",
       "helpId": "16915",
       "classInfo": {
         "assembly": "",
@@ -540,7 +539,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 50,
-          "updated": "2025-09-13T22:06:10.5768253-07:00",
+          "updated": "2025-09-13T19:06:10.5768253-10:00",
           "helpId": "16914",
           "classInfo": {
             "assembly": "",
@@ -561,7 +560,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 40,
-          "updated": "2025-06-02T13:59:28.244923-07:00",
+          "updated": "2025-06-02T10:59:28.244923-10:00",
           "helpId": "16911",
           "classInfo": {
             "assembly": "",
@@ -578,7 +577,7 @@
           "displayType": "topic",
           "type": "markdown",
           "sortOrder": 30,
-          "updated": "2025-06-06T19:02:01.7116638-07:00",
+          "updated": "2025-06-06T16:02:01.7116638-10:00",
           "classInfo": {}
         },
         {
@@ -590,7 +589,7 @@
           "displayType": "topic",
           "type": "markdown",
           "sortOrder": 20,
-          "updated": "2025-06-23T19:06:53.3938555-07:00",
+          "updated": "2025-06-23T16:06:53.3938555-10:00",
           "classInfo": {}
         },
         {
@@ -602,7 +601,7 @@
           "displayType": "topic",
           "type": "markdown",
           "sortOrder": 11,
-          "updated": "2025-06-02T14:00:13.9477771-07:00",
+          "updated": "2025-06-02T11:00:13.9477771-10:00",
           "classInfo": {}
         },
         {
@@ -614,7 +613,7 @@
           "displayType": "topic",
           "type": "markdown",
           "sortOrder": 10,
-          "updated": "2025-06-02T14:00:26.0920696-07:00",
+          "updated": "2025-06-02T11:00:26.0920696-10:00",
           "classInfo": {}
         }
       ]
@@ -631,7 +630,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 90,
-      "updated": "2025-06-02T11:27:30.8488562-07:00",
+      "updated": "2025-06-02T08:27:30.8488562-10:00",
       "helpId": "16442",
       "classInfo": {
         "assembly": "",
@@ -652,7 +651,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 100,
-          "updated": "2025-02-24T01:03:51.460974-08:00",
+          "updated": "2025-02-23T23:03:51.460974-10:00",
           "helpId": "2971",
           "classInfo": {
             "assembly": "",
@@ -673,7 +672,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 90,
-          "updated": "2025-05-27T11:46:12.1523136-07:00",
+          "updated": "2025-05-27T08:46:12.1523136-10:00",
           "helpId": "368",
           "classInfo": {
             "assembly": "",
@@ -694,7 +693,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 80,
-          "updated": "2025-07-04T12:36:51.2831838-07:00",
+          "updated": "2025-07-04T09:36:51.2831838-10:00",
           "helpId": "5209",
           "classInfo": {
             "assembly": "",
@@ -715,7 +714,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 70,
-          "updated": "2025-05-27T11:46:18.0656554-07:00",
+          "updated": "2025-05-27T08:46:18.0656554-10:00",
           "helpId": "5206",
           "classInfo": {
             "assembly": "",
@@ -736,7 +735,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 60,
-          "updated": "2025-05-27T11:46:23.5897416-07:00",
+          "updated": "2025-05-27T08:46:23.5897416-10:00",
           "helpId": "16441",
           "classInfo": {
             "assembly": "",
@@ -757,7 +756,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 50,
-          "updated": "2025-05-27T11:46:29.1886124-07:00",
+          "updated": "2025-05-27T08:46:29.1886124-10:00",
           "helpId": "16439",
           "classInfo": {
             "assembly": "",
@@ -778,7 +777,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 40,
-          "updated": "2025-05-27T11:46:31.466716-07:00",
+          "updated": "2025-05-27T08:46:31.466716-10:00",
           "helpId": "16909",
           "classInfo": {
             "assembly": "",
@@ -799,7 +798,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 30,
-          "updated": "2025-05-27T11:46:34.1365367-07:00",
+          "updated": "2025-05-27T08:46:34.1365367-10:00",
           "helpId": "1123",
           "classInfo": {
             "assembly": "",
@@ -820,7 +819,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 20,
-          "updated": "2025-05-27T11:46:39.5812539-07:00",
+          "updated": "2025-05-27T08:46:39.5812539-10:00",
           "helpId": "16440",
           "classInfo": {
             "assembly": "",
@@ -841,7 +840,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 10,
-          "updated": "2025-05-27T11:46:45.2381437-07:00",
+          "updated": "2025-05-27T08:46:45.2381437-10:00",
           "helpId": "16443",
           "classInfo": {
             "assembly": "",
@@ -863,7 +862,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 80,
-      "updated": "2025-09-17T12:22:41.1887599-07:00",
+      "updated": "2025-09-17T09:22:41.1887599-10:00",
       "helpId": "16919",
       "classInfo": {
         "assembly": "",
@@ -885,7 +884,7 @@
           "example": "",
           "sortOrder": 40,
           "isExpanded": true,
-          "updated": "2025-08-08T14:32:45.5369067-07:00",
+          "updated": "2025-08-08T11:32:45.5369067-10:00",
           "helpId": "8484",
           "classInfo": {
             "assembly": "",
@@ -906,7 +905,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 30,
-          "updated": "2025-05-27T11:46:51.2798071-07:00",
+          "updated": "2025-05-27T08:46:51.2798071-10:00",
           "helpId": "16913",
           "classInfo": {
             "assembly": "",
@@ -927,7 +926,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 20,
-          "updated": "2025-05-27T11:46:55.4801514-07:00",
+          "updated": "2025-05-27T08:46:55.4801514-10:00",
           "helpId": "16920",
           "classInfo": {
             "assembly": "",
@@ -948,7 +947,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 5,
-          "updated": "2025-05-27T11:46:56.9543016-07:00",
+          "updated": "2025-05-27T08:46:56.9543016-10:00",
           "helpId": "6637",
           "classInfo": {
             "assembly": "",
@@ -970,7 +969,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 70,
-      "updated": "2025-09-17T10:53:37.6413948-07:00",
+      "updated": "2025-09-17T07:53:37.6413948-10:00",
       "helpId": "2972",
       "classInfo": {
         "assembly": "",
@@ -991,7 +990,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 180,
-          "updated": "2025-05-27T11:47:02.299595-07:00",
+          "updated": "2025-05-27T08:47:02.299595-10:00",
           "helpId": "379",
           "classInfo": {
             "assembly": "",
@@ -1012,7 +1011,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 170,
-          "updated": "2025-05-27T11:47:04.5357227-07:00",
+          "updated": "2025-05-27T08:47:04.5357227-10:00",
           "helpId": "6632",
           "classInfo": {
             "assembly": "",
@@ -1033,7 +1032,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 165,
-          "updated": "2025-05-27T11:47:05.6885155-07:00",
+          "updated": "2025-05-27T08:47:05.6885155-10:00",
           "helpId": "361",
           "classInfo": {
             "assembly": "",
@@ -1054,7 +1053,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 150,
-          "updated": "2025-05-27T11:47:08.9856639-07:00",
+          "updated": "2025-05-27T08:47:08.9856639-10:00",
           "helpId": "353",
           "classInfo": {
             "assembly": "",
@@ -1075,7 +1074,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 140,
-          "updated": "2025-05-27T11:50:37.2798154-07:00",
+          "updated": "2025-05-27T08:50:37.2798154-10:00",
           "helpId": "374",
           "classInfo": {
             "assembly": "",
@@ -1096,7 +1095,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 130,
-          "updated": "2025-02-23T16:15:27.0689737-08:00",
+          "updated": "2025-10-29T12:20:27.2795578-10:00",
           "helpId": "359",
           "classInfo": {
             "assembly": "",
@@ -1107,13 +1106,15 @@
         {
           "id": "_dhmcg656iw",
           "parentId": "_4XS11S2GW",
-          "title": "Customizing Editor CSS Styling and JS Overrides",
+          "title": "Customizing and overriding Editor CSS Styling and JavaScript",
           "slug": "Common-Tasks/Customizing-Editor-CSS-Styling-and-JS-Overrides",
           "link": "Common-Tasks/Customizing-Editor-CSS-Styling-and-JS-Overrides.md",
           "displayType": "topic",
           "type": "markdown",
+          "keywords": "CSS,Editor,Style,JavaScript",
           "sortOrder": 121,
-          "updated": "2025-10-06T12:16:08.1919082-07:00",
+          "isExpanded": true,
+          "updated": "2025-10-28T13:34:24.9333005-10:00",
           "classInfo": {}
         },
         {
@@ -1129,7 +1130,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 120,
-          "updated": "2025-10-11T10:58:25.0315583-07:00",
+          "updated": "2025-10-11T07:58:25.0315583-10:00",
           "helpId": "354",
           "classInfo": {
             "assembly": "",
@@ -1171,7 +1172,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 100,
-          "updated": "2025-02-23T16:15:27.0692511-08:00",
+          "updated": "2025-02-23T14:15:27.0692511-10:00",
           "helpId": "8481",
           "classInfo": {
             "assembly": "",
@@ -1192,7 +1193,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 90,
-          "updated": "2025-02-23T16:15:27.0693669-08:00",
+          "updated": "2025-02-23T14:15:27.0693669-10:00",
           "helpId": "8939",
           "classInfo": {
             "assembly": "",
@@ -1213,7 +1214,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 80,
-          "updated": "2025-02-23T16:15:27.0694743-08:00",
+          "updated": "2025-02-23T14:15:27.0694743-10:00",
           "helpId": "373",
           "classInfo": {
             "assembly": "",
@@ -1234,7 +1235,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 70,
-          "updated": "2025-02-23T16:15:27.0695814-08:00",
+          "updated": "2025-02-23T14:15:27.0695814-10:00",
           "helpId": "8934",
           "classInfo": {
             "assembly": "",
@@ -1255,7 +1256,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 60,
-          "updated": "2025-02-23T16:15:27.0696831-08:00",
+          "updated": "2025-02-23T14:15:27.0696831-10:00",
           "helpId": "1963",
           "classInfo": {
             "assembly": "",
@@ -1277,7 +1278,7 @@
           "example": "",
           "sortOrder": 50,
           "isExpanded": true,
-          "updated": "2025-02-23T16:15:27.0697897-08:00",
+          "updated": "2025-02-23T14:15:27.0697897-10:00",
           "helpId": "8483",
           "classInfo": {
             "assembly": "",
@@ -1319,7 +1320,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 30,
-          "updated": "2025-02-23T16:15:27.0698947-08:00",
+          "updated": "2025-02-23T14:15:27.0698947-10:00",
           "helpId": "11270",
           "classInfo": {
             "assembly": "",
@@ -1361,7 +1362,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 10,
-          "updated": "2025-02-23T16:15:27.0700219-08:00",
+          "updated": "2025-02-23T14:15:27.0700219-10:00",
           "helpId": "13651",
           "classInfo": {
             "assembly": "",
@@ -1383,7 +1384,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 60,
-      "updated": "2025-06-24T09:46:59.5459845-07:00",
+      "updated": "2025-06-24T06:46:59.5459845-10:00",
       "helpId": "16445",
       "classInfo": {
         "assembly": "",
@@ -1404,7 +1405,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 10,
-          "updated": "2025-06-23T21:45:27.6401186-07:00",
+          "updated": "2025-06-23T18:45:27.6401186-10:00",
           "helpId": "4",
           "classInfo": {
             "assembly": "",
@@ -1425,7 +1426,7 @@
               "remarks": "",
               "example": "",
               "sortOrder": 70,
-              "updated": "2025-07-17T17:04:32.9304801-07:00",
+              "updated": "2025-07-17T14:04:32.9304801-10:00",
               "helpId": "362",
               "classInfo": {
                 "assembly": "",
@@ -1446,7 +1447,7 @@
                   "remarks": "",
                   "example": "",
                   "sortOrder": 40,
-                  "updated": "2025-06-23T20:27:27.5195516-07:00",
+                  "updated": "2025-06-23T17:27:27.5195516-10:00",
                   "helpId": "1128",
                   "classInfo": {
                     "assembly": "",
@@ -1467,7 +1468,7 @@
                   "remarks": "",
                   "example": "",
                   "sortOrder": 30,
-                  "updated": "2025-02-23T16:15:27.0707468-08:00",
+                  "updated": "2025-02-23T14:15:27.0707468-10:00",
                   "helpId": "13646",
                   "classInfo": {
                     "assembly": "",
@@ -1488,7 +1489,7 @@
                   "remarks": "",
                   "example": "",
                   "sortOrder": 15,
-                  "updated": "2025-02-23T16:15:27.0709056-08:00",
+                  "updated": "2025-02-23T14:15:27.0709056-10:00",
                   "helpId": "1129",
                   "classInfo": {
                     "assembly": "",
@@ -1509,7 +1510,7 @@
                   "remarks": "",
                   "example": "",
                   "sortOrder": 10,
-                  "updated": "2025-06-23T20:31:17.1064553-07:00",
+                  "updated": "2025-06-23T17:31:17.1064553-10:00",
                   "helpId": "364",
                   "classInfo": {
                     "assembly": "",
@@ -1532,7 +1533,7 @@
               "remarks": "",
               "example": "",
               "sortOrder": 60,
-              "updated": "2025-06-23T20:32:01.5054896-07:00",
+              "updated": "2025-06-23T17:32:01.5054896-10:00",
               "helpId": "363",
               "classInfo": {
                 "assembly": "",
@@ -1553,7 +1554,7 @@
               "remarks": "",
               "example": "",
               "sortOrder": 40,
-              "updated": "2025-06-23T20:32:02.4441593-07:00",
+              "updated": "2025-06-23T17:32:02.4441593-10:00",
               "helpId": "351",
               "classInfo": {
                 "assembly": "",
@@ -1574,7 +1575,7 @@
               "remarks": "",
               "example": "",
               "sortOrder": 20,
-              "updated": "2025-06-23T20:27:28.8336273-07:00",
+              "updated": "2025-06-23T17:27:28.8336273-10:00",
               "helpId": "1964",
               "classInfo": {
                 "assembly": "",
@@ -1595,7 +1596,7 @@
               "remarks": "",
               "example": "",
               "sortOrder": 10,
-              "updated": "2025-06-23T20:32:04.271686-07:00",
+              "updated": "2025-06-23T17:32:04.271686-10:00",
               "helpId": "5",
               "classInfo": {
                 "assembly": "",
@@ -1617,7 +1618,7 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "updated": "2025-09-18T10:19:44.3805467-07:00",
+          "updated": "2025-09-18T07:19:44.3805467-10:00",
           "helpId": "8938",
           "classInfo": {
             "assembly": "",
@@ -1639,7 +1640,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 50,
-      "updated": "2025-05-27T13:08:51.1537982-07:00",
+      "updated": "2025-05-27T10:08:51.1537982-10:00",
       "helpId": "13645",
       "classInfo": {
         "assembly": "",
@@ -1660,7 +1661,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 40,
-          "updated": "2025-09-27T13:23:03.7945976-07:00",
+          "updated": "2025-09-27T10:23:03.7945976-10:00",
           "helpId": "1967",
           "classInfo": {
             "assembly": "",
@@ -1681,7 +1682,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 30,
-          "updated": "2025-09-14T13:08:27.7173788-07:00",
+          "updated": "2025-09-14T10:08:27.7173788-10:00",
           "helpId": "8935",
           "classInfo": {
             "assembly": "",
@@ -1702,7 +1703,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 10,
-          "updated": "2025-06-23T19:26:55.170628-07:00",
+          "updated": "2025-06-23T16:26:55.170628-10:00",
           "helpId": "13647",
           "classInfo": {
             "assembly": "",
@@ -1724,7 +1725,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 40,
-      "updated": "2025-07-05T14:20:28.3276149-07:00",
+      "updated": "2025-07-05T11:20:28.3276149-10:00",
       "helpId": "352",
       "classInfo": {
         "assembly": "",
@@ -1766,7 +1767,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 70,
-          "updated": "2025-02-23T16:15:27.0716203-08:00",
+          "updated": "2025-02-23T14:15:27.0716203-10:00",
           "helpId": "16907",
           "classInfo": {
             "assembly": "",
@@ -1787,7 +1788,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 60,
-          "updated": "2025-07-04T12:40:35.7228554-07:00",
+          "updated": "2025-07-04T09:40:35.7228554-10:00",
           "helpId": "8944",
           "classInfo": {
             "assembly": "",
@@ -1808,7 +1809,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 50,
-          "updated": "2025-05-27T11:38:52.93263-07:00",
+          "updated": "2025-05-27T08:38:52.93263-10:00",
           "helpId": "8945",
           "classInfo": {
             "assembly": "",
@@ -1892,7 +1893,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 10,
-          "updated": "2025-03-02T14:51:28.3010594-08:00",
+          "updated": "2025-03-02T12:51:28.3010594-10:00",
           "helpId": "16908",
           "classInfo": {
             "assembly": "",
@@ -1914,7 +1915,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 30,
-      "updated": "2025-09-17T10:52:34.6588531-07:00",
+      "updated": "2025-09-17T07:52:34.6588531-10:00",
       "helpId": "6638",
       "classInfo": {
         "assembly": "",
@@ -1935,7 +1936,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 90,
-          "updated": "2025-09-11T16:46:23.6256683-07:00",
+          "updated": "2025-09-11T13:46:23.6256683-10:00",
           "helpId": "371",
           "classInfo": {
             "assembly": "",
@@ -1956,29 +1957,8 @@
           "remarks": "",
           "example": "",
           "sortOrder": 85,
-          "updated": "2025-09-08T17:35:26.7410966-07:00",
+          "updated": "2025-09-08T14:35:26.7410966-10:00",
           "helpId": "13652",
-          "classInfo": {
-            "assembly": "",
-            "contract": "",
-            "exceptions": ""
-          }
-        },
-        {
-          "id": "_58Q0PCUZK",
-          "parentId": "_5AB0ZT9JC",
-          "title": "Customizing Editor Styling CSS",
-          "slug": "Recipes/Customizing-Editor-Styling-CSS",
-          "link": "Recipes/Customizing-Editor-Styling-CSS.md",
-          "displayType": "topic",
-          "type": "markdown",
-          "keywords": "",
-          "seeAlso": "",
-          "remarks": "",
-          "example": "",
-          "sortOrder": 70,
-          "updated": "2025-04-26T20:45:05.6564736-07:00",
-          "helpId": "6634",
           "classInfo": {
             "assembly": "",
             "contract": "",
@@ -2061,7 +2041,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 30,
-          "updated": "2025-05-15T11:37:42.082393-07:00",
+          "updated": "2025-05-15T08:37:42.082393-10:00",
           "helpId": "8936",
           "classInfo": {
             "assembly": "",
@@ -2082,7 +2062,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 10,
-          "updated": "2025-02-23T16:15:27.0720273-08:00",
+          "updated": "2025-02-23T14:15:27.0720273-10:00",
           "helpId": "6639",
           "classInfo": {
             "assembly": "",
@@ -2102,7 +2082,7 @@
           "seeAlso": "Markdown Monster local Web Server",
           "remarks": "",
           "example": "",
-          "updated": "2025-05-09T14:24:40.2153398-07:00",
+          "updated": "2025-05-09T11:24:40.2153398-10:00",
           "helpId": "13644",
           "classInfo": {
             "assembly": "",
@@ -2124,7 +2104,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 20,
-      "updated": "2025-05-27T13:21:27.0667159-07:00",
+      "updated": "2025-05-27T10:21:27.0667159-10:00",
       "helpId": "3",
       "classInfo": {
         "assembly": "",
@@ -2145,7 +2125,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 120,
-          "updated": "2025-06-23T14:06:56.1942657-07:00",
+          "updated": "2025-06-23T11:06:56.1942657-10:00",
           "helpId": "7",
           "classInfo": {
             "assembly": "",
@@ -2208,7 +2188,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 90,
-          "updated": "2025-02-23T16:15:27.0723645-08:00",
+          "updated": "2025-02-23T14:15:27.0723645-10:00",
           "helpId": "9",
           "classInfo": {
             "assembly": "",
@@ -2251,7 +2231,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 70,
-          "updated": "2025-02-23T16:15:27.0724844-08:00",
+          "updated": "2025-02-23T14:15:27.0724844-10:00",
           "helpId": "1126",
           "classInfo": {
             "assembly": "",
@@ -2335,7 +2315,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 30,
-          "updated": "2025-02-23T16:15:27.0726295-08:00",
+          "updated": "2025-02-23T14:15:27.0726295-10:00",
           "helpId": "11271",
           "classInfo": {
             "assembly": "",
@@ -2356,7 +2336,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 20,
-          "updated": "2025-02-23T16:15:27.0727522-08:00",
+          "updated": "2025-02-23T14:15:27.0727522-10:00",
           "helpId": "4097",
           "classInfo": {
             "assembly": "",
@@ -2377,7 +2357,7 @@
               "remarks": "",
               "example": "",
               "sortOrder": 30,
-              "updated": "2025-02-23T16:15:27.0728779-08:00",
+              "updated": "2025-02-23T14:15:27.0728779-10:00",
               "helpId": "4098",
               "classInfo": {
                 "assembly": "",
@@ -2398,7 +2378,7 @@
               "remarks": "",
               "example": "",
               "sortOrder": 20,
-              "updated": "2025-02-23T16:15:27.073013-08:00",
+              "updated": "2025-02-23T14:15:27.073013-10:00",
               "helpId": "6633",
               "classInfo": {
                 "assembly": "",
@@ -2443,7 +2423,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 10,
-      "updated": "2025-09-17T10:49:16.4539442-07:00",
+      "updated": "2025-09-17T07:49:16.4539442-10:00",
       "helpId": "369",
       "classInfo": {
         "assembly": "",
@@ -2464,7 +2444,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 190,
-          "updated": "2025-07-06T17:29:23.5979167-07:00",
+          "updated": "2025-07-06T14:29:23.5979167-10:00",
           "helpId": "16438",
           "classInfo": {
             "assembly": "",
@@ -2486,7 +2466,7 @@
           "example": "",
           "sortOrder": 180,
           "isExpanded": true,
-          "updated": "2025-02-25T14:54:07.5421437-08:00",
+          "updated": "2025-02-25T12:54:07.5421437-10:00",
           "helpId": "8482",
           "classInfo": {
             "assembly": "",
@@ -2507,7 +2487,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 170,
-          "updated": "2025-02-23T16:15:27.0736475-08:00",
+          "updated": "2025-02-23T14:15:27.0736475-10:00",
           "helpId": "8949",
           "classInfo": {
             "assembly": "",
@@ -2528,7 +2508,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 160,
-          "updated": "2025-02-24T01:28:10.3981053-08:00",
+          "updated": "2025-02-23T23:28:10.3981053-10:00",
           "helpId": "5207",
           "classInfo": {
             "assembly": "",
@@ -2549,7 +2529,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 150,
-          "updated": "2025-05-24T22:21:30.1018574-07:00",
+          "updated": "2025-05-24T19:21:30.1018574-10:00",
           "helpId": "5208",
           "classInfo": {
             "assembly": "",
@@ -2570,7 +2550,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 140,
-          "updated": "2025-05-15T11:52:34.6635819-07:00",
+          "updated": "2025-05-15T08:52:34.6635819-10:00",
           "helpId": "6630",
           "classInfo": {
             "assembly": "",
@@ -2675,7 +2655,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 60,
-          "updated": "2025-06-26T12:22:41.4850877-07:00",
+          "updated": "2025-06-26T09:22:41.4850877-10:00",
           "helpId": "13643",
           "classInfo": {
             "assembly": "",
@@ -2696,7 +2676,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 50,
-          "updated": "2025-05-27T20:06:25.4390743-07:00",
+          "updated": "2025-05-27T17:06:25.4390743-10:00",
           "helpId": "1125",
           "classInfo": {
             "assembly": "",
@@ -2717,29 +2697,8 @@
           "remarks": "",
           "example": "",
           "sortOrder": 40,
-          "updated": "2025-02-23T16:15:27.0741289-08:00",
+          "updated": "2025-02-23T14:15:27.0741289-10:00",
           "helpId": "13654",
-          "classInfo": {
-            "assembly": "",
-            "contract": "",
-            "exceptions": ""
-          }
-        },
-        {
-          "id": "_65W0QDV1E",
-          "parentId": "_4SD0LXFQ0",
-          "title": "Overriding Editor Styling and Behavior",
-          "slug": "FAQ/Overriding-Editor-Styling-and-Behavior",
-          "link": "FAQ/Overriding-Editor-Styling-and-Behavior.md",
-          "displayType": "topic",
-          "type": "markdown",
-          "keywords": "",
-          "seeAlso": "",
-          "remarks": "",
-          "example": "",
-          "sortOrder": 30,
-          "updated": "2025-02-24T00:00:00Z",
-          "helpId": "13655",
           "classInfo": {
             "assembly": "",
             "contract": "",
@@ -2759,7 +2718,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 20,
-          "updated": "2025-02-23T16:15:27.074243-08:00",
+          "updated": "2025-02-23T14:15:27.074243-10:00",
           "helpId": "16910",
           "classInfo": {
             "assembly": "",
@@ -2796,7 +2755,7 @@
           "link": "FAQ/Allow-Host-Input-Processing-Setting.md",
           "displayType": "topic",
           "type": "markdown",
-          "updated": "2025-09-23T10:34:39.7064823-07:00",
+          "updated": "2025-09-23T07:34:39.7064823-10:00",
           "classInfo": {}
         },
         {
@@ -2807,7 +2766,7 @@
           "link": "FAQ/Custom-Styling-for-Markdown-Elements.md",
           "displayType": "topic",
           "type": "markdown",
-          "updated": "2025-09-16T12:45:31.3932847-07:00",
+          "updated": "2025-09-16T09:45:31.3932847-10:00",
           "classInfo": {}
         }
       ]
@@ -2820,12 +2779,14 @@
       "displayType": "weblink",
       "type": "markdown",
       "isLink": true,
-      "updated": "2025-05-27T13:07:26.5712703-07:00",
+      "updated": "2025-05-27T10:07:26.5712703-10:00",
       "classInfo": {}
     }
   ],
   "settings": {
     "renderTheme": "Dharkan",
+    "renderThemeMode": "dark",
+    "showTocIcons": true,
     "topicTypes": {
       "index": "Top level topic for the documentation.",
       "header": "Header topic for sub-topics",
@@ -2863,6 +2824,6 @@
       "username": "rstrahl",
       "maxUploadConnections": 10
     },
-    "lastTopicId": "_4S0144W3G"
+    "lastTopicId": "_58U0U6BNH"
   }
 }

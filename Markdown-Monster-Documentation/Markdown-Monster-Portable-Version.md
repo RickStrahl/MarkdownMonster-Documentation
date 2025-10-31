@@ -1,5 +1,8 @@
 Markdown Monster ships both as a **full installer**, and a **portable install** that is delivered as a Zip archive. Both versions also come as Chocolatey packages.
 
+
+
+
 * **Full Installer**  
 The full installation requires elevated rights for registering several system components.
 

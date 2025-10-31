@@ -444,9 +444,15 @@ var helpBuilder = null;
         var $button = $href.parent().prev();
 
         if ($ul.is(":visible"))
-            $button.removeClass("fa-caret-right").addClass("fa-caret-down");
+        {
+                $button.removeClass("fa-caret-right").addClass("fa-caret-down");
+                $button.removeClass("fas").addClass("far");
+        }
         else
-            $button.removeClass("fa-caret-down").addClass("fa-caret-right");
+        {
+                $button.removeClass("fa-caret-down").addClass("fa-caret-right");
+                $button.removeClass("far").addClass("fas");
+        }
     }
 
     function expandParents(id, noFocus) {
@@ -554,8 +560,7 @@ var helpBuilder = null;
     function isLocalUrl(href) {        
         if (!href)
             href = window.location.href;
-        return href.startsWith("mk:@MSITStore") ||
-	           href.startsWith("file://")
+        return href.startsWith("file://")
     }
     function getIdFromUrl(href) {      
   
@@ -832,14 +837,12 @@ function mermaidLoader(mermaidUrl, mermaidConfig)
     }
 }
 
+// *** Startup ***
 if(helpBuilder.isLocalUrl())
-    setTimeout(()=> helpBuilder.initializeLayout(),10);
-
-
+    helpBuilder.initializeLayout();
 
 function scrollToPragmaLine(lineno, headerId, noScrollTimeout, noScrollTopAdjustment)
-{
- 
+{ 
 //    setTimeout(function() {
         try {
             var $el;
