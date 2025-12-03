@@ -15,7 +15,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 110,
-      "updated": "2025-10-28T11:10:44.2698123-10:00",
+      "updated": "2025-11-10T12:45:04.3235768-10:00",
       "helpId": "2",
       "classInfo": {
         "assembly": "",
@@ -398,7 +398,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 50,
-          "updated": "2025-10-30T14:16:11.5185809-10:00",
+          "updated": "2025-10-30T14:42:44.1032382-10:00",
           "helpId": "6635",
           "classInfo": {
             "assembly": "",
@@ -483,7 +483,7 @@
           "example": "",
           "sortOrder": 10,
           "isExpanded": true,
-          "updated": "2025-08-20T11:41:16.0683397-10:00",
+          "updated": "2025-11-08T21:44:45.8559041-10:00",
           "helpId": "8942",
           "classInfo": {
             "assembly": "",
@@ -507,7 +507,6 @@
     },
     {
       "id": "_6Z50U8E3Y",
-      "parentId": "_4RD0XIGYS",
       "title": "AI Integration  Features",
       "slug": "AI-Integration-Features",
       "link": "AI-Integration-Features.md",
@@ -518,7 +517,8 @@
       "remarks": "\t",
       "example": "",
       "sortOrder": 90,
-      "updated": "2025-09-13T15:13:56.7217092-10:00",
+      "isExpanded": true,
+      "updated": "2025-11-10T12:48:13.0745801-10:00",
       "helpId": "16915",
       "classInfo": {
         "assembly": "",
@@ -538,14 +538,26 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "sortOrder": 50,
-          "updated": "2025-09-13T19:06:10.5768253-10:00",
+          "sortOrder": 60,
+          "updated": "2025-11-08T22:03:09.2118709-10:00",
           "helpId": "16914",
           "classInfo": {
             "assembly": "",
             "contract": "",
             "exceptions": ""
           }
+        },
+        {
+          "id": "_z19agubjgt",
+          "parentId": "_6Z50U8E3Y",
+          "title": "AI Chat Interface",
+          "slug": "AI-Integration-Features/AI-Chat-Interface",
+          "link": "AI-Integration-Features/AI-Chat-Interface.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "sortOrder": 50,
+          "updated": "2025-12-02T17:16:26.7729902-10:00",
+          "classInfo": {}
         },
         {
           "id": "_6RZ0SMZC0",
@@ -600,7 +612,7 @@
           "link": "AI-Integration-Features/Grammar-Checking.md",
           "displayType": "topic",
           "type": "markdown",
-          "sortOrder": 11,
+          "sortOrder": 10,
           "updated": "2025-06-02T11:00:13.9477771-10:00",
           "classInfo": {}
         },
@@ -612,7 +624,6 @@
           "link": "AI-Integration-Features/Text-Translation.md",
           "displayType": "topic",
           "type": "markdown",
-          "sortOrder": 10,
           "updated": "2025-06-02T11:00:26.0920696-10:00",
           "classInfo": {}
         }
@@ -969,7 +980,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 70,
-      "updated": "2025-09-17T07:53:37.6413948-10:00",
+      "updated": "2025-11-19T23:19:48.4458148-10:00",
       "helpId": "2972",
       "classInfo": {
         "assembly": "",
@@ -990,7 +1001,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 180,
-          "updated": "2025-05-27T08:47:02.299595-10:00",
+          "updated": "2025-11-19T23:26:31.8902976-10:00",
           "helpId": "379",
           "classInfo": {
             "assembly": "",
@@ -2073,7 +2084,7 @@
         {
           "id": "_5RJ1CKNRJ",
           "parentId": "_5AB0ZT9JC",
-          "title": "Open from Browser with `markdownmonster:` Protocol Handler",
+          "title": "Open from Browser with the `markdownmonster:` Protocol Handler",
           "slug": "Recipes/Open-from-Browser-with-markdownmonster-Protocol-Handler",
           "link": "Recipes/Open-from-Browser-with-markdownmonster-Protocol-Handler.md",
           "displayType": "topic",
@@ -2082,7 +2093,7 @@
           "seeAlso": "Markdown Monster local Web Server",
           "remarks": "",
           "example": "",
-          "updated": "2025-05-09T11:24:40.2153398-10:00",
+          "updated": "2025-11-19T23:19:36.7354767-10:00",
           "helpId": "13644",
           "classInfo": {
             "assembly": "",
@@ -2817,13 +2828,13 @@
     "webSiteHomeUrl": "https://markdownmonster.west-wind.com/",
     "supportEmail": "support@west-wind.com",
     "upload": {
-      "hostname": "west-wind.com",
+      "hostname": "ftp.west-wind.com",
       "uploadFtpPath": "/Westwind_SysRoot/Web Sites/markdownmonster.west-wind.com/docs/",
       "webSiteUrl": "https://markdownmonster.west-wind.com/docs/",
       "openWebSite": true,
       "username": "rstrahl",
       "maxUploadConnections": 10
     },
-    "lastTopicId": "_58U0U6BNH"
+    "lastTopicId": "_z19agubjgt"
   }
 }

@@ -1,8 +1,8 @@
-﻿Markdown Monster renders Markdown text into HTML output when it transforms your Markdown document, and you can print the rendered HTML to a printer or a PDF document using several different mechanisms.
+Markdown Monster renders Markdown text into HTML output when it transforms your Markdown document, and you can print the rendered HTML to a printer or a PDF document using several different mechanisms.
 
 The following uses the preferred  **Save As Pdf Dialog** to render to Pdf output:
 
-![Pdf Output Generation](/images/PdfOutputGeneration.png)
+![Pdf Output Generation](../images/PdfOutputGeneration.png)
 
 There are a number of ways to produce Pdf output in Markdown Monster:
 

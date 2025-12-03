@@ -51,8 +51,12 @@ var helpBuilder = null;
 	                loadTopicAjax(href);
 	                return false; // stop navigation
 	            } 
-	        });
-            
+	        })
+            .on("dblclick", "img", function() {                
+                var href = $(this).attr("src");
+                window.open(href);
+            });
+                    
             var id = getIdFromUrl();
 
             if (id){

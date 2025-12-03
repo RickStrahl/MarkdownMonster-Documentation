@@ -1,15 +1,13 @@
-Using **Favorites** you can add any kind of file (not just Markdown Files) or folders to the Favorites list. 
+Markdown Monster provides a @icon-star-color:goldenrod **Favorites** list in the Sidebar, which allows you to easily store and quickly recall saved file or folder references for quick access. 
 
-I have a lot of notes and lists that I keep in Markdown files and one of the biggest annoyances has been to keep track of these often used files. Even with Markdown Monster's configurable and optionally very long recent files list, many of my frequently used files that I really want to track keep dropping off these lists.
-
-Favorites address this issue nicely by allowing me to keep my often reused files linked in one place along with an easy way to add favorites and organize them into groups via drag and drop. 
+The favorite list can be organized into groups and a search bar lets you quickly find Favorites if your list is long. Groups can be used for simple task categorization or for separating separate projects via folder nesting.
 
 ### Favorites in Markdown Monster
-Markdown Monster includes a Favorites as part of the UI. Here's what this Favorites Panel looks like:
+Markdown Monster includes a Favorites Sidebar on the left with the @icon-star-color:goldenrod Favorites Tab:
 
 ![MarkdownMonster FavoritesPanel](../images/MarkdownMonster_FavoritesPanel.png)
 
-The easiest way to get Favorites into the list is b**y dragging an open document tag into the Favorites panel**. Just drop it under a folder or into an existing list of files or folders and it'll get added there. You can also **drag and drop from Windows Explorer** (or any other Shell file tool) into the Favorites list.
+The easiest way to get Favorites into the list is by ** dragging an open document tab into the Favorites panel**. Just drop it under a folder or ontop of an existing item and the favorite gets added there. You can also **drag and drop from Windows Explorer** (or any other Shell file tool) into the Favorites list, or you can manually create a new Favorite via `ctrl-n` in the panel, or the @icon-plus icon in the panel toolbar.
 
 You can access the favorites panel either from the @icon-star-color:goldenrod toolbar button or from the **Recent Files Menu dropdown** which is accessible from multiple places:
 
@@ -27,6 +25,5 @@ If you're anything like me you probably manage a number of lists:
 * Phone log notes
 * Blog posts or post/article ideas
 * Client project notes and credentials
+* Project specific sub-folders
 * etc.
-
-Most of these types of files I use constantly, but even though they are frequently used, they often fall of Markdown Monster's **Recently Used** list. Having a single place to go to to find files I frequently use makes it much more likely for me to use Markdown keeping track of things especially like Meeting notes or client errata that I need.

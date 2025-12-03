@@ -1,8 +1,15 @@
-﻿Markdown Monster installs a  `markdownmonster:` **Application Protocol Handler** (also referenced as a **Uri Scheme** in Windows Documentation), which allows you to open Markdown Monster documents from within a Web Browser via a URL or using `ShellExecute` on Windows. Using the Protocol Handler URL you can:
+Markdown Monster installs a  `markdownmonster:` **Application Protocol Handler** (also referenced as a **Uri Scheme** in Windows Documentation), which allows you to open Markdown Monster documents from within a Web Browser via a URL or using `ShellExecute` on Windows. Using the Protocol Handler URL you can:
 
-* Open an existing file
-* Open an empty document
-* Open a new document with pre-set text <small>(in a number of ways)</small>
+* **Open an existing file**  
+  <small>`markdownmonster:c:/temp/test.md` (add linenumber with `:3`)</small>
+* **Open an empty document**  
+  <small>`markdownmonster:untitled`</small>
+* **Open a new document with pre-set text** 
+    <small>`markdownmonster:untitled.text,# My New Document`</small>  
+    <small>`markdownmonster:untitled.urlencoded,%23+My+New+Document%0AAnother+line`</small>  
+<small>`markdownmonster:untitled.json,# My new document\nAnother line`</small>  
+    <small>`markdownmonster:untitled.base64,<base64-encoded-text>`</small>
+
 
 ![](https://github.com/RickStrahl/ImageDrop/raw/master/MarkdownMonster/MarkdownMonsterProtocolHandler.gif)
 
@@ -10,7 +17,7 @@
 A **Protocol Handler** is an OS registered URL 'prefix' - specifically `markdownmonster:` - that Web browsers and the Shell recognize as belonging to Markdown Monster. In a browser when a `markdownmonster:` URL is detected the browser prompts for permission to launch Markdown Monster and then executes the specified command. With these URL *monikers* you can open Markdown Monster from a Web Browser or any other application that can invoke a Web link.
 
 > #### @icon-info-circle Application Protocol Handler Size is Limited to 2040 Characters
-> Application Protocol Handlers invoked from a Web Browser are **limited in length to 2040 characters** of the URL moniker passed which means you unfortunately cannot use it for passing very large documents from a browser to MM. You can however use relatively small Markdown blocks and open new documents quite nicely. For larger blocks an optional Web Server is available in Markdown Monster.
+> Application Protocol Handlers invoked from a Web Browser are **limited in length to 2040 characters** of the URL moniker passed which means you unfortunately cannot use it for passing very large documents from a browser to MM. You can however use relatively small Markdown blocks and open new documents quite nicely. For larger blocks an [optional Web Server is available](dm-topic://_5S1009YX1) in Markdown Monster.
 
 > #### @icon-warning Protocol Handlers require a Full Installation
 > Because Protocol Handlers have to be installed in the Administrative area of the registry, URL Monikers are only configured using the **full Markdown Monster installation program**. The Portable installer and application startup configuration cannot register URL Monikers. If you change location of MM, you'll need to re-run the full setup to re-register the `markdownmonster:` URL Moniker.
@@ -27,12 +34,19 @@ markdownmonster:untitled
 or this to open a document with some pre-set text:
 
 ```text
-markdownmonster:untitled.text,Hello cruel world
+markdownmonster:untitled.text,# My Personal Document
 ```
 
 <small>(note in this example the browser automatically URL encodes the string)</small>
 
-More commonly you'll want to encode your text though using either `markdownmonster:untitled.urlencode` for single line text, or more likely `markdownmonster:untitled.base64`. Here's what the Url encoded version looks like:
+More commonly you'll want to encode your text though using either `markdownmonster:untitled.urlencoded` or `markdownmonster:untitled.json` for multi-line text, or more likely `markdownmonster:untitled.base64`. 
+
+```text
+markdownmonster:untitled.urlencoded,%23+My+New+Document%0AAnother+line+here
+markdownmonster:untitled.json,# My New Document\nAnd another line
+markdownmonster:untitled.base64,<base64-string-here>
+```
+Here's what the Url encoded version looks like:
 
 ![](/images/UrlMonikerInAddressBar.png)
 

@@ -127,3 +127,24 @@ You can also use Ollama interactively using [OpenWebUi](https://openwebui.com/) 
 * [Open WebUI](https://github.com/open-webui/open-webui)
 * [Ollama curated Models](https://ollama.com/library)
 * [More models at Hugging Face Models](https://huggingface.co/models)
+
+
+
+## Some Provider Recommendations
+
+* **OpenAI - Mini and Nano Models are cheap and effective**  
+OpenAI has `-mini` and `-nano` models that are very cheap and work great for the built-in operational tasks like summarizing, translation and grammar checking. They also work fairly well for most document centric tasks you might throw at it in the Chat UI. 
+
+* **Azure -  if you're already using it**  
+If you're already using Azure or you're getting free Azure credits that you can use, setting up model instances and running them through Azure can be a cheap way to use models as well. You can set up a huge variety of models on Azure quickly with pricing the same as OpenAI with the benefit of Azure credits for MVPs and various subscriptions.
+
+
+* **OpenRouter - many free models**  
+[OpenRouter.ai](https://openrouter.ai) is another great way to use a single interface to access a huge variety of models from a single API reference. OpenRouter has many capable mid-size models available for free.
+
+* **Ollama - local AI, but it's slow**  
+If you want to run completely offline Ollama works and lets you work with many small models locally on your own computer. However, unless you have a smoking fast machine with a top of the line GPU or a new NPU, performance for local usage is very disappointing. Also because you can't use big models locally due to size constraints local SLM models tend to lack much general knowledge. Local models work well for operational task like translation, summarization, grammar etc. but for generic chat choose a larger online model.
+
+
+* [GitHub Models](https://github.com/marketplace?type=models)  
+GitHub Models makes various models available through your GitHub account with a number of models (including the nano and mini models) being available for free. I think this matches the same list of model pricing that you see in your GitHub CoPilot Chat.

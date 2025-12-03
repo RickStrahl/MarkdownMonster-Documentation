@@ -1,6 +1,8 @@
 ![Markdown Monster Banner](/images/MarkdownMonsterSplash.png){style="max-width: 600px; width: 100%"}
 
-Markdown Monster is an easy to use and extensible Markdown Editor for Windows, that provides you with intuitive features to write Markdown content efficiently.
+Markdown Monster is an easy to use and extensible Markdown Editor for Windows, that provides you with intuitive features to write Markdown content quickly efficiently. 
+
+It provides many optimized support features for embedding images, links, code blocks and other resources quickly with minimal and optional user interface interaction. If you're new to Markdown these tools help you get going, for advanced users these features speed up many operations by automating and often simplifying repetitive tasks with interactive, but keyboard optimized operations.
 
 ### Use the  Documentation, Luke
 This documentation isn't meant to cover **every** aspect of the user interface. We think that Markdown Monster is easy to use and works without requiring much hand holding. 
@@ -17,6 +19,7 @@ Here are a few things to get you started.
 * [Embedding Links](dm-topic://_4XS10GAUI)
 * [The Folder Browser](dm-topic://_4WU1CJYKA)
 * [Configuration Settings](dm-topic://_4NK01YQ6Q)
+* [AI Integration Features](dm-topic://_6Z50U8E3Y)
 
 ### Addins
 * [Creating Addins with .NET](dm-topic://_4NE0S0QOI)
