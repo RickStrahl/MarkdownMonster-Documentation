@@ -1,4 +1,4 @@
-﻿Using an Addin you can:
+﻿Markdown Monster allows you to add and extend functionality by using an Addin. With an addin you get access to the core features of Markdown Monster and you can:
 
 * Retrieve and set the active document text
 * Insert text at the active selection
@@ -8,7 +8,8 @@
 * Hook into document life cycle events (load, save, updated etc.)
 * Add menu and toolbar items
 * Create entirely new features and hook into the sidebars  
-  (similar to the folder browser, bookmarks, or favorites list)
+  *(similar to the folder browser, bookmarks, or favorites list)*
+* Create both non-interactive and UI based features
 * *and much more...*
 
 This section describes how to create add-ins and documents a couple of the built in add-ins.

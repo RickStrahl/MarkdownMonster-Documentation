@@ -1,26 +1,35 @@
-﻿To facilitate creation of Add-ins Markdown Monster provides an installable addin template that can be used from either the command line via **dotnet new** or from **Visual Studio New Project Dialog**.
+To facilitate creation of Add-ins Markdown Monster provides installable addin templates that can be used from either the from command with the .NET SDK line via **dotnet new** or from **Visual Studio New Project Dialog** and installable via the **Visual Studio Extension Manager**.
 
-To install the template, use the following from the Windows Command Prompt:
+To install the `dotnet new` template, use the following from the Windows Command Prompt:
 
 ```ps
 dotnet new install MarkdownMonster.AddinProject.Template
 ```
+> Instructions are for Markdown Monster 4.0 which uses .NET 10 runtimes. If you're using older versions the runtime version may be different, but an Addin always has to match the runtime version of Markdown Monster.
+
+To install the Visual Studio Addin:
+
+* Open **Extensions -> Extensions Manager**
+* Find **Markdown Monster Addin Project** and install it
 
 **Prerequisites:**
-* [.NET SDK](https://dotnet.microsoft.com/download/) (v8.0 or later)  
-The free .NET SDK is required to build the Addin project. It includes the C#/.NET compiler and build tools to create the addin binary. You can use any editor to build your .NET code and then use `dotnet build` to create the addin. If you're using Visual Studio, the .NET SDK is automatically available and used behind the scenes.
 
-* [.NET Desktop Runtime](https://dotnet.microsoft.com/download/) (should be installed with Markdown Monster)  
-Markdown Monster is a Windows Desktop application so it needs the .NET Core Runtimes. If you're building this addin on the same machine as MM, the runtime should be installed already.
+* [.NET 10 SDK for dotnet new](https://dotnet.microsoft.com/download/)   
+The free .NET SDK is required to create and then build the Addin project using the Command Line tools. The SDK includes the C#/.NET compiler and build tools to create the addin binary. You can use any editor to build your .NET code and then use `dotnet build` to create the addin. 
+
+* **Visual Studio 2026 for VS Extension Project Template**  
+.NET 10 requires use Visual Studio 2026 in order to build a .NET 10 project required for a Markdown Monster addin.
+
 
 ## What does the Project Template do?
 The addin template creates a ready-to-run starter Addin project for you that does the following:
 
-* Creates an SDK style .NET 8.0 Class Library Project  
-  *Make sure the project name (specifically the result assembly) ends `Addin` (as in `MyGreatAddin`)*
+* Creates an SDK style .NET 10.0 Class Library Project  
+  <small>*make sure the project name (specifically the **result assembly**) ends `Addin` (ie. `MyGreatAddin`)*</small>
 * Creates a class that inherits from `MarkdownMonsterAddin`  
 * Implements `OnApplicationInitialized()` to configure the Addin
 * Stubs out a few common event handlers for MM life-time event handling
+  <small>*you can add other handlers later on*</small>
 * Includes a dummy button handler that tests initial Addin installation
 * Includes a `build.ps1` script to package your addin
 
@@ -37,6 +46,8 @@ You can create a new Markdown Monster addin project in one of two ways:
 * Using Visual Studio
 
 Let's go through these steps in detail.
+
+
 
 ## @icon-download Create an Addin with the *dotnet new* Template
 The `dotnet new` template is an installable template that can be used with the `dotnet new` command and also in Visual Studio. You can install the Nuget package after which you can then use the template to create a new Markdown Monster Addin project. By default this is done **from the command line** although you can also run the template from the Visual Studio New Project dialog once the template is initially installed.
@@ -403,6 +414,7 @@ The `<IncludeAssets>all</IncludeAssets>` element ensures that the library and it
 #### Unloading Markdown Monster to see Addin
 If MM is running and the addin is loaded you will have to stop all instances of Markdown Monster before you can recompile the files. Addins load when Markdown Monster starts, so you have to restart to see your newly built addin.
 
+
 ### Test your Add in
 At this point you should also be able to run your add-in. When you do, you should now see something like this:
 
@@ -424,14 +436,37 @@ In Visual Studio you can simple run your project in debug mode and set breakpoin
 ### Package your Addin
 If you're building your addin only for your personal use, there's nothing else you need to do. You can simply build into the `Addins` folder and you're done.
 
+Optionally you can package your Addin into a Zip file that you can transfer to another machine and manually install, or optionally publish to Markdown Monster's addin repository.
+
 #### Updating version.json
-Make sure that you update `version.json` in your project to:
+Before you build your project, make sure that you update `version.json` in your project to:
 
-* Provide a new `version` number for your build
-* Specify a `minVersion` to require a minimum Markdown Monster version
-* Set the `updated` publish date of your addin
+* Provide a new and updated `version` number for your build
+* Specify a `minVersion` and `maxversion` (ie. `4.0` to `4.99` )
+* Set the `updated` publish date to the current date
 
-#### Publishing to the Addin Registry
+#### Package your Addin
+Finally you can package up your Addin into a Zip file that you can transfer to another machine:
+
+* Compile and build your project
+* Use `build.ps1` to package your project
+* Look in the `.\build` folder to `addin.zip` 
+
+### Installing the Addin on another Machine
+Once you've packaged your Addin into an `addin.zip` file you can copy it to another machine and install it by creating a folder in the common `Addins` folder and copying the files into it.
+
+To do this:
+
+* Compile and build your project
+* Use `build.ps1` to package your project
+* Look in the `.\build` folder to `addin.zip` 
+* Copy or transfer the zip file to another machine
+* Unzip the `addin.zip` into the
+  `%appdata%\Markdown Monster\Addins` folder by
+  creating a folder and unzipping the files into it.
+
+
+### Publishing to the Addin Registry
 Once you have debugged your addin locally you can optionally share it in a GitHub repository and submit it to the [Markdown Monster Addin Registry](https://github.com/RickStrahl/MarkdownMonsterAddinsRegistry).
 
 An addin project that is published to the Registry needs to be in a specific format and you can use `build.ps1` to create a `Build` folder in the root of the project. The folder contains the binaries of the addin in zipped up format as well as a `version.json` and `icon.png` file that identify the addin for the Addin Manager.

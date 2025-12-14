@@ -56,5 +56,3 @@ Voice input in Markdown Monster is enabled by default via the **Enable Voice Dic
 In addition, Windows also has to be enabled to use **Windows 11 Voice Typing** feature . However, in recent updates of Windows 11, Voice Typing is now on by default and if the feature is configured and working, you'll see a recording widget when you press @icon-brands-windows**-H**. Otherwise, you are prompted to set up the Voice Typing feature.
 
 > If Windows does not have Voice Typing enabled, due to explicit disabling, or no Microphone inputs, clicking on the @icon-microphone-alt button in the Chat UI shows the recording icon, but it may not actually work. Make sure when you click the button the Microphone Widget activates and if it doesn't use @icon-brands-windows**-H** to configure your microphone setup first then retry.
-
-
