@@ -1,4 +1,4 @@
-﻿Configuration is a key component to most applications and a Markdown Monster addin is not exception. Markdown Monster provides an easy way to create a custom configuration for your Addin.
+﻿Configuration is a key component to most applications and a Markdown Monster addin is no exception. Markdown Monster provides an easy way to create a custom configuration for your Addin.
 
 The Markdown Monster Visual Studio Project Template automatically creates a configuration class for you. You can add properties to this class that act as configuration values that can be easily persisted and restored in a JSON configuration file.
 
@@ -55,4 +55,4 @@ You can also explicitly re-read values with:
 
 ```cs
 SampleAddinConfigration.Current.Read()
-``
+```

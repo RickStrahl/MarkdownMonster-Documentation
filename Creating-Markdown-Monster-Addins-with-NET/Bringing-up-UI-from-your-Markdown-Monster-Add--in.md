@@ -17,7 +17,7 @@ public override void OnExecute(object sender)
 ```
 Here's what the Addin looks like when it runs:
 
-![](/images/WebLogAddIn.png)
+![Web Log Add In](../images/WebLogAddIn.png)
 
 
 ### MahApps.Metro Forms
@@ -55,13 +55,21 @@ and in code make sure to inherit from `MetroWindow`:
 
 ```csharp
 public partial class WebLogForm : MetroWindow
+{
+    public WeblogForm()
+    {
+        InitializeComponent();
+        
+        // match theming to main app Window
+        mmApp.SetThemeWindowOverride(this);
+        
+        // ...
+    }
+}  
 ```
+
 
 ### Form to Markdown Monster Interaction
 Once you have your form up and running you can easily interact with Markdown Monster using the `Addin` object or the `Addin.Model`, just as the other examples so far have done. You can grab editor selection, and update it with new content, open new tabs/documents or otherwise manipulate the UI.
 
 If you want to see more of an advanced example on how to create a complex form based Addin take a look at the Weblog Addin which performs a number of different tasks that interact with Markdown Monster. For example, the Web log reads the entire Markdown document and adds a meta data footer to the bottom of the document. When posting to a Weblog that footer is stripped off and updated with the post id. It's possible to do pretty fine grained interaction between your form and Markdown Monster. The addin also allows for creation of a new post that creates a file and folder on disk and then opens the new document in a new tab in the editor.
-
-For more info take a look at the source code here:
-
-* <a href="https://github.com/RickStrahl/MarkdownMonster/tree/master/AddIns/WebLogAddin" target="top">Markdown Monster Weblog Publishing Addin</a>

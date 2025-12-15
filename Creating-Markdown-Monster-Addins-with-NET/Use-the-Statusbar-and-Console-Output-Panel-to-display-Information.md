@@ -1,4 +1,4 @@
-﻿If you are creating an addin that performs some non-visual operation it's often necessary to provide some feedback to the user. You can do this in two ways:
+If you are creating an addin that performs some non-visual operation it's often necessary to provide some feedback to the user. You can do this in two ways:
 
 * Display a message in the Main Window's Status Bar
 * Use the Main Windows Console Output Panel

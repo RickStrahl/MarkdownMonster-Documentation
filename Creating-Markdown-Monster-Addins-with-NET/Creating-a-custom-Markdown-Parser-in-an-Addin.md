@@ -4,7 +4,7 @@
 
 We've provided a [PanDoc Add-in](https://github.com/RickStrahl/Pandoc-MarkdownMonster-Addin) that you can check out to see how to add a custom Markdown parser for Markdown Monster.
 
-Custom markdown editors are useful for specialized tasks that the default parser doesn't do, or even if you want to extend the behavior of the default <a href="https://github.com/lunet-io/markdig" target="top">MarkDig parser</a> with additional functionality.
+Custom markdown parsers are useful for specialized tasks that the default parser doesn't do, or even if you want to extend the behavior of the default <a href="https://github.com/lunet-io/markdig" target="top">MarkDig parser</a> with additional functionality.
 
 > #### @icon-info-circle Markdig Extension Preferred
 > Markdown Monster uses the <a href="https://github.com/lunet-io/markdig" target="top">Markdig parser</a> and it's the preferred parser to use as it also provides features used in preview rendering. You can extend Markdig via Markdig Pipeline extensions, or extend via code in a Markdown Monster addin using string/RegEx manipulation of the input markdown or html output.
@@ -12,12 +12,12 @@ Custom markdown editors are useful for specialized tasks that the default parser
 ### Creating a Custom Markdown Parser Addin
 Custom parsers are created as an **Addin** that simply override the `GetMarkdownParser()` method and provide an `IMarkdownParser` interface.
 
-The easiest way to is to use <a href="https://marketplace.visualstudio.com/items?itemname=rickstrahl.markdownmonsteraddinproject" target="top">Visual Studio Markdown Monster Addin Project Template</a> to create a new Addin.
+The easiest way to is to use <a href="https://marketplace.visualstudio.com/items?itemname=rickstrahl.markdownmonsteraddinproject" target="top">Visual Studio Markdown Monster Addin Project Template</a> or the `dotnet new` Project Template to create a new Addin.
 
 Here are the steps:
 
-* Create a new Markdown Monster Addin Project
-* Name the project CustomMarkdownParser**Addin**
+* Create a new [Markdown Monster Addin Project](dm-topic://_4NE0S0QOI)
+* Name the project CustomMarkdownParser**Addin** *(@icon-warning compiled dll name must end in **Addin**)*
 * In generated class change the `Id` and `Name` properties  
   in `OnApplicationInitialized()` (remove the rest)
 * Override the `GetMarkdownParser()` method
@@ -51,13 +51,15 @@ This mostly involves removing code from `OnApplicationInitialized()` and impleme
 Creating a new markdown parser is also easy: Simply implement the `IMarkdownParser` interface which merely consists of the `Parse(markdown)` method. You can inherit from `MarkdownParserBase` to get some base functionality but that is optional.
 
 ```csharp
-public class PandocMarkdownParser : IMarkdownParser
+public class CustomMarkdownParser : IMarkdownParser
 {
         public override string Parse(string markdown) 
         {
             string html;
             
-            // do your markdown conversion logic
+            // Create your markdown parser and convert
+            var myParser = new MyMarkdownParser();
+            var html = myParser.Parse(markdown);
             
             return html;
         }
@@ -76,7 +78,7 @@ public class CustomMarkdownParser : MarkdownParserMarkdig
     public override string Parse(string markdown)
     {
         // inject some additional text
-        return "&copy; Custom Markdown Inc<hr />" + 
+        markdown = markdown + "\n\n"&copy; Custom Markdown Inc<hr />" + 
         base.Parse(markdown);
     }
 }
@@ -109,6 +111,6 @@ Markdown Monster's preview window relies on line information in the generated HT
 <p id="pragma-line-7"><em><small>not released yet</small></em></p>
 ```
 
-Markdown Monster uses the excellent <a href="https://github.com/lunet-io/markdig" target="top">Markdig</a> parser for creating markdown and it includes a **pragma-lines** option. If you use another Markdown Parser it may or may not support this functionality and **if it doesn't preview syncing will not work**.
+Markdown Monster uses the excellent <a href="https://github.com/lunet-io/markdig" target="top">Markdig</a> parser for creating markdown and it includes a **pragma-lines** option. If you use another Markdown Parser it may or may not support this functionality and **if it doesn't preview syncing will not work reliably**.
 
 If possible we'd recommend overriding the Markdig parser either via a Markdig extension or by extending the custom MarkdownParser functionality (most likely via string and RegEx manipulation of the generated output) inside of your C# addin code.

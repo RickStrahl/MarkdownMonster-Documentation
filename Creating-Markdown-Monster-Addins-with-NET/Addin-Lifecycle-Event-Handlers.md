@@ -4,7 +4,6 @@
 * Add-in Common Feature Methods
 
 ### LifeTime Events
-
 * OnApplicationStart()
 * OnApplicationInitialized()
 * OnWindowLoaded()
@@ -13,6 +12,11 @@
 ### Installation Events
 * OnInstalled()
 * OnUninstalled()
+
+### Toolbar Execution Events
+* OnExecute()
+* OnCanExecute()
+* OnConfiguration()
 
 ### Document Related Events
 In addition to the main Execute events, the add-in exposes a number of document related events that you can intercept as well:
@@ -36,7 +40,7 @@ You can override these events to hook the specific operations you are interested
 For example if you want to add custom logic when a document is saved you can do something like this:
 
 ```csharp
-public override bool OnBeforeSaveDocument(MarkdownDocument doc)
+public override async Task<bool> OnBeforeSaveDocument(MarkdownDocument doc)
 {
     string file = doc.Filename;
     string text = doc.CurrentText;

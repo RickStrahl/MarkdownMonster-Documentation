@@ -1,4 +1,4 @@
-Inside your Markdown Monster Addin you have full access to he active Markdown Document as well as the entire UI of the application. 
+Inside your Markdown Monster Addin you have full access to the active Markdown Document.
 
 The Addin interface exposes a number of useful methods that abstract some common operations such as accessing the selection points in the document to read and write content, retrieve and set the entire Markdown document, Create new documents, close documents and so on.
 
@@ -49,8 +49,32 @@ There are many other things you can do:
 ### Getting entire Document
 You can get and set the entire document with `GetMarkdown()` and `SetMarkdown()`. Use this when you manipulate the entire document and you need to replace it.
 
-### Opening and Closing Tabs
+### Opening and Closing Tabs and interacting with new Tabs
 If you need to open a new document or close an existing tab, you can do so using the Addin's `OpenTab()` and `CloseTab()` methods. `OpenTab()` takes an optional file name or `untitled` to open a new blank tab.
+
+```csharp
+public override async Task OnExecute(object sender)
+{
+    var window = Model.Window;
+    var tab = await window.OpenTab(@"c:\temp\test.md");
+    
+    // Tab content isn't immediately available
+    Model.ActiveEditor.TabLoadingCompleted += async (editor) =>
+    {
+        // select the second line
+        await editor.SetSelectionRange( 
+            new AcePosition { column = 0, row =1}, 
+            new AcePosition { column = 999999, row =1 } );
+    };
+    
+    // ... do more stuff
+    
+    window.CloseTab(tab);
+}
+```
+
+> Keep in mind that if you open documents the documents are not immediately available. If you need to do something to the document immediately after loading use the `TabLoadingCompleted` property to fire your code after the tab has completed loading.
+
 
 ### Accessing the Markdown Document
 You can access the Markdown Document using `Model.ActiveDocument` which holds information about the document. You can get the `Filename`,`CurrentText`,`IsDirty` status, the `HtmlRenderFileName` used for previews and you can call methods like `RenderHtml()` and `RenderHtmlToFile()` to create HTML from your Markdown.
@@ -61,7 +85,7 @@ You can also gain access to the `Model.ActiveEditor` which gives access to the u
 There are methods like `MarkupMarkdown()` that let you trigger operations like `bold`, `italic`, `image`, `code` etc that match the toolbar operations. There's `SpecialKey()` which lets you trigger most of the hotkeys that Markdown Monster uses like Ctrl-n, Ctrl-s, Ctrl-O etc. You can also switch the Editor's syntax highlighting to a different language (it's `markdown` by default) but you can switch to `csharp` for example and then display a `.cs` file. You can call the `SetDirty()` method to force the document to be marked as dirty (or not dirty). 
 
 ### Accessing the Markdown Editor JavaScript Editor
-The Editor also has an `JsEditor` property that references the JavaScript Editor wrapper instance called `textEditor` in `editor.js`. This object is a wrapper JavaScript object around ACE editor that provides high level common operations directly to Markdown Monster's C# interface. This essentially allows you to directly interface with ACE editor from an Addin.
+The Editor also has an `JsEditor` property that references the JavaScript Editor wrapper instance called `textEditor` in `.\Editor\editor.js`. This object is a wrapper JavaScript object around ACE editor that provides high level common operations directly to Markdown Monster's C# interface. This essentially allows you to directly interface with ACE editor from an Addin.
 
 ```csharp
 var editor = Model.ActiveEditor;
@@ -76,9 +100,10 @@ await editor.SetEditorSyntax("javascript");
 editor.SetSpellChecking(true);  // disable
 ```
 
-You can call functions defined in the `Editor\editor.js` file on the main `textEditor` instance with `Invoke()`. For more info on what's available take a look at the `editor.js` source code or the ACE editor documentation.
 
 ### Accessing the Main Window
 You can also gain access to the Main UI window of Markdown Monster by using `Model.Window`. This is the top level window and it gives you access to a large list of Methods to manipulate the UI including all sub controls, tabs, sidebars etc. This is an advanced feature and if you plan to do this you're on your own for drilling into the object model, but you do have access the full UI through this interface.
+
+
 
 [Window Documentation](https://markdownmonster.west-wind.com/docs/Class-Reference/Class-Reference/MarkdownMonster/MainWindow-Class.html)
