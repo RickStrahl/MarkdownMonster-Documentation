@@ -4,4 +4,4 @@ In order order to use any of the AI features you first need to set up your [Open
 
 Here are the AI features available:
 
-{{ Helpers.ChildTopicsList()}}
+{{ Helpers.ChildTopicsList() }}
