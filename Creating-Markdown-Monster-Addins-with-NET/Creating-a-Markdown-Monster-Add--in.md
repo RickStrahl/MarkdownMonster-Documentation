@@ -5,12 +5,14 @@ To install the `dotnet new` template, use the following from the Windows Command
 ```ps
 dotnet new install MarkdownMonster.AddinProject.Template
 ```
-> Instructions are for Markdown Monster 4.0 which uses .NET 10 runtimes. If you're using older versions the runtime version may be different, but an Addin always has to match the runtime version of Markdown Monster.
 
 To install the Visual Studio Addin:
 
 * Open **Extensions -> Extensions Manager**
 * Find **Markdown Monster Addin Project** and install it
+
+> Instructions are for Markdown Monster 4.0 which uses .NET 10 runtimes. If you're using older versions the runtime version may be different, but an Addin always **has to match the runtime version of Markdown Monster**.
+
 
 **Prerequisites:**
 

@@ -30,9 +30,13 @@ By default the preview Window can be **internal** inside of the main Markdown Mo
 
 Optionally you can also use an **external window** for the preview:
 
-![](/images/externalpreview.png)
+![External Preview](/images/externalpreview.png)
 
-The external window can be **Docked to the main Markdown Monster Window** or can be free floating and optionally be set to float to the top of the Windows stack to always stay visible.
+The external window can be **Docked to the main Markdown Monster Window** *(as shown)* or can be free floating. The floating window then has additional activation options how it is linked to the main window: 
+
+* Activated by Main Window
+* Manually activated
+* Always on Top
 
 Using an external window can be useful to put the Preview output onto a separate screen.
 

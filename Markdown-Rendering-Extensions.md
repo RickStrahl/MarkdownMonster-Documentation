@@ -11,7 +11,7 @@ These extensions can significantly enhance your Markdown workflow by allowing yo
 A few things to consider:
 
 > #### @icon-warning RenderExtensions are Custom!
->  Although Markdown Monster will render the extension in the previewer and any directly generated Html and Pdf output, not all of these extensions are supported by all Markdown hosting provider services. None of these extensions are 'standard' Markdown, so even though the Markdown Monster previewer renders the output, if you're hosting your Markdown on a platform like GitHub, WordPress or some Jekyll service, make sure the extension format is supported by your host. 
+>  Although Markdown Monster will render the extension in the previewer and any directly generated Html and Pdf output, not all of these extensions are supported by all Markdown hosting provider services. None of these extensions are 'standard' Markdown, so even though the Markdown Monster previewer renders the output, if you're hosting your Markdown on a platform like GitHub, WordPress or some Jekyll service, make sure the extension format is supported by your host, independently of Markdown Monster's rendering.
 
 > #### @icon-lightbulb Create your own Render Extensions in C#
 > You [can create custom RenderExtensions using C#](dm-topic://_5I30SBA89) as part of a Markdown Monster Addin to extend Markdown preview and output rendering with custom behavior.
