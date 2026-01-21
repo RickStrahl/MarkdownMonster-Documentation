@@ -186,7 +186,7 @@
           "example": "",
           "sortOrder": 150,
           "isExpanded": true,
-          "updated": "2026-01-16T12:07:19.4714123-10:00",
+          "updated": "2026-01-20T14:19:12.778402-10:00",
           "helpId": "349",
           "classInfo": {
             "assembly": "",
@@ -979,6 +979,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 70,
+      "isExpanded": true,
       "updated": "2025-11-19T23:19:48.4458148-10:00",
       "helpId": "2972",
       "classInfo": {
@@ -1394,6 +1395,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 60,
+      "isExpanded": true,
       "updated": "2025-06-24T06:46:59.5459845-10:00",
       "helpId": "16445",
       "classInfo": {
@@ -1415,6 +1417,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 10,
+          "isExpanded": true,
           "updated": "2025-06-23T18:45:27.6401186-10:00",
           "helpId": "4",
           "classInfo": {
@@ -1925,6 +1928,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 30,
+      "isExpanded": true,
       "updated": "2025-09-17T07:52:34.6588531-10:00",
       "helpId": "6638",
       "classInfo": {
@@ -2114,6 +2118,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 20,
+      "isExpanded": true,
       "updated": "2025-12-17T13:52:49.1321068-10:00",
       "helpId": "3",
       "classInfo": {
@@ -2135,7 +2140,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 120,
-          "updated": "2025-12-17T12:40:08.8128573-10:00",
+          "updated": "2026-01-21T12:37:03.6991084-10:00",
           "helpId": "7",
           "classInfo": {
             "assembly": "",
@@ -2346,6 +2351,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 20,
+          "isExpanded": true,
           "updated": "2025-02-23T14:15:27.0727522-10:00",
           "helpId": "4097",
           "classInfo": {
@@ -2834,6 +2840,6 @@
       "username": "rstrahl",
       "maxUploadConnections": 15
     },
-    "lastTopicId": "_4NI0V22AD"
+    "lastTopicId": "_4NE0S0QOI"
   }
 }

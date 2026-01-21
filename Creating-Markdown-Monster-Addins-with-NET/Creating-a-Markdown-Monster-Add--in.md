@@ -270,7 +270,7 @@ This add-in simply displays a `MessageBox()` when you click the Toolbar button, 
 With the Project Template and assuming standard install folders, the project should be ready to build and run. You can also start debugging by running the application in Debug mode, which should launch Markdown Monster as the startup executable.
 
 > #### @icon-warning Build and Debug Failures
-> If the project does not build or run, **make sure your paths are correct**. The new Add-in assumes you installed Markdown Monster in the default `%localappdata%\Markdown Monster` location and build your addin to the common folder location at `%appdata%\Markdown Monster\Addins` - if you used a different install folder or the portable installer, you'll have to adjust the project paths in the `.csproj` file by replacing all references to `$(localappdata)` and `$(appdata)` folders with your actual MM install and common folder paths.
+> If the project does not build or run, **make sure your paths are correct**. The new Add-in assumes you installed Markdown Monster in the default `%ProgramFiles%\Markdown Monster` location and build your addin to the common folder location at `%appdata%\Markdown Monster\Addins` - if you used a different install folder or the portable installer, you'll have to adjust the project paths in the `.csproj` file by replacing all references to `$(programfiles)` and `$(appdata)` folders with your actual MM install and common folder paths.
 
 When the project builds the the output is generated into the Markdown Monster Shared Settings folder and the `Addins` folder below that. The default build location is: `%appdata%\Addins\SampleAddin`.
 
@@ -429,7 +429,7 @@ The dropdown to the right provides for executing the addin, executing the config
 ### Debug your Add in
 The project is set up with a custom `Properties\Launchsettings.json` file that allows you to run or debug the application from Visual Studio or any other development tool that uses this file to determine which application to run. 
 
-> The project runs `MarkdownMonster.exe` from the default install location in `%localappdata%\Markdown Monster` - if you installed in a different location you'll need to change `Launchsettings.json'` to reflect the alternate install path.
+> The project runs `MarkdownMonster.exe` from the default install location in `%programfiles%\Markdown Monster` - if you installed in a different location you'll need to change `Launchsettings.json'` to reflect the alternate install path.
 
 In Visual Studio you can simple run your project in debug mode and set breakpoints as needed and the debugger stops at the appropriate place in the code:
 
