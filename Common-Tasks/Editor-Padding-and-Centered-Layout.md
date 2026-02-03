@@ -1,4 +1,4 @@
-﻿When working with wide monitors it's quite common to get a feeling of **too wide** of a wall of text when editing. Maxing the editor on a 4k screen can really overwhelm the user with too much text. Studies show that there's an optimal width for reading text which is generally somewhere around 120 characters per line max.
+When working with wide monitors it's quite common to get a feeling of **too wide** of a wall of text when editing. Maxing the editor on a 4k screen can really overwhelm the user with too much text. Studies show that there's an optimal width for reading text which is generally somewhere around 120 characters per line max.
 
 Markdown Monster lets you configure how wide is too wide, or lets you go full bore if want to take in all the text you can get at once.
 
