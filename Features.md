@@ -1,4 +1,4 @@
-﻿This section highlights many of Markdown Monster's features and several common usage scenarios.
+This section highlights many of Markdown Monster's features and several common usage scenarios.
 
 {{ Helpers.ChildTopicsList() }}
 

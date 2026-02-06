@@ -1,4 +1,4 @@
-﻿When rendering documents in the Preview for documents that eventually end up on a Web Site, you often end up with **site relative links** that use a site relative root path that starts with `/`.
+When rendering documents in the Preview for documents that eventually end up on a Web Site, you often end up with **site relative links** that use a site relative root path that starts with `/`.
 
 For example if you have images with links like this on a Web site:
 
@@ -13,8 +13,11 @@ Site Root Paths are important for a couple of reasons:
 * **Preview Root Folder Location**  
 This allows the Previewer to use the Site Root Path as the `basePath` in the rendered HTML document. All links are then rendered relative to this base path. This effectively mimics the behavior of a Web site root folder even if that location is not running as a Web site.
 
-* **Relative Paths for Link and File Embedding**
+* **Relative Paths for Link and File Embedding**  
 This allows you to link or save files in a local folder location that can be resolved as a relative path to the Preview Root Path specified so that `/images` can resolve cleanly. It also ensures that `../` links are only followed up to the Root Path and don't embed crazy link `../../../` folder chains.
+
+* **Search and Discovery Features**  
+Some file search and discovery features look for the project base path to start their file lookups from. For example, the Command Palette Matching Files section uses this folder as a base for looking for file matches.
 
 > #### @icon-warning Avoid Absolute File Paths
 > Ideally you should **never** link a file using an absolute path as that only works on your local machine. Ideally everything should be linked as either a document relative path, or a 'site' relative path where `/` is a known root path location.

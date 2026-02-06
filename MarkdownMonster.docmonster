@@ -164,6 +164,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 100,
+      "isExpanded": true,
       "updated": "2025-09-19T11:23:14.3222431-10:00",
       "helpId": "356",
       "classInfo": {
@@ -228,7 +229,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 130,
-          "updated": "2025-06-02T11:01:54.0564455-10:00",
+          "updated": "2026-02-06T13:16:52.0079565-10:00",
           "helpId": "1965",
           "classInfo": {
             "assembly": "",
@@ -980,7 +981,7 @@
       "example": "",
       "sortOrder": 70,
       "isExpanded": true,
-      "updated": "2025-11-19T23:19:48.4458148-10:00",
+      "updated": "2026-02-04T11:16:25.3438383-10:00",
       "helpId": "2972",
       "classInfo": {
         "assembly": "",
@@ -2055,7 +2056,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 30,
-          "updated": "2025-05-15T08:37:42.082393-10:00",
+          "updated": "2026-02-05T14:42:32.7545405-10:00",
           "helpId": "8936",
           "classInfo": {
             "assembly": "",
