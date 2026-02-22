@@ -15,7 +15,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 110,
-      "updated": "2026-01-10T13:53:56.7524067-10:00",
+      "updated": "2026-02-16T18:50:47.3944344-10:00",
       "helpId": "2",
       "classInfo": {
         "assembly": "",
@@ -101,7 +101,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 20,
-          "updated": "2025-10-28T13:12:15.2418762-10:00",
+          "updated": "2026-02-21T19:13:22.1480861-10:00",
           "helpId": "375",
           "classInfo": {
             "assembly": "",
@@ -164,8 +164,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 100,
-      "isExpanded": true,
-      "updated": "2025-09-19T11:23:14.3222431-10:00",
+      "updated": "2026-02-15T22:58:38.4023005-10:00",
       "helpId": "356",
       "classInfo": {
         "assembly": "",
@@ -958,7 +957,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 5,
-          "updated": "2025-05-27T08:46:56.9543016-10:00",
+          "updated": "2026-02-20T13:07:12.796635-10:00",
           "helpId": "6637",
           "classInfo": {
             "assembly": "",
@@ -980,7 +979,6 @@
       "remarks": "",
       "example": "",
       "sortOrder": 70,
-      "isExpanded": true,
       "updated": "2026-02-04T11:16:25.3438383-10:00",
       "helpId": "2972",
       "classInfo": {
@@ -1396,7 +1394,6 @@
       "remarks": "",
       "example": "",
       "sortOrder": 60,
-      "isExpanded": true,
       "updated": "2025-06-24T06:46:59.5459845-10:00",
       "helpId": "16445",
       "classInfo": {
@@ -1418,7 +1415,6 @@
           "remarks": "",
           "example": "",
           "sortOrder": 10,
-          "isExpanded": true,
           "updated": "2025-06-23T18:45:27.6401186-10:00",
           "helpId": "4",
           "classInfo": {
@@ -1929,7 +1925,6 @@
       "remarks": "",
       "example": "",
       "sortOrder": 30,
-      "isExpanded": true,
       "updated": "2025-09-17T07:52:34.6588531-10:00",
       "helpId": "6638",
       "classInfo": {
@@ -2162,7 +2157,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 110,
-          "updated": "2025-12-14T13:47:40.5127443-10:00",
+          "updated": "2026-02-21T21:58:56.7563889-10:00",
           "helpId": "11",
           "classInfo": {
             "assembly": "",
@@ -2352,7 +2347,6 @@
           "remarks": "",
           "example": "",
           "sortOrder": 20,
-          "isExpanded": true,
           "updated": "2025-02-23T14:15:27.0727522-10:00",
           "helpId": "4097",
           "classInfo": {

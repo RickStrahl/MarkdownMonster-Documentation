@@ -1,22 +1,3 @@
-﻿<script>
-MathJax = {
-  startup: {
-    ready: function () {
-      MathJax.startup.defaultReady();
-      const toMML = MathJax.startup.toMML;      
-      MathJax.startup.output.postFilters.add((args) => {
-        const math = args.math, node = args.data;
-        const original = (math.math ? math.math :
-                          math.inputJax.processStrings ? '' : math.start.node.outerHTML);
-        node.setAttribute('data-original', original);
-        node.setAttribute('data-mathml', toMML(math.root).replace(/\n\s*/g, ''));
-      });
-    }
-  }
-};
-</script> 
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
 Math equations can be rendered in Markdown Monster and the generated HTML by using a Math processing library that is either added to the page, or to the Preview Template or your deployed site.
 
 There are a number of libraries available and we use <a href="https://mathjax.org" target="top">MathJax</a> as an example in this topic. The output of the example below look like this:
@@ -186,7 +167,9 @@ In order for this to work you have to turn on `"AllowRenderScriptTags": true` in
 
 
 ## Java Script To Execute Math Expressions
-Markdown Monster automatically injects script into the preview HTML page to allow rendering of Math expressions and if you plan on using the output produced from this content you'll need to use these same libraries and startup code in your page(s).
+Markdown Monster automatically injects script into the preview HTML page to allow rendering of Math expressions and if you plan on using the output produced from this content you'll need to use these same libraries and startup code in your page(s) unless your server platform supports MathMl itself.
+
+Here's the code that MM uses to enable Math rendering:
 
 ```html
 <script>
@@ -205,7 +188,9 @@ MathJax = {
     }
   }
 };
-// refresh when the document is refreshed via code
+// OPTIONAL -  refresh when the document is refreshed via code
+// this will differ for your environment or may not
+// be necessary if you don't update page content dynamically
 document.addEventListener('previewUpdated',function() {
    setTimeout(function() {
      MathJax.typeset(); 

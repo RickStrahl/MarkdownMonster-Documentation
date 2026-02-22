@@ -1,4 +1,4 @@
-﻿Markdown Monster allows you to add and extend functionality by using an Addin. With an addin you get access to the core features of Markdown Monster and you can:
+Markdown Monster allows you to add and extend functionality by using an Addin. With an addin you get access to the core features of Markdown Monster and you can:
 
 * Retrieve and set the active document text
 * Insert text at the active selection
