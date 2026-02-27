@@ -164,7 +164,8 @@
       "remarks": "",
       "example": "",
       "sortOrder": 100,
-      "updated": "2026-02-15T22:58:38.4023005-10:00",
+      "isExpanded": true,
+      "updated": "2026-02-23T10:57:49.1300258-10:00",
       "helpId": "356",
       "classInfo": {
         "assembly": "",
@@ -272,7 +273,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 120,
-          "updated": "2025-05-27T08:45:05.6169837-10:00",
+          "updated": "2026-02-23T23:01:38.726082-10:00",
           "helpId": "360",
           "classInfo": {
             "assembly": "",
@@ -494,7 +495,7 @@
         {
           "id": "_cmujr2d84a",
           "parentId": "_4RD0XIGYS",
-          "title": "Voice Dictation (preview)",
+          "title": "Voice Dictation",
           "slug": "Features/Voice-Dictation",
           "link": "Features/Voice-Dictation.md",
           "displayType": "topic",
@@ -517,6 +518,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 90,
+      "isExpanded": true,
       "updated": "2026-01-14T16:57:23.681038-10:00",
       "helpId": "16915",
       "classInfo": {
@@ -600,7 +602,7 @@
           "displayType": "topic",
           "type": "markdown",
           "sortOrder": 20,
-          "updated": "2025-06-23T16:06:53.3938555-10:00",
+          "updated": "2026-02-27T13:02:06.921713-10:00",
           "classInfo": {}
         },
         {
@@ -979,6 +981,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 70,
+      "isExpanded": true,
       "updated": "2026-02-04T11:16:25.3438383-10:00",
       "helpId": "2972",
       "classInfo": {
@@ -2114,7 +2117,6 @@
       "remarks": "",
       "example": "",
       "sortOrder": 20,
-      "isExpanded": true,
       "updated": "2025-12-17T13:52:49.1321068-10:00",
       "helpId": "3",
       "classInfo": {
@@ -2157,7 +2159,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 110,
-          "updated": "2026-02-21T21:58:56.7563889-10:00",
+          "updated": "2026-02-21T21:58:56.7621161-10:00",
           "helpId": "11",
           "classInfo": {
             "assembly": "",

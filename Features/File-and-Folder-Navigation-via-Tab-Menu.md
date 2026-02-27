@@ -1,4 +1,4 @@
-﻿The **Tab context menu** and also the **Tools menu** provides a number of useful options for working in the active document's folder and accessing the theme and configuration folders.
+The **Tab context menu** and also the **Tools menu** provides a number of useful options for working in the active document's folder and accessing the theme and configuration folders.
 
 Here's what the tab context menu looks like:
 
