@@ -80,7 +80,7 @@
           "example": "",
           "isLink": true,
           "sortOrder": 30,
-          "updated": "2025-06-26T12:50:49.1697677-10:00",
+          "updated": "2026-03-04T17:21:42.3609921-10:00",
           "helpId": "367",
           "classInfo": {
             "assembly": "",
@@ -187,7 +187,7 @@
           "example": "",
           "sortOrder": 150,
           "isExpanded": true,
-          "updated": "2026-01-20T14:19:12.778402-10:00",
+          "updated": "2026-03-04T17:46:12.3957175-10:00",
           "helpId": "349",
           "classInfo": {
             "assembly": "",
@@ -229,6 +229,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 130,
+          "isExpanded": true,
           "updated": "2026-02-06T14:25:01.7454517-10:00",
           "helpId": "1965",
           "classInfo": {
@@ -2436,6 +2437,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 10,
+      "isExpanded": true,
       "updated": "2025-09-17T07:49:16.4539442-10:00",
       "helpId": "369",
       "classInfo": {

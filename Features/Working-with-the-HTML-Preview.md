@@ -1,7 +1,22 @@
-Markdown Monster's Preview Pane shows you what your markdown text looks like when rendered to HTML in close to real time while you are entering text.
+Markdown Monster's Preview Pane displays your markdown text rendered as Html in close to real time while you are entering text, or when you click or scroll the editor. 
 
-**The preview is updated whenever you briefly stop typing.**
+The editor also syncs the previewer position  that corresponds to the current editor position and highlights the current paragraph, header or section.
 
+> **The previewer is updated whenever you briefly stop typing and highlights and repositions to the active rendered Html section.**
+
+## Preview Position Syncing
+The editor syncs the preview with updated text when you're typing or pasting etc., and also attempts - as best as possible - to sync the cursor position to the rendered output in the preview.  
+   
+Editing or selecting text automatically highlights the current paragraph/section in the preview and at the same preview position whenever possible.
+   
+When scrolling the editor, the preview **aligns to the top of the document**, with the preview positioning itself to the rendered section that matches the editor's first visible section.
+
+> #### @icon-info-circle Preview Sync is not Perfect
+> Please keep in mind that preview positioning is not an exact science as the editor and Html output don't line up 1 to 1. Although generally the preview reflects the current context and position, there are occasions where the preview maybe off slightly or where matching content is just off the top or bottom the page.  
+> 
+> Specifically, large blocks of code, tables or large images can result in content not syncing exactly.
+
+## Preview Operations
 The editor has a few special operations that affect the way the preview pane is handled:
 
 * [Preview Toggling](#preview-toggling): On or off
