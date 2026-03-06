@@ -2,7 +2,10 @@ Markdown Monster's Preview Pane displays your markdown text rendered as Html in 
 
 The editor also syncs the previewer position  that corresponds to the current editor position and highlights the current paragraph, header or section.
 
-> **The previewer is updated whenever you briefly stop typing and highlights and repositions to the active rendered Html section.**
+> **The previewer is updated whenever you briefly stop typing and highlights and repositions to the active rendered Html section. You can also force a refresh immediately by pressing `ctrl`.**
+
+![Preview Sync in Markdown Monster](https://github.com/RickStrahl/ImageDrop/blob/master/MarkdownMonster/PreviewSync.gif?raw=true)  
+<small>**Figure 1** - Preview to Editor Syncing in Markdown Monster</small>
 
 ## Preview Position Syncing
 The editor syncs the preview with updated text when you're typing or pasting etc., and also attempts - as best as possible - to sync the cursor position to the rendered output in the preview.  
@@ -43,6 +46,9 @@ By default the preview Window can be **internal** inside of the main Markdown Mo
 
 ![](/images/ScreenShot.png)
 
+
+<small>**Figure 2** - The internal preview window is part of the main window</small>
+
 Optionally you can also use an **external window** for the preview:
 
 ![External Preview](/images/externalpreview.png)
@@ -55,7 +61,9 @@ The external window can be **Docked to the main Markdown Monster Window** *(as s
 
 Using an external window can be useful to put the Preview output onto a separate screen.
 
-![External Preview Window](https://github.com/RickStrahl/ImageDrop/raw/master/MarkdownMonster/ExternalPreviewWindow.gif)
+![External Preview Window](https://github.com/RickStrahl/ImageDrop/raw/master/MarkdownMonster/ExternalPreviewWindow.gif)  
+
+<small>**Figure 3** - The detached preview window can either be docked to the main window or float freely including to another monitor</small>
 
 To switch between modes use:
 
@@ -82,7 +90,9 @@ To this effect there are 5 Preview Sync Mode options:
 
 The setting can be configured in **File -> Tools -> Settings** with the `PreviewSyncMode` property or by using the rightmost statusbar icon dropdown:
 
-![](/images/PreviewModeSelection.png)
+![](/images/PreviewModeSelection.png)  
+
+<small>**Figure 4** - Selecting the preview sync mode from the status bar dropdown</small>
 
 > #### @icon-warning EditorAndPreview Sync Mismatches
 > When you use preview mode **EditorAndPreview** you may find that occasionally the preview or editor won't line up properly. This can happen when working with large images or code blocks (or any other non-text objects) when the previewer can't find an appropriate element to sync to. 
