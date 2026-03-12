@@ -4,7 +4,7 @@ The editor also syncs the previewer position  that corresponds to the current ed
 
 > **The previewer is updated whenever you briefly stop typing and highlights and repositions to the active rendered Html section. You can also force a refresh immediately by pressing `ctrl`.**
 
-![Preview Sync in Markdown Monster](https://github.com/RickStrahl/ImageDrop/blob/master/MarkdownMonster/PreviewSync.gif?raw=true)  
+![Preview Sync in Markdown Monster](https://raw.githubusercontent.com/RickStrahl/ImageDrop/refs/heads/master/MarkdownMonster/PreviewSync.gif)  
 <small>**Figure 1** - Preview to Editor Syncing in Markdown Monster</small>
 
 ## Preview Position Syncing
