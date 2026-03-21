@@ -4,7 +4,8 @@ The editor also syncs the previewer position  that corresponds to the current ed
 
 > **The previewer is updated whenever you briefly stop typing and highlights and repositions to the active rendered Html section. You can also force a refresh immediately by pressing `ctrl`.**
 
-![Preview Sync in Markdown Monster](https://raw.githubusercontent.com/RickStrahl/ImageDrop/refs/heads/master/MarkdownMonster/PreviewSync.gif)  
+![Preview Sync in Markdown Monster](https://raw.githubusercontent.com/RickStrahl/ImageDrop/refs/heads/master/MarkdownMonster/PreviewSync.gif)
+
 <small>**Figure 1** - Preview to Editor Syncing in Markdown Monster</small>
 
 ## Preview Position Syncing
@@ -18,6 +19,7 @@ When scrolling the editor, the preview **aligns to the top of the document**, wi
 > Please keep in mind that preview positioning is not an exact science as the editor and Html output don't line up 1 to 1. Although generally the preview reflects the current context and position, there are occasions where the preview maybe off slightly or where matching content is just off the top or bottom the page.  
 > 
 > Specifically, large blocks of code, tables or large images can result in content not syncing exactly.
+
 
 ## Preview Operations
 The editor has a few special operations that affect the way the preview pane is handled:
@@ -61,7 +63,7 @@ The external window can be **Docked to the main Markdown Monster Window** *(as s
 
 Using an external window can be useful to put the Preview output onto a separate screen.
 
-![External Preview Window](https://github.com/RickStrahl/ImageDrop/raw/master/MarkdownMonster/ExternalPreviewWindow.gif)  
+![External Preview Window](https://raw.githubusercontent.com/RickStrahl/ImageDrop/refs/heads/master/MarkdownMonster/ExternalPreviewWindow.gif)  
 
 <small>**Figure 3** - The detached preview window can either be docked to the main window or float freely including to another monitor</small>
 
@@ -95,7 +97,7 @@ The setting can be configured in **File -> Tools -> Settings** with the `Preview
 <small>**Figure 4** - Selecting the preview sync mode from the status bar dropdown</small>
 
 > #### @icon-warning EditorAndPreview Sync Mismatches
-> When you use preview mode **EditorAndPreview** you may find that occasionally the preview or editor won't line up properly. This can happen when working with large images or code blocks (or any other non-text objects) when the previewer can't find an appropriate element to sync to. 
+> When you use preview mode **EditorAndPreview** you may find that occasionally the preview or editor won't line up properly. This can happen when w orking with large images or code blocks (or any other non-text objects) when the previewer can't find an appropriate element to sync to. 
 >
 > For most common scenarios this isn't a big problem, but if you run into frequently you might be better off to use  **EditorToPreview** sync mode rather than  on **EditorAndPreview**. You can still scroll the preview by scrolling the editor achieving a similar, but more consistent sync experience.
 

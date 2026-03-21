@@ -2,7 +2,7 @@
     Script.Layout = "_layout.html";
 }}
 <h1 class="content-title">
-    <img src="~/_docmonster/icons/{{Topic.DisplayType}}.png">    
+    <img src="~/_docmonster/icons/{{Topic.DisplayType}}.png">
     {{Topic.Title }}
 </h1>
 
@@ -41,7 +41,7 @@
 {{% if(!string.IsNullOrEmpty(Topic.Example))  { }}
     <h3 class="outdent" id="example">Example</h3>
     {{ Helpers.Markdown(Topic.Example) }}
-{{% } }} 
+{{% } }}
 
 
 {{% if (!string.IsNullOrEmpty(Model.Topic.SeeAlso)) { }}

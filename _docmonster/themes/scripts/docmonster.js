@@ -52,7 +52,10 @@ var helpBuilder = null;
 	                return false; // stop navigation
 	            } 
 	        })
-            .on("dblclick", "img", function() {                
+            .on("dblclick", "img", function() {
+                if ( $(this).parents("a").length > 0)
+                   return;
+
                 var href = $(this).attr("src");
                 window.open(href);
             });

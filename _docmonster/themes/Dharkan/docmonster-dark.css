@@ -1,12 +1,12 @@
 html, body {
     color: #eee;
     background: #292929;
-} 
+}
 h1,h2,h3,h4,h5,h6, .byline,.content-title {
   color: #89a6b9;
 }
-code {
 
+code {
     background: #393939;
     color: #ddd;
 }
@@ -16,8 +16,8 @@ code {
     border: 1px solid #3f3f3f;
 }
 blockquote {
-    background: #383838;    
-    border-left: 0.65em #3b5572 solid;    
+    background: #383838;
+    border-left: 0.65em #3b5572 solid;
 }
 blockquote code { background: #292929}
 table th {
@@ -44,7 +44,7 @@ table tr:nth-child(even) {
 .content-body a:hover, a:hover {
     color: #89c8fb;
 }
-.banner {    
+.banner {
     background: #333;
 }
 .content-title {

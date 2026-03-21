@@ -1,0 +1,44 @@
+{{%    
+    Script.Layout = "_layout.html";
+    var isCompilerError = Model.TemplateError.Message?.Contains(" CS") ?? false;
+}}
+
+<style>
+pre {
+    border: none;
+    ;
+}
+</style>
+
+<h2 class="content-title">
+    <i class="fa-solid fa-warning text-danger" style="font-size: 1.5em"></i>
+    Template Execution Error
+</h2>
+
+<div class="content-body" id="body">
+    <small>
+        {{ Model.TemplateError.TemplateFile }}
+    </small>
+
+ {{% if(isCompilerError) { }} 
+    <h4>Compiler Errors</h4>
+    {{! HtmlUtils.DisplayMemo(Model.TemplateError.Message) }}
+{{% } else { }}
+    <h4>Execution Error</h4>
+    <b>{{ HtmlUtils.DisplayMemo(Model.TemplateError.Message) }}</b>
+{{% } }}
+
+{{% if(Model.Topic.TopicState.TopicRenderMode == TopicRenderModes.Preview) { }}
+
+    {{% if(isCompilerError) { }}
+        <h4>Generated Template Code</h4>
+        <pre>{{ Model.TemplateError.GeneratedCode }}</pre>
+    {{% } else if(Model.TemplateError.Exception?.StackTrace != null) { }}
+        <h4>Exception Stack Trace</h4>
+        <p style="white-space: pre">{{ StringUtils.GetLines(Model.TemplateError.Exception?.StackTrace, 1).FirstOrDefault() }}</p>    
+
+        <pre>{{ Model.TemplateError.GeneratedCode }}</pre>
+    {{% } }}
+
+{{% } }}
+</div>

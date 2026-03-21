@@ -2,7 +2,7 @@
     Script.Layout = "_layout.html";
 }}
 <h2 class="content-title">
-    <img src="~/_docmonster/icons/{{Topic.DisplayType}}.png">    
+    <img src="~/_docmonster/icons/{{Topic.DisplayType}}.png">
     {{Topic.Title }}
 </h2>
 
@@ -25,7 +25,8 @@
 {{% } }}
 
 {{% if(!string.IsNullOrEmpty(Topic.ClassInfo.Exceptions)) { }}
-	{{ HtmlUtils.DisplayMemo(Topic.ClassInfo.Exceptions) }}
+    <h3 class="outdent" id="exceptions">Exceptions</h3>
+	{{ Helpers.Markdown(Topic.ClassInfo.Exceptions) }}
 {{% } }}
 
 {{% if(!string.IsNullOrEmpty(Topic.Remarks))  { }}

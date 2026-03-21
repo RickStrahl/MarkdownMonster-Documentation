@@ -4,12 +4,13 @@ var te = window.previewer = {
   mmEditorAsync: null,   // WebViewPreviewer
   isPreviewEditorSync: false,
   highlightTimeout: 1800,
+  codeScrolledTimeout: 500,
   codeScrolled: new Date().getTime() + 2500,
   setCodeScrolled: function() {
     te.codeScrolled = new Date().getTime();
   },
   isCodeScrolled: function() {
-    var t = new Date().getTime() - 400;
+    var t = new Date().getTime() - 500;
     return te.codeScrolled > t ? true : false;
   },
   // all dotnet calls go through this class
@@ -47,7 +48,7 @@ var te = window.previewer = {
         if (!editor)
             return false;
         try {
-            var handled = await editor.PreviewLinkNavigationAsync(url, rawHref);            
+            var handled = await editor.PreviewLinkNavigationAsync(url, rawHref);
             return handled;
         } catch (ex) { return false; }
     },
@@ -80,15 +81,25 @@ var te = window.previewer = {
         editor.GotoLine(line, updateEditor || false);
       } catch (ex) {}
     },
-    isPreviewEditorToSync: function() {
-      var editor = te.dotnetInterop.getEditorSync();
+    // Preview->editor sync: scrolls the line to the TOP of the
+    // editor viewport so the editor top matches the preview top.
+    gotoSynchedLine: function(line) {
+      let editor = te.dotnetInterop.getEditor();
       if (!editor)
-        return false;
-
+        return;
       try {
-        te.isPreviewEditorSync = editor.IsPreviewToEditorSync();
-        return te.isPreviewEditorSync;
-      } catch(ex) { return false; }
+        editor.GotoSynchedLine(line);
+      } catch (ex) {}
+    },      
+    isPreviewEditorToSync: function (force) {                    
+          var editor = te.dotnetInterop.getEditorSync();
+          if (!editor)
+            return false;
+
+          try {
+            te.isPreviewEditorSync = editor.IsPreviewToEditorSync();
+            return te.isPreviewEditorSync;
+          } catch(ex) { return false; }
     }
   }
 
@@ -124,37 +135,51 @@ function initializeinterop(editor) {
 
 
 $(document).ready(function () {
+    highlightCode();
+
+
+    $(document).on("dblclick", "#MainContent img", function (e) {
+        let target = e.target;
+        if ($(target).parents("a").length > 0)
+            return;
+
+        window.open(target.src);
+        e.preventDefault();
+        return true;
+
+    });
 
     // navigate all links externally in default browser
-    document.addEventListener("click", async function (e) {        
+    document.addEventListener("click", async function (e) {
         let target = e.target;
 
-        // link with nested image
-        if (target.nodeName == "IMG" && e.target.parentNode?.nodeName === "A")
+        // link with nested imag
+        if (target.nodeName == "IMG" && e.target.parentNode?.nodeName === "A" ||
+            target.nodeName != "A" && target.parentNode?.nodeName === "A")
             target = e.target.parentNode;
-        // ignore any non-links            
+        // ignore any non-links
         else if (target.nodeName != "A")
-            return;
+            return true; // continue
 
         const el = target;
         const url = el.href;                // fixed up url
         const rawHref = el.attributes["href"].value;
         if (!rawHref) return false;
 
-        // pure hash navigation                
+        // pure hash navigation
         if (rawHref[0] == "#") {
             e.preventDefault();
             navigateHash(el.hash);
             return false;
         }
 
-        if (!te.mmEditor) return;
+        if (!te.mmEditor) return true;
 
         e.preventDefault();
 
         // TODO: WebView bug: ALWAYS return true regardless of type or return value
         const handled = await te.dotnetInterop.previewLinkNavigationAsync(url, rawHref);
-        
+
         // If we opened a document with a hash
         // navigate to the hash location in the new document
         if (!handled && el.hash) {
@@ -165,9 +190,9 @@ $(document).ready(function () {
         // handled nav didn't work - navigate actual url explicitly
         if (handled === false)
            window.location.href = url;
-        
+
         return false;
-    });  
+    });
     function navigateHash(hash) {
         hash = decodeURIComponent(hash).substring(1);
         const safeHash = CSS.escape(hash);
@@ -207,7 +232,7 @@ $(document).on("contextmenu",
         }
 
         var sel = window.getSelection();
-        if (sel) {            
+        if (sel) {
             parm.TextSelection = sel.toString();
             if (!parm.TextSelection && parm.type == "Range")
                 parm.TextSelection = "SELECTION-NOT-TEXT";
@@ -222,339 +247,357 @@ $(document).on("contextmenu",
         return true;
     });
 
-// window.ondrop = function (event) {
-//     // don't allow dropping here - we can't get full file info
-//     event.preventDefault();
-//     event.stopPropagation();
+window.ondrop = function (event) {
+    // don't allow dropping here - we can't get full file info
+    event.preventDefault();
+    event.stopPropagation();
 
-//     setTimeout(function () {
-//         alert("To open dropped files in Markdown Monster, please drop files onto the header area of the window.");
-//     }, 50);
-// }
+    setTimeout(function () {
+        alert("To open dropped files in Markdown Monster, please drop files onto the header area of the window.");
+    }, 50);
+}
 
-// window.ondragover = function (event) {
-//     event.preventDefault();
-//     return false;
-// }
+window.ondragover = function (event) {
+    event.preventDefault();
+    return false;
+}
 
+// Handle Scroll Detection manual vs. programmatic scroll
+var lastUserInput = 0;
+function markUserInput() {
+    lastUserInput = performance.now();
+    console.log("Last User INput set: " + lastUserInput);
+}
+window.addEventListener('wheel', markUserInput, { passive: true });
+window.addEventListener('touchstart', markUserInput, { passive: true });
+window.addEventListener('mousedown', markUserInput);
+window.addEventListener('keydown', markUserInput);
 
 
 // scroll editor to the scroll position of the preview
-// var scroll = debounce(function (event) {
-    
-//     te.isPreviewEditorSync = te.dotnetInterop.isPreviewEditorToSync();  // force check in real time to get updated state
-//     if (!te.mmEditor || !te.isPreviewEditorSync) return;
+var scroll = debounce(function (event) {    
+    if (!te.mmEditor || !te.isPreviewEditorSync) return;
 
-//     // prevent repositioning editor scroll sync
-//     // when selecting line in editor (w/ two way sync)
-//     // te.codeScrolled is set in scrollToPragmaLines so that we don't
-//     // re-navigate
-//     var isScrolled = te.isCodeScrolled();
-//     if (isScrolled)
-//       return;
+    const isUserScroll = (performance.now() - lastUserInput) < 800;
+    console.log(isUserScroll, performance.now() - lastUserInput, performance.now(), lastUserInput);
+    if (!isUserScroll) {
+        console.log('scroll event NO, isUserScroll: ' + isUserScroll); 
+        return;
+    }
+    console.log('scroll event, isUserScroll: ' + isUserScroll); 
+                    
+    // prevent repositioning editor scroll sync
+    // when selecting line in editor (w/ two way sync)
+    // te.codeScrolled is set in scrollToPragmaLines so that we don't
+    // re-navigate
+    var isScrolled = te.isCodeScrolled();
+    if (isScrolled)
+      return;
 
-//     var st = window.document.documentElement.scrollTop;
-//     var sh = window.document.documentElement.scrollHeight - window.document.documentElement.clientHeight;
+    var el = document.getElementById("MainContent");
+    var st = el.scrollTop;
+    var sh = el.scrollHeight - el.clientHeight;
+    var clientHeight = el.clientHeight;
 
-//     if (st < 3) {
-//       te.dotnetInterop.gotoLine(0, true);
-//       return;
-//     }
-//     //// if we're on the last page
-//     if (sh === st) {
-//       te.dotnetInterop.gotoBottom(true, true);
-//       return;
-//     }
+    // Determine scroll direction
+    var scrollingDown = st > lastScrollTop;
+    lastScrollTop = st;
 
-//     var winTop = st + 100;
+    if (st < 3) {
+      te.dotnetInterop.gotoLine(0, true);
+      return;
+    }
+    if (sh - st < 3) {
+      te.dotnetInterop.gotoBottom(true, true);
+      return;
+    }
+
+    var $lines = $("[id*='pragma-line-']");
+    if ($lines.length < 1)
+        return;
+
+    // Compute offset of an element relative to the scrollable container
+    // by walking up the offsetParent chain — reliable regardless of layout/transforms
+    function getOffsetTop(element, container) {
+        var offset = 0;
+        var node = element;
+        while (node && node !== container) {
+            offset += node.offsetTop;
+            node = node.offsetParent;
+        }
+        return offset;
+    }
+
+    // Visible area within the container: [st + topPadding .. st + clientHeight - bottomPadding]
+    var topPadding = 100; // account for fixed header and some extra padding to avoid jitter
+    var bottomPadding = 40;
+    var visibleTop = st + topPadding;
+    var visibleBottom = st + clientHeight - bottomPadding;
+
+    // Always find the topmost visible pragma line — the editor API
+    // scrolls the target line to the top of the editor viewport,
+    // so anchoring on the top element keeps both views aligned.
+    var id = null;
+    for (var i = 0; i < $lines.length; i++) {
+        var elTop = getOffsetTop($lines[i], el);
+        var elBottom = elTop + $lines[i].offsetHeight;
+        // First element at least partially visible in the padded band
+        if (elBottom >= visibleTop && elTop <= visibleBottom) {
+            id = $lines[i].id;
+            break;
+        }
+    }
+
+    if (!id)
+        return;
+
+    id = id.replace("pragma-line-", "");
+    var line = parseInt(id, 10);
+
+    te.dotnetInterop.gotoSynchedLine(line, true);
+},50);
+setTimeout(()=> window.addEventListener('scroll', scroll), 200);
+
+function highlightCode(lineno) {
+
+    var pres = document.querySelectorAll("pre>code");
+
+    // Try to find lineno in doc - if lineno is passed
+    // and render only those plus padding above and below
+    var linePos = 0;
 
 
-//     var $lines = $("[id*='pragma-line-']");
+    // special handling for more than 200 code blocks
+    // render only  what's in the viewport
+    if (lineno && pres.length > 200) {
+        var $el = $("#pragma-line-" + lineno);
+        if ($el.length < 1) {
+            for (var j = 0; j < 10; j++) {
+                if (lineno - j < 0)
+                    break;
+                var $el = $("#pragma-line-" + (lineno - j) );
+                if ($el.length > 0)
+                    break;
+            }
+            if ($el.length < 1) {
+                for (var k = 0; k < 10; k++) {
+                    var $el = $("#pragma-line-" + (lineno + k) );
+                    if ($el.length > 0)
+                        break;
+                }
+            }
+        }
+        if ($el.length > 0) {
+            linePos = $el.position().top;
+        }
+    }
 
-//     if ($lines.length < 1)
-//         return;
+    for (var i = 0; i < pres.length; i++) {
+        var block = pres[i];
+        var $code = $(block);
 
-//     // find the first line that is below the scrolltop+ position
-//     var id = null;
-//     for (var i = 0; i < $lines.length; i++) {
+        //console.log(block.classList.toString());
 
-//         if ($($lines[i]).position().top >= winTop) {
-//             id = $lines[i].id;
-//             break;
-//         }
-//     }
-//     if (!id)
-//         return;
+        // too many code blocks to render or text/plain styles - just style
+        if ((pres.length > 400) ||
+            $code.hasClass("language-text") ||
+            $code.hasClass("language-plain")) {
+                $code.addClass("hljs");
+                continue;
 
-//     id = id.replace("pragma-line-", "");
+        }
 
-//     var line = (id * 1) - 4;
+        // render only matched lines that are in viewport + padding
+        if (linePos > 0) {
+            var top = $code.position().top;
 
-//     te.dotnetInterop.gotoLine(line, true);
-// },50);
-// window.onscroll = scroll;
+            if (top < linePos - 2000) {
+                //console.log("Skipping smaller: " + top, linePos);
+                //$code.addClass("hljs");
+                continue;
+            }
+            if (top > linePos + 2000) {
+                //console.log("Breaking larger: " + top, linePos);
+                //$code.addClass("hljs");
+                break;
+            }
+        }
+        // no language specified - don't render'
+        if (block.classList.toString().indexOf("language-") < 0) {
+            $code.addClass("hljs");
+            continue;
+        }
 
-// function highlightCode(lineno) {
+        hljs.highlightBlock(block);
+    }
 
-//     var pres = document.querySelectorAll("pre>code");
+    // add the code snippet syntax and code copying
 
-//     // Try to find lineno in doc - if lineno is passed
-//     // and render only those plus padding above and below
-//     var linePos = 0;
+    if (window.highlightJsBadge)
+        window.highlightJsBadge();
+}
 
+function updateDocumentContent(html, lineno) {
 
-//     // special handling for more than 200 code blocks
-//     // render only  what's in the viewport
-//     if (lineno && pres.length > 200) {
-//         var $el = $("#pragma-line-" + lineno);
-//         if ($el.length < 1) {
-//             for (var j = 0; j < 10; j++) {
-//                 if (lineno - j < 0)
-//                     break;
-//                 var $el = $("#pragma-line-" + (lineno - j) );
-//                 if ($el.length > 0)
-//                     break;
-//             }
-//             if ($el.length < 1) {
-//                 for (var k = 0; k < 10; k++) {
-//                     var $el = $("#pragma-line-" + (lineno + k) );
-//                     if ($el.length > 0)
-//                         break;
-//                 }
-//             }
-//         }
-//         if ($el.length > 0) {
-//             linePos = $el.position().top;
-//         }
-//     }
+    window.requestAnimationFrame(()=> {
+        // special check for Mermaid script - force reload doc if not in doc
+        if (html.indexOf("class=\"mermaid\"") > -1) {
+            const el = document.getElementById("MermaidScript");
+            if (!el) {
+                window.location.reload();
+                return;
+            }
+        }
+        // special check for MathJax script - force reload doc if not in doc
+        if (html.indexOf("class=\"math\"") > -1) {
+            const el = document.getElementById("MathJax-script");
+            if (!el) {
+                window.location.reload();
+                return;
+            }
+        }
 
-//     for (var i = 0; i < pres.length; i++) {
-//         var block = pres[i];
-//         var $code = $(block);
+        var match = html.match(/<!-- Rendered Content -->(.*?)<!-- End Rendered Content -->/s);
+        if (match && match.length > 1)
+            html = match[1];
 
-//         //console.log(block.classList.toString());
+        const el = document.getElementById("MainContent");
+        if (!el)
+            return;
 
-//         // too many code blocks to render or text/plain styles - just style
-//         if ((pres.length > 400) ||
-//             $code.hasClass("language-text") ||
-//             $code.hasClass("language-plain")) {
-//                 $code.addClass("hljs");
-//                 continue;
+        el.innerHTML = html;
+        highlightCode(lineno);
 
-//         }
-
-//         // render only matched lines that are in viewport + padding
-//         if (linePos > 0) {
-//             var top = $code.position().top;
-
-//             if (top < linePos - 2000) {
-//                 //console.log("Skipping smaller: " + top, linePos);
-//                 //$code.addClass("hljs");
-//                 continue;
-//             }
-//             if (top > linePos + 2000) {
-//                 //console.log("Breaking larger: " + top, linePos);
-//                 //$code.addClass("hljs");
-//                 break;
-//             }
-//         }
-//         // no language specified - don't render'
-//         if (block.classList.toString().indexOf("language-") < 0) {
-//             $code.addClass("hljs");
-//             continue;
-//         }
-        
-//         hljs.highlightBlock(block);
-//     }
-
-//     // add the code snippet syntax and code copying
-    
-//     if (window.highlightJsBadge)
-//         window.highlightJsBadge();
-// }
-
-function updateDocumentContent(html, lineno) {  
-  var match = html.match(/<!-- Rendered Content -->(.*?)<!-- End Rendered Content -->/s);
-  if (match && match.length > 1)
-    html = match[1];
-
-  var el = document.getElementById("MainContent");
-  if (!el)
-    return;
-
-  el.innerHTML = html;
-
-  helpBuilder.refreshDocument();
-
-  // // Raise a previewUpdated event on the document
-  // var event = new Event("previewUpdated", { bubbles: false, cancelable: true });
-  // //event.initEvent("previewUpdated", false, true);
-  // event.target = el;
-  // event.currentTarget = el;
-  // document.dispatchEvent(event);
+        // Raise a previewUpdated event on the document
+        var event = new Event("previewUpdated", { bubbles: false, cancelable: true });
+        //event.initEvent("previewUpdated", false, true);
+        event.target = el;
+        event.currentTarget = el;
+        document.dispatchEvent(event);
+    });
 }
 
 
-// function focusPreview() {
-//     document.body.focus();
-// }
-// function forcedScroll() {
-//     //alert('forced scroll here');
-// }
+function focusPreview() {
+    document.body.focus();
+}
+function forcedScroll() {
+    //alert('forced scroll here');
+}
 
 
-// function scrollToPragmaLine(lineno, headerId, noScrollTimeout, noScrollTopAdjustment)
-// {
- 
-// //    setTimeout(function() {
-//         try {
-//             var $el;
-//             if (headerId)
-//                 $el = $("#" + CSS.escape(headerId));
-//             if (!$el || $el.length < 1)
-//                 $el = $("#pragma-line-" + lineno);
-            
-//             if ($el.length < 1) {
-//                 var origLine = lineno;
-//                 for (var i = 0; i < 3; i++) {
-//                     lineno++;
-//                     $el = $("#pragma-line-" + lineno);
-//                     if ($el.length > 0)
-//                         break;
-//                 }
-//                 if ($el.length < 1) {
-//                     lineno = origLine;
-//                     for (var i = 0; i < 3; i++) {
-//                         lineno--;
-//                         $el = $("#pragma-line-" + lineno);
-//                         if ($el.length > 0)
-//                             break;
-//                     }
-//                 }
-//                 if ($el.length < 1)
-//                     return;
-//             }
-         
-//             $(".line-highlight").removeClass("line-highlight");
-//             $el.addClass("line-highlight");
-//             setTimeout(function() { $el.removeClass("line-highlight"); }, 1200);
-            
-//             $el[0].scrollIntoView({ behavior: "instant", block: "center" });
-//             $mc = $(".main-content");                
-//             $mc[0].scrollTop = $mc[0].scrollTop - 80;                        
-//         }
-//         catch(ex) {  
-            
-//         }
-// //    },20);       
-// }
 
-function scrollToPragmaLine(lineno, headerId, noScrollTimeout, noScrollTopAdjustment) {  
+
+function scrollToPragmaLine(lineno, headerId, noScrollTimeout, noScrollTopAdjustment) {
     if (typeof lineno !== "number" || lineno < 0) return;
 
-    //setTimeout(function() {    
-    let scrolled = false;
-    if (lineno < 2 && !headerId) {
-        $(document).scrollTop(0);
-        scrolled = true;
-    }
 
-    var $el;
-    if (headerId)
-        $el = $("#" + CSS.escape(headerId));
-    if (!$el || $el.length < 1)
-        $el = $("#pragma-line-" + lineno);
+    window.requestAnimationFrame(()=> {
+        if (!noScrollTimeout)
+            te.setCodeScrolled();
 
-    var lines = 10;
-    if ($el.length < 1) {
-        var origLine = lineno;
+        //setTimeout(function() {
+        let scrolled = false;
 
-        // try forwards with x lines
-        for (var i = 0; i < lines; i++) {
-            lineno--;
+        var $el;
+        if (headerId)
+            $el = $("#" + CSS.escape(headerId));
+        if (!$el || $el.length < 1)
             $el = $("#pragma-line-" + lineno);
-            if ($el.length > 0)
-                break;
-        }
 
-        // try backwards with x lines
+        var lines = 10;
         if ($el.length < 1) {
-            lineno = origLine;
+            var origLine = lineno;
 
-            // try forward with 3 lines
+            // try forwards with x lines
             for (var i = 0; i < lines; i++) {
-                lineno++;
+                lineno--;
                 $el = $("#pragma-line-" + lineno);
                 if ($el.length > 0)
                     break;
             }
+
+            // try backwards with x lines
+            if ($el.length < 1) {
+                lineno = origLine;
+
+                // try forward with 3 lines
+                for (var i = 0; i < lines; i++) {
+                    lineno++;
+                    $el = $("#pragma-line-" + lineno);
+                    if ($el.length > 0)
+                        break;
+                }
+            }
+            if ($el.length < 1)  // couldn't match anything
+                return;
         }
-        if ($el.length < 1)  // couldn't match anything
-            return;
-    }
 
-    $(".line-highlight").removeClass("line-highlight");
-    $el.addClass("line-highlight");
-    if (te.highlightTimeout > 0)
-        setTimeout(function () { $el.removeClass("line-highlight"); }, te.highlightTimeout);
+        $(".line-highlight").removeClass("line-highlight");
+        $el.addClass("line-highlight");
+        if (te.highlightTimeout > 0)
+        {
+            setTimeout(()=> { $el.removeClass("line-highlight"); }, te.highlightTimeout);
+        }
 
-    if (!scrolled && !noScrollTopAdjustment) {       
-        $el[0].scrollIntoView({ behavior: "instant", block: "center" });
-    }
-    //  }, 10);
+        if (!scrolled && !noScrollTopAdjustment) {            
+            var el = $el[0];
+            el.scrollIntoView({ behavior: "instant", block: "center" });
+        }
+    });
 }
 
-// function getScrollTop() {
+function getScrollTop() {
 
-//     var st = document.documentElement.scrollTop;
-//     if (!st)
-//         return 0;
-//     return st;
-// }
+    var st = document.documentElement.scrollTop;
+    if (!st)
+        return 0;
+    return st;
+}
 
-// function scrollToHtmlBlock(htmlText) {
-//   //te.setCodeScrolled();
+function scrollToHtmlBlock(htmlText) {
+  te.setCodeScrolled();
 
-//   if (!htmlText)
-//     return;
-//   try {
-//     // Normalize the HTML
-//     var htmlText2 = $(htmlText)[0].outerHTML;
-//     var $matched = $("#MainContent *").filter(function () {
-//       var elHtml = $(this.outerHTML)[0].outerHTML;
-//       return elHtml.startsWith(htmlText2);
-//     });
+  if (!htmlText)
+    return;
+  try {
+    // Normalize the HTML
+    var htmlText2 = $(htmlText)[0].outerHTML;
+    var $matched = $("#MainContent *").filter(function () {
+      var elHtml = $(this.outerHTML)[0].outerHTML;
+      return elHtml.startsWith(htmlText2);
+    });
 
-//     if ($matched.length > 0) {
-//       $matched[0].scrollIntoView();
-//       $matched.addClass("line-highlight");
-//       setTimeout(function () { $matched.removeClass("line-highlight"); }, te.highlightTimeout);
-//     }
-//   }
-//   catch(ex) { }
-// }
+    if ($matched.length > 0) {
+      $matched[0].scrollIntoView();
+      $matched.addClass("line-highlight");
+      setTimeout(function () { $matched.removeClass("line-highlight"); }, te.highlightTimeout);
+    }
+  }
+  catch(ex) { }
+}
 
 ///Reference: https://stackoverflow.com/a/46087348/11197
-// function getElementByTextContent(str, partial, parentNode, onlyLast) {
-//   var filter = function (elem) {
-//     var isLast = onlyLast ? !elem.children.length : true;
-//     var contains = partial ? elem.textContent.indexOf(str) > -1 :
-//       elem.textContent === str;
-//     if (isLast && contains)
-//       return NodeFilter.FILTER_ACCEPT;
-//   };
-//   filter.acceptNode = filter; // for IE
-//   var treeWalker = document.createTreeWalker(
-//     parentNode || document.documentElement,
-//     NodeFilter.SHOW_ELEMENT, {
-//       acceptNode: filter
-//     },
-//     false
-//   );
-//   var nodeList = [];
-//   while (treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
-//   return nodeList;
-// }
+function getElementByTextContent(str, partial, parentNode, onlyLast) {
+  var filter = function (elem) {
+    var isLast = onlyLast ? !elem.children.length : true;
+    var contains = partial ? elem.textContent.indexOf(str) > -1 :
+      elem.textContent === str;
+    if (isLast && contains)
+      return NodeFilter.FILTER_ACCEPT;
+  };
+  filter.acceptNode = filter; // for IE
+  var treeWalker = document.createTreeWalker(
+    parentNode || document.documentElement,
+    NodeFilter.SHOW_ELEMENT, {
+      acceptNode: filter
+    },
+    false
+  );
+  var nodeList = [];
+  while (treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
+  return nodeList;
+}
 
 function status(msg,append) {
     var $el = $("#statusmessage");
@@ -598,18 +641,18 @@ window.onerror = function windowError(message, filename, lineno, colno, error) {
     return true;
 }
 
-// function debounce(func, wait, immediate) {
-//     var timeout;
-//     return function () {
-//         var context = this, args = arguments;
-//         var later = function () {
-//             timeout = null;
-//             if (!immediate) func.apply(context, args);
-//         };
-//         var callNow = immediate && !timeout;
-//         clearTimeout(timeout);
-//         timeout = setTimeout(later, wait);
-//         if (callNow)
-//             func.apply(context, args);
-//     };
-// };
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function () {
+        var context = this, args = arguments;
+        var later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow)
+            func.apply(context, args);
+    };
+};

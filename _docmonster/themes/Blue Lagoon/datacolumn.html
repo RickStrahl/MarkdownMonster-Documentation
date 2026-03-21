@@ -2,7 +2,7 @@
     Script.Layout = "_layout.html";
 }}
 <h2 class="content-title">
-    <img src="~/_docmonster/icons/{{Topic.DisplayType}}.png">    
+    <img src="~/_docmonster/icons/{{Topic.DisplayType}}.png">
     {{Topic.Title }}
 </h2>
 
@@ -29,7 +29,7 @@
 {{%
 // Parameters are overloaded to hold Data Type Info
 if (!string.IsNullOrEmpty(Topic.ClassInfo.Parameters))
-{ }}    
+{ }}
 <h3 class="outdent" id="datatype">Data Type</h3>
 {{ Helpers.Markdown(Topic.ClassInfo.Parameters) }}
 {{% } }}

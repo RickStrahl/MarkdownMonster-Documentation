@@ -1,4 +1,4 @@
-﻿When browsing files in the Folder Browser and clicking on documents that can be opened in the editor, the documents are initially opened in a *Preview Mode*, which is a transient tab, that is removed when navigating to a different item in the folder browser or activating another tab. 
+When browsing files in the Folder Browser and clicking on documents that can be opened in the editor, the documents are initially opened in a *Preview Mode*, which is a transient tab, that is removed when navigating to a different item in the folder browser or activating another tab.
 
 There are two available *Preview Modes*
 
@@ -9,7 +9,7 @@ Shows the document in the editor as well as the split preview (if active), but t
 
 
 * **Html Preview**  
-Shows a full panel preview of the rendered HTML document. It's essentially a zoomed preview panel that shows just the HTML preview of the document. You can doubl
+Shows a full panel preview of the rendered HTML document. It's essentially a zoomed preview panel that shows just the HTML preview of the document. 
 
 ![](/images/FolderBrowser_Preview_HtmlMode.png)
 

@@ -9,13 +9,13 @@
 
 
 <div class="content-body" id="body">
-    {{% if(!string.IsNullOrEmpty(Topic.Body)) { }}    
+    {{% if(!string.IsNullOrEmpty(Topic.Body)) { }}
         {{ Model.Helpers.Markdown(Topic.Body) }}
     {{% } }}
 
     <div class="mb-2">
 
-    {{ Helpers.ChildTopicsTable("","Endpoint")  }}    
+    {{ Helpers.ChildTopicsTable("","Endpoint")  }}
     </div>
 </div>
 

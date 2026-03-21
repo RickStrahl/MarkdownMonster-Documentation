@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {{% 
+    {{%
      var theme = Project.Settings.RenderTheme;
-     if(Topic.TopicState.IsPreview) {         
+     if(Topic.TopicState.IsPreview) {
     }}
     <base href="{{ Model.PageBasePath }}" />
     {{% } }}
@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="~/_docmonster/themes/scripts/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="~/_docmonster/themes/scripts/fontawesome/css/font-awesome.min.css" />
     <link id="AppCss" rel="stylesheet" type="text/css" href="~/_docmonster/themes/{{ theme }}/docmonster.css" />
-    
+
 
     <script src="~/_docmonster/themes/scripts/jquery/jquery.min.js"></script>
 
@@ -36,9 +36,9 @@
 
     <script>
         window.page = {};
-        window.page.basePath = "{{ Project.Settings.RelativeBaseUrl }}";     
+        window.page.basePath = "{{ Project.Settings.RelativeBaseUrl }}";
 
-        window.renderTheme="{{ Project.Settings.RenderThemeMode }}";    
+        window.renderTheme="{{ Project.Settings.RenderThemeMode }}";
     </script>
     <script src="~/_docmonster/themes/scripts/docmonster.js"></script>
 
@@ -53,7 +53,7 @@
 
             // You can customize Mermaid config here
             mermaidLoader('{{MarkdownMonster.mmApp.Configuration.Markdown.MermaidDiagramsUrl}}', null);
-        }); 
+        });
     </script>
 
     <style>
@@ -66,7 +66,7 @@
         pre.mermaid {
             border: none !important;
         }
-    </style> 
+    </style>
 
     <topictype value="{{ Topic.DisplayType }}" />
 
@@ -87,36 +87,36 @@
         content="{{ Project.Settings.WebSiteBaseUrl?.TrimEnd('/') }}{{ Project.Settings.RelativeBaseUrl }}images/logo.png" />
     {{% } }}
 </head>
-<body>    
-    <!-- Markdown Monster Content -->    
+<body>
+    <!-- Markdown Monster Content -->
     <div class="flex-master">
         <div class="banner">
             <div class="float-end">
-                <button id="themeToggleBtn" type="button" onclick="toggleTheme()" 
-                        class="btn btn-sm btn-secondary theme-toggle"                        
+                <button id="themeToggleBtn" type="button" onclick="toggleTheme()"
+                        class="btn btn-sm btn-secondary theme-toggle"
                         title="Toggle Light/Dark Theme">
-                    <i id="themeToggleIcon" 
+                    <i id="themeToggleIcon"
                        class="fa fa-moon text-warning">
                     </i>
-                </button>                 
+                </button>
             </div>
 
             <div class="float-start sidebar-toggle">
                 <i class="fa fa-bars"
                    title="Show or hide the topics list"></i>
             </div>
-			
+
 			{{% if (Topic.Incomplete) { }}
                <div class="float-end mt-2 " title="This topic is under construction.">
-                   <i class="fa-duotone fa-triangle-person-digging fa-lg fa-beat" 
-                   style="--fa-primary-color: #333; --fa-secondary-color: goldenrod; --fa-secondary-opacity: 1; --fa-animation-duration: 3s;"></i> 
+                   <i class="fa-duotone fa-triangle-person-digging fa-lg fa-beat"
+                   style="--fa-primary-color: #333; --fa-secondary-color: goldenrod; --fa-secondary-opacity: 1; --fa-animation-duration: 3s;"></i>
 	           </div>
-		    {{% } }}		   
-			
+		    {{% } }}
+
             <img src="~/images/logo.png" class="banner-logo" />
             <div class="projectname"> {{ Project.Title }}</div>
 
-            <div class="byline">                
+            <div class="byline">
                 <img src="~/_docmonster/icons/{{ Topic.DisplayType }}.png">
                 {{ Topic.Title }}
             </div>
@@ -135,8 +135,8 @@
                 <div class="topic-outline-header">On this page:</div>
                 <div class="topic-outline-content"></div>
             </nav>
-            
-            <div id="MainContent" class="main-content">                
+
+            <div id="MainContent" class="main-content">
                 <!-- Rendered Content -->
 
 
@@ -145,17 +145,17 @@
                 </article>
 
                 <hr />
-            
-             
+
+
                 <div class="footer">
-                    
-                    <div class="float-start">                    
+
+                    <div class="float-start">
                         &copy; {{ Project.Owner }}, {{ DateTime.Now.Year }} &bull;
                         updated: {{ Topic.Updated.ToString("MMM dd, yyyy") }}
                         <br />
-                        {{%      
+                        {{%
                             string mailBody = $"Project: {Project.Title}\nTopic: {Topic.Title}\n\nUrl:\n{ Project.Settings.WebSiteBaseUrl?.TrimEnd('/') + Project.Settings.RelativeBaseUrl }{ Topic.Id }.html";
-                            mailBody = WebUtility.UrlEncode(mailBody).Replace("+", "%20");                        
+                            mailBody = WebUtility.UrlEncode(mailBody).Replace("+", "%20");
                         }}
                         <a href="mailto:{{ Project.Settings.SupportEmail }}?subject=Support: {{ Project.Title }} - {{ Topic.Title }}&body={{ mailBody }}">Comment or report problem with topic</a>
                     </div>
@@ -167,9 +167,9 @@
 
                 <br class="clearfix" />
                 <br />
-                <!-- End Rendered Content -->                    
+                <!-- End Rendered Content -->
 
-            </div> <!-- End MainContent --> 
+            </div> <!-- End MainContent -->
 
         </div> <!-- End page-content -->
 
@@ -180,4 +180,3 @@
 
 </body>
 </html>
-
