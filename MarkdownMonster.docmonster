@@ -516,6 +516,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 90,
+      "isExpanded": true,
       "updated": "2026-01-14T16:57:23.681038-10:00",
       "helpId": "16915",
       "classInfo": {
@@ -570,7 +571,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 40,
-          "updated": "2025-06-02T10:59:28.244923-10:00",
+          "updated": "2026-03-26T11:56:57.5124492-10:00",
           "helpId": "16911",
           "classInfo": {
             "assembly": "",
