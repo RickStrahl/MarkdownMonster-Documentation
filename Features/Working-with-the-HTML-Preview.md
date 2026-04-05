@@ -97,7 +97,7 @@ The setting can be configured in **File -> Tools -> Settings** with the `Preview
 <small>**Figure 4** - Selecting the preview sync mode from the status bar dropdown</small>
 
 > #### @icon-warning EditorAndPreview Sync Mismatches
-> When you use preview mode **EditorAndPreview** you may find that occasionally the preview or editor won't line up properly. This can happen when w orking with large images or code blocks (or any other non-text objects) when the previewer can't find an appropriate element to sync to. 
+> When you use preview mode **EditorAndPreview** you may find that occasionally the preview or editor won't line up properly. This can happen when working with large images or code blocks (or any other non-text objects) when the previewer can't find an appropriate element to sync to. 
 >
 > For most common scenarios this isn't a big problem, but if you run into frequently you might be better off to use  **EditorToPreview** sync mode rather than  on **EditorAndPreview**. You can still scroll the preview by scrolling the editor achieving a similar, but more consistent sync experience.
 

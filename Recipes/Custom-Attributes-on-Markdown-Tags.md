@@ -32,7 +32,7 @@ that is rendered as raw HTML.
 And on we go.
 ```
 
-As you can see you can mix and match Markdown and HTML and it's possible to get quite creative with the Html. For example, you can wrap styled `<div>` tags around blocks of Markdown, add style and script blocks, in addition to simple attribute additions. There are some special rules about how Markdown works inside of HTML blocks - you want to leave blank lines between the HTML and markdown blocks  to separarate them - so you have to experiment a bit to see what works and what doesn't.
+As you can see you can mix and match Markdown and HTML and it's possible to get quite creative with the Html. For example, you can wrap styled `<div>` tags around blocks of Markdown, add style and script blocks, in addition to simple attribute additions. There are some special rules about how Markdown works inside of HTML blocks - you want to leave blank lines between the HTML and markdown blocks  to separate them - so you have to experiment a bit to see what works and what doesn't.
 
 **Configuration Setting**  
 Markdown Monster supports turning off raw HTML rendering as an option, but it is enabled by default. You can find it in the Settings Window under **No Html** in the Markdown section.

@@ -164,7 +164,7 @@ Here's what the project should look like in Visual Studio:
 ![](/images/AddinReferencesInProject.png)
 
 ### Working with your Addin Class
-If you need to do this manually create a new C# class that inherits from the **MarkdownMonsterAddin** class. The template creates a `SampleAddin` class in `Addin.cs` and provides the base infrastructure to load the addin on MM startup. It also sets up a toolbar button and `OnExecute()` handler you can implement to quickly add behavior to your addinand or you can choose to hook up and respond to additional events that are fired throughout the application lifetime.
+If you need to do this manually create a new C# class that inherits from the **MarkdownMonsterAddin** class. The template creates a `SampleAddin` class in `Addin.cs` and provides the base infrastructure to load the addin on MM startup. It also sets up a toolbar button and `OnExecute()` handler you can implement to quickly add behavior to your addin, and you can choose to hook up and respond to additional events that are fired throughout the application lifetime.
 
 This is a link [](https://west-wind.com)
 
@@ -327,7 +327,7 @@ This object holds all of Markdown Monster's many configuration settings. There a
 There are a lot more Model properties available and you can find out more about these objects and their sub-objects in the [Class Reference](dm-topic://_55O1DXZIA) or by browsing the configuration file as JSON (go to Settings, then click on Edit JSON).
 
 #### Implementing generic Addin Configuration
-By default the Addin also creates a [configuration class](dm-topic://_5520TLAV7) that you can use to hold configuration data specific to your addin. The configuration class can be easily persisted and is configured to handle loading and saving autmatically. You can add any properties to the configuration class and those properties are then accessible via `SampleAddinConfiguration.Current.Property`.
+By default the Addin also creates a [configuration class](dm-topic://_5520TLAV7) that you can use to hold configuration data specific to your addin. The configuration class can be easily persisted and is configured to handle loading and saving automatically. You can add any properties to the configuration class and those properties are then accessible via `SampleAddinConfiguration.Current.Property`.
 
 The `.Write()` method can then persist the configuration data to a JSON config file, or you can use `.Read()` to re-load configuration data from disk. The latter is useful if you edit the configuration setting as a JSON file, you can then update the current settings by reloading the settings from disk. The configuration data is stored in a JSON file in the common settings folder (ie. `%appdata%\Markdown Monster` by default) and is not deleted when the add-in is removed.
 
@@ -389,7 +389,7 @@ The project template automatically points the build output to this folder in the
 ```
 
 #### Addin Dependencies
-If you are explicitly using any dependencies in your code - including depedencies that Markdown Monster explicitly loads - make sure to add the appropriate NuGet packages or references. 
+If you are explicitly using any dependencies in your code - including dependencies that Markdown Monster explicitly loads - make sure to add the appropriate NuGet packages or references. 
 
 If you're explicitly using features in packages that Markdown Monster already uses add the packages like this:
 
@@ -411,7 +411,7 @@ For example, in the Weblog Addin I'm explicit referencing an XmlRpc library like
 </PackageReference>
 ```
 
-The `<IncludeAssets>all</IncludeAssets>` element ensures that the library and its depedencies are output into the addin output folder.
+The `<IncludeAssets>all</IncludeAssets>` element ensures that the library and its dependencies are output into the addin output folder.
 
 #### Unloading Markdown Monster to see Addin
 If MM is running and the addin is loaded you will have to stop all instances of Markdown Monster before you can recompile the files. Addins load when Markdown Monster starts, so you have to restart to see your newly built addin.

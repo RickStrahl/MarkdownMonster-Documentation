@@ -17,7 +17,7 @@ or using the full executable:
 markdownmonster "c:\temp\filename"
 ```
 
-`markdownmonster.exe` and the `mm.exe` passthrough alias are the main executables you can do to lauch Markdown and other supported files from the commandline. These executables are **added to your user path during installation** so there's no need to provide a path for the exe's.
+`markdownmonster.exe` and the `mm.exe` passthrough alias are the main executables you can do to launch Markdown and other supported files from the commandline. These executables are **added to your user path during installation** so there's no need to provide a path for the exe's.
 
 Note that you can provide multiple files to open on a single command line operation.
 
@@ -32,7 +32,7 @@ To close a document:
 mm -close "c:\temp\filename"
 ```
 
-The order is siginificant - the `-close` has to proceed the filename and you can specify multiple `-close` \ filename combinations.
+The order is significant - the `-close` has to proceed the filename and you can specify multiple `-close` \ filename combinations.
 
 ### `-autosave` Command Line Option
 If you specify any file names on the command line, you can optionally force files to be saved as soon as you are editing the text using the `-autosave` command line option. This flag is applied to any files you open via the command line which means files are written to disk as soon as you stop typing. This allows any external applications that might be monitoring the specified file to pick up changes as quickly as they are saved in MM.

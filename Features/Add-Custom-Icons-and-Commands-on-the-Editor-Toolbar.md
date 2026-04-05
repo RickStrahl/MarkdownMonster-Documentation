@@ -37,7 +37,7 @@ All available commands can be found in the code shown at the end of this topic:
 
 [MarkdownDocumentEditor::MarkupMarkdown()](#available-html-operation-commands)
 
-> You can also create custom addins that extend the default markup 'commands' by implmenting [MarkdownMonsterAddin.OnEditorCommand](VFPS://Topic/MarkdownMonsterAddin.OnEditorCommand) and creating your own commands.
+> You can also create custom addins that extend the default markup 'commands' by implementing [MarkdownMonsterAddin.OnEditorCommand](VFPS://Topic/MarkdownMonsterAddin.OnEditorCommand) and creating your own commands.
 
 ### Custom HTML Tag Wrapping
 You can also create a custom HTML commands that wrap the selected text into an HTML element tag. For example:
@@ -146,7 +146,7 @@ public async Task<MarkupMarkdownResult> MarkupMarkdown(string action, string inp
     {
         if (input.Contains('`'))
         {
-            // nested ` reqiures double escaping
+            // nested ` requires double escaping
             if (input.StartsWith("`"))
                 input = ' ' + input;
             if (input.EndsWith("`"))
@@ -455,7 +455,7 @@ public async Task<MarkupMarkdownResult> MarkupMarkdown(string action, string inp
                 // the ID tag
                 html = $"{mmApp.NewLine}{mmApp.NewLine}[{id}]: {image}{mmApp.NewLine}";
 
-                // set selction position to bottom of document
+                // set selection position to bottom of document
                 await Editor.GotoBottom();
                 await Editor.SetSelection(html);
 

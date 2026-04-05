@@ -39,7 +39,7 @@ Markdown Monster provides many useful features both for direct markdown editing 
 * Embed code snippets and see highlighted syntax coloring
 * Two-way table editor for interactively creating and editing tables
 * Text Snippet Expansion with C# Code via [Snippets Addin](https://github.com/RickStrahl/Snippets-MarkdownMonster-Addin)
-* Embed Emojii
+* Embed Emoji
 * Smart, unobtrusive toolbar and shortcut key helpers
 * Snippet expansion from text templates
 * Many Editor customization options

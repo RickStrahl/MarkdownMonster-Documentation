@@ -12,7 +12,7 @@ If **you installed Markdown Monster using a full installation** with the full in
 Uninstall won't remove the User Settings folder (see below).
 
 ### Uninstalling a Portable Install
-You can remove the above mentioned user settings from a portable istall by running the following command from the Windows Command Prompt:
+You can remove the above mentioned user settings from a portable install by running the following command from the Windows Command Prompt:
 
 ```
 mm -uninstall

@@ -95,7 +95,7 @@ Markdown Monster adds a number of additional hotkeys to access common functional
 </tr>
 <tr>
   <td>Ctrl-J</td>
-  <td>Insert Emojii from Picker</td>
+  <td>Insert Emoji from Picker</td>
 </tr>
 <tr>
   <td>Alt-C</td>

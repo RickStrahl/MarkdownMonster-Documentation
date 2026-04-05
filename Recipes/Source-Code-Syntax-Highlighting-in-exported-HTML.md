@@ -1,4 +1,4 @@
-﻿Markdown by design doesn't create HTML with embedded source code formatting, as it generates just a block of HTML. Unless you exported HTML with all assests that you see in the preview, the output doesn't automatically show syntax coloring.
+﻿Markdown by design doesn't create HTML with embedded source code formatting, as it generates just a block of HTML. Unless you exported HTML with all assets that you see in the preview, the output doesn't automatically show syntax coloring.
 
 ### Markdown Code Output
 Markdown dictates that code blocks are exported as plain `<pre><code>` blocks into HTML, and it's up to the hosting page or application to provide the syntax highlighting.
@@ -26,7 +26,7 @@ is actually rendered in the underlying HTML like this:
 
 HighlightJS then turn this HTML into nicely syntax colored text you see in the first code sample. There are a number of other JavaScript based Syntax Highlighters available, but highlightJs is amongst the easiest and fastest rendering ones so that's what we provide.
 
-Note that code is HTML encoded so it's safe to display without script injection, but the actual code is not in any way marked up for syntax coloring other than using the start tags that identitify the optional syntax in use:
+Note that code is HTML encoded so it's safe to display without script injection, but the actual code is not in any way marked up for syntax coloring other than using the start tags that identify the optional syntax in use:
 
 ```html
 <pre><code class="language-html">
@@ -35,7 +35,7 @@ Note that code is HTML encoded so it's safe to display without script injection,
 ```
 
 ### Example using HighlightJs 
-Markdown Monster uses <a href="https://highlightjs.org/" target="top">HighlighJs</a> for syntax highlighting in the previewer and for full HTML exports, and you can see how the default highlighting works in the HTML Preview Pane of Markdown Monster's UI. HighlightJs is open source and you can easily add HighlightJs on your Web site with just a script and css reference, plus couple of lines of JavaScript code.
+Markdown Monster uses <a href="https://highlightjs.org/" target="top">HighlightJs</a> for syntax highlighting in the previewer and for full HTML exports, and you can see how the default highlighting works in the HTML Preview Pane of Markdown Monster's UI. HighlightJs is open source and you can easily add HighlightJs on your Web site with just a script and css reference, plus couple of lines of JavaScript code.
 
 > #### @icon-info-circle Other Highlighters
 > You can use any kind of JavaScript based highlighter. For example, MM originally used AceEditor for highlighting. The integration syntax might be slightly different, but the process is usually quite easy to set up similar to what we show here for HighlightJs.

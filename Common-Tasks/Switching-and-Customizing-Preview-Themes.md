@@ -38,7 +38,7 @@ The easiest way to find files for the active Preview Theme is by using the Previ
 
 ![](/images/PreviewThemeFromContextMenu.png)
 
-That folder contains a `Theme.html` and related `Theme.css` file which make up the theme. There's also a `../scripts` folder that contains a few dependencies like FontAwesome for icon support and HighlightJs for code sytnax highlighting.
+That folder contains a `Theme.html` and related `Theme.css` file which make up the theme. There's also a `../scripts` folder that contains a few dependencies like FontAwesome for icon support and HighlightJs for code syntax highlighting.
 
 Here's what the PreviewThemes folder looks like:
 

@@ -2,7 +2,7 @@
 
 ![Markdown Monster PlantUML Support](https://github.com/RickStrahl/ImageDrop/blob/master/MarkdownMonster/PlantUML.gif?raw=true)
 
-You can embed PlantUML blocks using* uing the following code block syntax used by many common Markdown platforms (including GitHub):
+You can embed PlantUML blocks using the following code block syntax used by many common Markdown platforms (including GitHub):
 
 * Code block syntax: `` ```plantuml`` to delineate the PlantUML block
 

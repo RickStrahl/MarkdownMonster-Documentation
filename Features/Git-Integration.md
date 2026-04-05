@@ -119,7 +119,7 @@ In some cases you may also want to attach a local repository to a newly created 
 
 ![](/images/gitaddremote.png)
 
-Note adding a remote to an existing unsynched remote Git repository can have undesired effects. The typical use case is to attach the current repository to a new empty repository and then push. For almost all other scenarios cloning/forking is usually a better approach.
+Note adding a remote to an existing unsynced remote Git repository can have undesired effects. The typical use case is to attach the current repository to a new empty repository and then push. For almost all other scenarios cloning/forking is usually a better approach.
 
 ### Remote Configuration and Authentication
 If you're connecting to a private repository you might have to use an external tool to connect to the remote and configure your credentials. Markdown Monster will in most cases prompt for credentials via a sign in dialog, but there are cases where this may not work. In that situation you may have to ensure you can access the remote repository **externally** using the Git Command line, or another tool like [Github Desktop](https://desktop.github.com/), [SmartGit](https://www.syntevo.com/smartgit/), [SourceTree](https://www.sourcetreeapp.com/), [GitKraken](https://www.gitkraken.com/) or similar, which provide more robust credential configuration support than Markdown Monster internally.

@@ -19,4 +19,4 @@ Suggestions call out to an the specified AI server providing your document as in
 > This feature sends your document text to the configure AI completion provider you have set up.
 
 ## Disabling AutoSuggestions
-Although auto-suggestions have to be triggered with `Ctrl-Space` they can pop up on occasion when you hit that key combination inadvertantly. To completely disable this feature even if you have AI providers enabled you can use the following configuration setting: `Editor.NoAiAutoSuggestions` either in the configuration JSON file, or via Configuration Settings UI (**Editor** -> **No Ai Auto Suggestions** ).
+Although auto-suggestions have to be triggered with `Ctrl-Space` they can pop up on occasion when you hit that key combination inadvertently. To completely disable this feature even if you have AI providers enabled you can use the following configuration setting: `Editor.NoAiAutoSuggestions` either in the configuration JSON file, or via Configuration Settings UI (**Editor** -> **No Ai Auto Suggestions** ).

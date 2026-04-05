@@ -44,7 +44,7 @@ You can also set the theme in **Tools->Settings**:
 ```
 
 ### Preview Themes
-Preview themes are used in the HTML preview pane to format the rendered HTML output. Markdown Monster ships with a handful of preview themes: **Darkhan**, **Github**, **Medium**, **Blackout** and **Hipster**. You can easily create themes of your own by copying an existing theme or creating a brand new one based on plain HTML and CSS formats. 
+Preview themes are used in the HTML preview pane to format the rendered HTML output. Markdown Monster ships with a handful of preview themes: **Dharkan**, **Github**, **Medium**, **Blackout** and **Hipster**. You can easily create themes of your own by copying an existing theme or creating a brand new one based on plain HTML and CSS formats. 
 
 ![](https://github.com/RickStrahl/ImageDrop/raw/master/MarkdownMonster/PreviewThemes.gif)
 

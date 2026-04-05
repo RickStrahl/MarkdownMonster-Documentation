@@ -117,7 +117,7 @@ renders:
 
 ![Markdown Monster](https://markdownmonster.west-wind.com/Images/MarkdownMonster_Icon_128.png)
 
-Images can be embeded easily from the Clipboard by pasting (**ctrl-v**), by using the @icon-image Image Dialog, using the Screen Capture addin or by dragging and dropping images into the document from the Folder Browser, Windows Explorer or a browser.
+Images can be embedded easily from the Clipboard by pasting (**ctrl-v**), by using the @icon-image Image Dialog, using the Screen Capture addin or by dragging and dropping images into the document from the Folder Browser, Windows Explorer or a browser.
 
 ### Block Quotes
 Block quotes are callouts that are great for adding notes or warnings into documentation.
@@ -204,7 +204,7 @@ This text and header renders fine.
 This paragraph is commented out and **does not render**.
 -->
 
-This footer is comming across just fine.
+This footer is coming across just fine.
 ```
 
 This renders:

@@ -22,7 +22,7 @@ You can also open a folder in the [FolderBrowser](VFPS://Topic/_4WU1CJYKA) by sp
 
 ```powershell
 mm .
-mm .\dev\MyPoject
+mm .\dev\MyProject
 ```
 
 You can combine both opening a file and folder in the FolderBrowser like this:

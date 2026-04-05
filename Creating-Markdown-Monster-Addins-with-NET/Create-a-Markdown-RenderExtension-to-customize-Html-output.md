@@ -10,7 +10,7 @@ This is a tree step process:
 * Add your extension to the Extension Manager
 
 ## The IMarkdownRenderExtension Interface
-Render Extensions work by providing pre- and post-rendering hook methods that allow you inspect and modify the incoming markdown and outgoing HTML content and are implemented via a simple `IMarkdownRenderExtesion` interface.
+Render Extensions work by providing pre- and post-rendering hook methods that allow you inspect and modify the incoming markdown and outgoing HTML content and are implemented via a simple `IMarkdownRenderExtension` interface.
 
 The `IMarkdownRenderExtension` interface is defined as follows ([github](https://github.com/RickStrahl/MarkdownMonster/blob/master/MarkdownMonster/RenderExtensions/IMarkdownRenderExtension.cs)):
 
@@ -80,7 +80,7 @@ public class TestRenderExtensionAddin : MarkdownMonster.AddIns.MarkdownMonsterAd
 Yup - it's real small, because a render extension is non-visual, so you can remove all other generated addin code and keep just this minimal `OnApplicationStart()` logic which helps minimize the impact of this addin.
 
 ## Implementing a MarkdownRenderExtension
-Let's create a super simple and frivolous MarkdownRenderExtension that turns all occurrances of ` the ` in the text into a bold and upper case text using ` **THE** ` as the text replacement. And just for kicks lets also add a copyright notice to the bottom of the document which allows us to demonstrate both pre-processing the Markdown for the `THE` replacement and post-processing for the footer to add. 
+Let's create a super simple and frivolous MarkdownRenderExtension that turns all occurrences of ` the ` in the text into a bold and upper case text using ` **THE** ` as the text replacement. And just for kicks lets also add a copyright notice to the bottom of the document which allows us to demonstrate both pre-processing the Markdown for the `THE` replacement and post-processing for the footer to add. 
 
 > In theory both of these transformations could be done in the same pre or post processing method - `BeforeMarkdownRendered()` being the preferred one for this scenarios since we're replacing actual Markdown text with other Markdown. I'm splitting up behavior here purely for demonstration purposes. 
 
@@ -143,7 +143,7 @@ Here's the code:
 
 ```cs
 /// <summary>
-/// Handles Mermaid charts based on one of two sytnax:
+/// Handles Mermaid charts based on one of two syntax:
 ///
 /// * Converts ```mermaid syntax into div syntax
 /// * Adds the mermaid script from CDN

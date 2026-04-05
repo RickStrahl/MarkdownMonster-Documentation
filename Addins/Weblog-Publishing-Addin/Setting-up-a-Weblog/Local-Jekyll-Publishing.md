@@ -21,7 +21,7 @@ The Markdown Monster Local Jekyll Publishing process performs the following task
 A few important things to keep in mind with this 'publishing' process:
 
 * The editable posts **are not** stored in the Jekyll `_posts` folder
-* The editable posts **are separately stored** in the MM Weblog folder structure (or whereever you choose)
+* The editable posts **are separately stored** in the MM Weblog folder structure (or wherever you choose)
 * Posts **are 'published' into the Jekyll `_posts` folder** 
 
 Once published you can choose whether to:

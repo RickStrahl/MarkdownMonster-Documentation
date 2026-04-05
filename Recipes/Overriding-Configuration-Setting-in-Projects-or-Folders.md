@@ -75,7 +75,7 @@ You can override any root object properties and any of the properties in the `Ed
 ### Override Behavior: No UI - JSON Settings Only
 Both of these configuration overrides are applied **ontop of the global settings**, and the values **can only be set in the configuration files not through the User Interface**. The User Interface only shows the global values, and if you change any of the values in the User Interface only the global values are updated, but which won't have any effect on any overridden values from the custom configuration.
 
-### Settings May Reqiure Reloading or Reactivating Documents
+### Settings May Require Reloading or Reactivating Documents
 Most settings are applied as soon as you set them and save the JSON file. A few settings however may require that explicitly re-activate the document either by switching document tabs or reloading the document.
 
 There are a few settings that can't be changed. For example, you can't change the full application theme in this way as theme changes require a restart. Editor and Preview Theme changes work fine however and are immediately reflected.

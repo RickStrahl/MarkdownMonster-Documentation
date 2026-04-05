@@ -29,7 +29,7 @@ You can customize the Start Dictation shortcut key in [Markdown Monster's Keybin
 ### Cleaning up Dictation Text via AI
 The dictation engine is pretty good at understanding spoken text and minimal context and it does a good job of capturing text accurately even in low quality mic environments. But the engine doesn't automatically handle punctuation, capitalization and sentence breaks. 
 
-You can explicitly speak punctuation like `period`, `comma`, `question mark` etc. and these values are approprately inserted into the text as you dictate. But text is not automatically terminated, nor are commas placed where they should be automatically.
+You can explicitly speak punctuation like `period`, `comma`, `question mark` etc. and these values are appropriately inserted into the text as you dictate. But text is not automatically terminated, nor are commas placed where they should be automatically.
 
 To help clean up text quickly you can use the AI aided **Cleanup Dictation Text from Selection** function.
 

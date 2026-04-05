@@ -124,7 +124,7 @@ Markdown Tables support column alignment 'hints' in the table header columns. Yo
 These options are also available via the **Context Menu -> Align  Column**, which then sets these Markdown hints on the header.
 
 ### Preview while you Edit
-Although the Table Editor uses the current preview theme while editing, the edit document doesn't look very close to the actual output - especially if you also include embedded Markdown formatting in your tables. If you want to see the actual rendered table **as you move out of each colunmn** you can use the preview option on the toolbar to activate the preview pane:
+Although the Table Editor uses the current preview theme while editing, the edit document doesn't look very close to the actual output - especially if you also include embedded Markdown formatting in your tables. If you want to see the actual rendered table **as you move out of each column** you can use the preview option on the toolbar to activate the preview pane:
 
 ![](/images/TableEditorPreview.png)
 

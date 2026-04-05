@@ -12,7 +12,7 @@ The following describes the issues that are fixed and what doesn't work with the
 * **Drag Selection past the bottom of the Window**  
 When `AllowHostInputProcessing` is `true` (default), when using drag selection and scrolling past the bottom of the window viewport the selection will not automatically keep the window scrolling as expected in other editors. When `false` the window automatically scrolls providing the expected behavior.
 
-* **Accellerator menu and button keys from the editor work**  
+* **Accelerator menu and button keys from the editor work**  
 When `AllowHostInputProcessing` is `false`, standard Windows accelerator behavior - underlined menus and focused button mnemonic and hot key execution - are not automatically activated *when the editor has focus*. IOW, the accelerator commands are not forwarding properly to the host shell. This diminishes keyboard navigation of many commands somewhat.
 
 

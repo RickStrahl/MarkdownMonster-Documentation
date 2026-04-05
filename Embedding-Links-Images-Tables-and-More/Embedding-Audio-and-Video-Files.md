@@ -1,4 +1,4 @@
-﻿You can embed audio and video links into content using the Image markdown syntax using the Medial Links confiuration switch which is enabled by default. 
+﻿You can embed audio and video links into content using the Image markdown syntax using the Medial Links configuration switch which is enabled by default. 
 
 ![](/images/MediaLinks.png)
 

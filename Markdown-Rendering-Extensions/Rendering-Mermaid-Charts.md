@@ -180,7 +180,7 @@ You can set this value through the MM configuration and the `Markdown.MermaidThe
 Mermaid also supports customization via custom theme value configuration which allows setting individual colors and line widths etc. This functionality is fairly limited but it's possible to create customized theme values [as described here](https://mermaid.js.org/config/theming.html#customizing-themes-with-themevariables).
 
 ### Customized Mermaid Initialization
-In addition to specifying the theme, you can also take over Mermaid's initialization process via a custom **Intializer** provided via JavaScript. Among other things you can use a custom initializer to completely customize theme rendering, but it can also provide for things like addins, security of the libary and more.
+In addition to specifying the theme, you can also take over Mermaid's initialization process via a custom **Initializer** provided via JavaScript. Among other things you can use a custom initializer to completely customize theme rendering, but it can also provide for things like addins, security of the library and more.
 
 I'll use theming here as the customization used for the example initializer.
 

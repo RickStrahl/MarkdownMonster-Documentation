@@ -1,5 +1,5 @@
 ﻿#### Font
-The name of the font to use in the editor. The font used **has to be a monospaced font** like **Consolas** (default), **Courier New**, **Lucidia Console** or installed monospace fonts like **Fira Code**, **Haskell** etc. Using proportional fonts likw Segoe UI, Arial, etc. doesn't work and will cause cursor offset issues. You can also use `monospace` which will default to the default monospace font (usually Courier New) for Internet Explorer. For more info please the [Font Support](VFPS://Topic/_5EA0SD8QX) topic.
+The name of the font to use in the editor. The font used **has to be a monospaced font** like **Consolas** (default), **Courier New**, **Lucida Console** or installed monospace fonts like **Fira Code**, **Haskell** etc. Using proportional fonts like Segoe UI, Arial, etc. doesn't work and will cause cursor offset issues. You can also use `monospace` which will default to the default monospace font (usually Courier New) for Internet Explorer. For more info please the [Font Support](VFPS://Topic/_5EA0SD8QX) topic.
 
 #### FontSize
 Font size in pixels and the default size is 18.
@@ -14,10 +14,10 @@ The Zoom level is a percentage value (100 is 100%, 50 is 50%) that is a multipli
 The line height determines the amount of space including white space that that a single line of text takes up. Sizing is in relative units and the default value `1.35`.
 
 #### Padding
-You can sepecify the padding for the editor's editing surface. This value is a fixed pixel value and cannot be specified as a percentage. If **MaxWidth** it will override the **Padding** value once the width exceeds the **MaxWidth**
+You can specify the padding for the editor's editing surface. This value is a fixed pixel value and cannot be specified as a percentage. If **MaxWidth** it will override the **Padding** value once the width exceeds the **MaxWidth**
 
 #### MaxWidth
-You can specify a max width for the editor content to keep content from spreading over the whole width of the editing area when using very wide screens. **MaxWidth** can be used to provide a managable edit 'column width' and provide extra wide space for a pleasant, distraction free experience. A *maxwidth:1000* setting can also be applied to the **DistractionFreeModeHideOptions**.
+You can specify a max width for the editor content to keep content from spreading over the whole width of the editing area when using very wide screens. **MaxWidth** can be used to provide a manageable edit 'column width' and provide extra wide space for a pleasant, distraction free experience. A *maxwidth:1000* setting can also be applied to the **DistractionFreeModeHideOptions**.
 
 #### EnableBulletAutoCompletion
 Determines whether Markdown bullet auto-completion is enabled. This behavior automatically creates new bullets on enter. Default is false as the behavior can be annoying when using short lists and automatically generating an extra bullet on the last item that needs to be deleted.

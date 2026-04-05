@@ -44,7 +44,7 @@ Once selected the capture content is displayed in the capture form. From there y
 
 To save the image click on the **Save** toolbar button, to write out the image to disk and embed it into your Markdown text as you exit the capture form.
 
-You can also click on **Save and Edit** which performs the same teps of saving and embedding, but also opens the saved image file in the configured **ImageEditor**.
+You can also click on **Save and Edit** which performs the same steps of saving and embedding, but also opens the saved image file in the configured **ImageEditor**.
 
 The screen capture form also includes a few additional features, like the ability to paste an image from the clipboard, copy a captured image to the clipboard, and opening the saved image in the configured **ImageEditor**.
 
