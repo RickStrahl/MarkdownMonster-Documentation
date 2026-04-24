@@ -37,7 +37,7 @@ All available commands can be found in the code shown at the end of this topic:
 
 [MarkdownDocumentEditor::MarkupMarkdown()](#available-html-operation-commands)
 
-> You can also create custom addins that extend the default markup 'commands' by implementing [MarkdownMonsterAddin.OnEditorCommand](VFPS://Topic/MarkdownMonsterAddin.OnEditorCommand) and creating your own commands.
+> You can also create custom addins that extend the default markup 'commands' by implementing [MarkdownMonsterAddin.OnEditorCommand](dm-topic://MarkdownMonsterAddin.OnEditorCommand) and creating your own commands.
 
 ### Custom HTML Tag Wrapping
 You can also create a custom HTML commands that wrap the selected text into an HTML element tag. For example:
@@ -70,7 +70,7 @@ Which renders:
 ```
 
 ### Custom Operations
-If you need to add toolbar buttons with more control you can also use either the [Commander Addin](https://github.com/RickStrahl/Commander-MarkdownMonster-Addin) or a [full Addin](VFPS://Topic/_4NB0SE717).
+If you need to add toolbar buttons with more control you can also use either the [Commander Addin](https://github.com/RickStrahl/Commander-MarkdownMonster-Addin) or a [full Addin](dm-topic://_4NB0SE717).
 
 
 ```cs

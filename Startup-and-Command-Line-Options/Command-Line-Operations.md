@@ -1,4 +1,4 @@
-In addition to [opening files and folders from the command line](VFPS://Topic/_4X313DNEU) you can also perform a few operational tasks using Markdown Monster's Command Line Interface.
+In addition to [opening files and folders from the command line](dm-topic://_4X313DNEU) you can also perform a few operational tasks using Markdown Monster's Command Line Interface.
 
 
 

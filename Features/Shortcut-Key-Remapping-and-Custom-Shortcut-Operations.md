@@ -1,4 +1,4 @@
-﻿Markdown Monster has the ability to remap many of it's shortcut keys that are defined on menus and elsewhere.
+Markdown Monster has the ability to remap many of it's shortcut keys that are defined on menus and elsewhere.
 
 Key mappings can be changed by re-mapping shortcut keys in:
 
@@ -120,7 +120,7 @@ You can also add custom commands
 }
 ```
 
-> If implemented here only, the commands will have no menu or toolbar buttons associated with it. If you want to add UI you can use [Additional Commands and Icons on the Toolbar](VFPS://Topic/_5IM10BJPW).
+> If implemented here only, the commands will have no menu or toolbar buttons associated with it. If you want to add UI you can use [Additional Commands and Icons on the Toolbar](dm-topic://_5IM10BJPW).
 
 ### Resetting the Default Key Mappings
 To reset the original key mappings in Markdown Monster, delete the `MarkdownMonster-KeyBindings.json` file. This causes Markdown Monster to use the default bindings, and re-create the file with the default bindings.

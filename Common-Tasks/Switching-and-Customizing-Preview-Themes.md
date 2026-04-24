@@ -98,7 +98,7 @@ This is where your rendered HTML is injected.
 This is the physical disk path to the preview folder (with a trailing slash). Markdown Monster renders HTML from this template into the folder where the Markdown file lives so that it can find any relative images and links properly. In order to find the related theme resources they have to be known and `{$themePath}` provides this known location.
 
 * **{$docPath}**  
-This is the HTML base path for the rendered HTML which by default is `./` (ie. the current path), but it can also be a custom value that is overridden. This value can be changed to allow referencing an external location like a Web site and can then render related resources like images or styling from those locations. `docPath` can be changed per document via [YAML properties and via Project settings](VFPS://Topic/_5FZ0OZKLN) - or if your template always relies on external resources you can just hard code the `basePath` directly in the HTML.
+This is the HTML base path for the rendered HTML which by default is `./` (ie. the current path), but it can also be a custom value that is overridden. This value can be changed to allow referencing an external location like a Web site and can then render related resources like images or styling from those locations. `docPath` can be changed per document via [YAML properties and via Project settings](dm-topic://_5FZ0OZKLN) - or if your template always relies on external resources you can just hard code the `basePath` directly in the HTML.
 
 * **{$extraHeaders}**  
 These are headers that can be set by `RenderExtension`s or addins that interact with the render process.

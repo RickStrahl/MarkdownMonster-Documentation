@@ -1,4 +1,4 @@
-﻿Markdown Monster doesn't have any special tools for embedding Tweets as Widgets into a Markdown document. The reason for this is that Twitter provides a fairly easy mechanism for creating these Widgets as part of various Web and Twitter clients by using the **Twitter Embed** feature which produces simple **embeddable Html with a script link that can be directly pasted into Markdown content**.
+Markdown Monster doesn't have any special tools for embedding Tweets as Widgets into a Markdown document. The reason for this is that Twitter provides a fairly easy mechanism for creating these Widgets as part of various Web and Twitter clients by using the **Twitter Embed** feature which produces simple **embeddable Html with a script link that can be directly pasted into Markdown content**.
 
 ## Twitter Embed
 The Twitter embedding feature can be accessed on any tweet in the Web browser. Start by clicking on the `...` **more** button in the Twitter UI:
@@ -38,24 +38,49 @@ Here's what typical embedded tweet Html looks like (formatting added):
 ```
 
 ## Requirements and Limitations
-There are a couple of issues you have to be aware of with rendering Twitter Widgets inside of Markdown, as these components require active JavaScript to render as Html.
+There are a couple of issues for Twitter/X Widgets due to the way the limited Twitter API works.
 
-> #### @icon-warning Requires that Script and `<iframe>` Rendering is Enabled
-> Twitter Widgets rely on an embedded `<script>` tag, rendering of which is disabled in MM by default. You can enable `<script>` rendering using the **Allow Script Tags in Markdown** option on the menu or in Settings.
->
-> You can enable this global setting here:
->
-> ![](/images/AllowRenderScriptTags.png)
+* Script Tag Embedding needs to be enabled in MM
+* Markdown Hosting Platform has to support Script Tags
+* Widget doesn't refresh in Previewer unless you do a full Page Refresh
 
 
-> #### @icon-warning Embedded Tweets only work if Markdown Server supports embedded Html
-> MM can always render this feature as it supports embedded Html and scripts (optionally). However, any server hosting platform that renders your Markdown may not.
->
-> Since the Tweet Widget is raw Html with a `<script>` tag that handles the formatting and interactions, whatever server platform ends up rendering the Markdown has to support rendering these tags.
-> 
-> For example, GitHub **does not allow** script tags to be rendered to avoid XSS attacks on the GitHub site, so embedded tweets do not work on GitHub. However, most Blog Engines like WordPress and Medium or static site generators like Jekyll or Statiq do support embedded Html and script, so you can use it there.
->
+### Requires that Script Rendering is Enabled
+Twitter Widgets rely on an embedded `<script>` tag, rendering of which is disabled in MM by default. You can enable `<script>` rendering using the **Allow Script Tags in Markdown** option on the menu or in Settings.
+
+You can enable this global setting here:
+
+![](/images/AllowRenderScriptTags.png)
+
+
+### Embedded Tweets only work if Markdown Server supports embedded Html
+MM can always render this feature as it supports embedded Html and scripts (optionally). However, any server hosting platform that renders your Markdown may not. 
+ 
+Since the Tweet Widget is raw Html with a `<script>` tag from Twitter's API that handles the formatting and interactions, whatever server platform ends up rendering the Markdown has to support rendering these tags.
+ 
+For example, GitHub **does not allow** script tags to be rendered to avoid XSS attacks on the GitHub site, so embedded tweets do not work on GitHub. However, most Blog Engines like WordPress and Medium or static site generators like Jekyll or Statiq do support embedded Html and script, so you can use it there.
+
 > Before going nuts with embedded Tweets in Markdown, make sure that your target hosting platform supports it.
+
+### Twitter Widget doesn't refresh in Previewer unless you do a full Page Refresh
+Due to the limitations in the Twitter/X API the script can only be loaded asynchronously via initial script invocation. The behavior is as follows:
+
+* **Initial Rendering** - widget visible
+* **After Editing Markdown** - widget placeholder shown
+* **After Browser Refresh** - widget visible
+
+The place holder looks like this and comes directly from the Twitter Widget when the script that loads it normally does not run:
+
+![TwitterEmbed Placeholder](../images/TwitterEmbed_Placeholder.png)
+
+In a nutshell, the widget only fully renders on **initial loading** or a **hard refresh**, *not on page updates from editing* as we replace the content rather than reload the entire page which would be very slow and janky.
+
+> While we can force the script to be reloaded, due to the async nature of the script execution and the explicit embedding of generated HTML into the page, the widget both excessively jumps around the document on render and it does so **after** MM has already positioned its cursor for the active content in the Preview - the result of this is that you effectively lose the preview position when the widget renders.
+
+To hard refresh the preview browser:
+
+* Preview Context Menu: **Forced Browser Refresh** 
+* Press F5 while focused in the Previewer
 
 ## Embed Tweet Info Toolbar Button
 In case you need to embed a Tweet in a month or two after you've forgotten these steps, MM also has a toolbar option that takes you directly to this help topic.
@@ -63,6 +88,6 @@ In case you need to embed a Tweet in a month or two after you've forgotten these
 ![](/images/TwitterEmbed_ToolbarInfo.jpg)
 
 ### Why is there No User Interface for Tweets?
-We thought about it, since tweets are very popular to embed into Markdown documents. However, Twitter's public API makes it very difficult to get the detailed tweet information that Twitter makes available. The embeddable Widgets are nice because they exactly match the Twitter UI.
+We thought about it, since tweets are very popular to embed into Markdown documents. However, Twitter's public API makes it very difficult to get the detailed tweet information that Twitter makes available. The embeddable Widgets are nice because they exactly match the Twitter UI and are clickable.
 
 The other issue is that one way or another you have to get some sort of Tweet Id in order to create a widget. If you already have to use Twitter to pick up this ID it's only one additional quick step to get the full widget that can be pasted. In short, it's actually easier to grab and paste the Widget HTML from Twitter than it would be to present a UI for it in Markdown Monster.

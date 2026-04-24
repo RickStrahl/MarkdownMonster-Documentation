@@ -1,4 +1,4 @@
-﻿The Snippets Addin allows for Text Template Expansion, optionally enhanced with C# code expressions to dynamically add content to the snippet. Using this tool lets create reusable Text Snippets that you can easily embed into your currently open document. 
+The Snippets Addin allows for Text Template Expansion, optionally enhanced with C# code expressions to dynamically add content to the snippet. Using this tool lets create reusable Text Snippets that you can easily embed into your currently open document. 
 
 Snippets can be:
 
@@ -89,13 +89,14 @@ In this snippet notice the expressions using `{{  }}` to delineate C# expression
 
 `{{ DateTime.Now.ToString("yyyy-MM-dd") }}`
 
-embeds the date in the format that FrontMatter requires for example. You can also access the `Model` which is [Markdown Monster's Application Model](VFPS://Topic/_67613ZLO8) which gives you access to a number of other objects:
+embeds the date in the format that FrontMatter requires for example. You can also access the `Model` which is [Markdown Monster's Application Model](https://markdownmonster.west-wind.com/docs/Class-Reference/Class-Reference/MarkdownMonster/AppModel-Class.html) which gives you access to a number of other objects:
 
-* [ActiveDocument](VFPS://Topic/_67613ZN74)
-* [ActiveEditor](VFPS://Topic/_67613ZNKB)
-* [JavaScriptInterop](_67613zqba) <small>(low level editor access)</small>
-* [OpenDocuments](VFPS://Topic/_67613ZLQF)
-* [OpenEditors](VFPS://Topic/_67613ZLQK)
+* [AppModel](https://markdownmonster.west-wind.com/docs/Class-Reference/Class-Reference/MarkdownMonster/AppModel-Class.html)
+* [ActiveDocument](https://markdownmonster.west-wind.com/docs/Class-Reference/Class-Reference/MarkdownMonster/MarkdownDocument-Class.html)
+* [ActiveEditor](https://markdownmonster.west-wind.com/docs/Class-Reference/Class-Reference/MarkdownMonster/MarkdownDocumentEditor-Class.html)
+* [JavaScriptInterop](https://markdownmonster.west-wind.com/docs/Class-Reference/Class-Reference/MarkdownMonster-Windows/EditorWebViewJavaScriptInterop-Class.html) <small>(low level editor access)</small>
+* [OpenDocuments](https://markdownmonster.west-wind.com/docs/Class-Reference/Class-Reference/MarkdownMonster/AppModel-Class/AppModel-OpenDocuments.html)
+* [OpenEditors](https://markdownmonster.west-wind.com/docs/Class-Reference/Class-Reference/MarkdownMonster/AppModel-Class/AppModel-OpenEditors.html)
 
 and much more.
 
@@ -271,12 +272,13 @@ If an error occurs a dialog is displayed with the compilation error along with t
 If you're using the C# features to access functionality in Markdown Monster you'll want to definitely take a look at the documentation site:
 
 * [Main Documentation Site](https://markdownmonster.west-wind.com/docs)
-* [API Documentation](https://markdownmonster.west-wind.com/docs/_55o1dxzia.htm)
+* [API Documentation](https://markdownmonster.west-wind.com/docs/Class-Reference/)
 
 Some key object you'll likely want to access:
 
-* [ActiveDocument](VFPS://Topic/_67613ZN74)
-* [ActiveEditor](VFPS://Topic/_67613ZNKB)
-* [JavaScriptInterop](_67613zqba) <small>(low level editor access)</small>
-* [OpenDocuments](VFPS://Topic/_67613ZLQF)
-* [OpenEditors](VFPS://Topic/_67613ZLQK)
+* [AppModel](https://markdownmonster.west-wind.com/docs/Class-Reference/Class-Reference/MarkdownMonster/AppModel-Class.html)
+* [ActiveDocument](https://markdownmonster.west-wind.com/docs/Class-Reference/Class-Reference/MarkdownMonster/MarkdownDocument-Class.html)
+* [ActiveEditor](https://markdownmonster.west-wind.com/docs/Class-Reference/Class-Reference/MarkdownMonster/MarkdownDocumentEditor-Class.html)
+* [JavaScriptInterop](https://markdownmonster.west-wind.com/docs/Class-Reference/Class-Reference/MarkdownMonster-Windows/EditorWebViewJavaScriptInterop-Class.html) <small>(low level editor access)</small>
+* [OpenDocuments](https://markdownmonster.west-wind.com/docs/Class-Reference/Class-Reference/MarkdownMonster/AppModel-Class/AppModel-OpenDocuments.html)
+* [OpenEditors](https://markdownmonster.west-wind.com/docs/Class-Reference/Class-Reference/MarkdownMonster/AppModel-Class/AppModel-OpenEditors.html)

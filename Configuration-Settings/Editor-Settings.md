@@ -1,5 +1,5 @@
-﻿#### Font
-The name of the font to use in the editor. The font used **has to be a monospaced font** like **Consolas** (default), **Courier New**, **Lucida Console** or installed monospace fonts like **Fira Code**, **Haskell** etc. Using proportional fonts like Segoe UI, Arial, etc. doesn't work and will cause cursor offset issues. You can also use `monospace` which will default to the default monospace font (usually Courier New) for Internet Explorer. For more info please the [Font Support](VFPS://Topic/_5EA0SD8QX) topic.
+#### Font
+The name of the font to use in the editor. The font used **has to be a monospaced font** like **Consolas** (default), **Courier New**, **Lucida Console** or installed monospace fonts like **Fira Code**, **Haskell** etc. Using proportional fonts like Segoe UI, Arial, etc. doesn't work and will cause cursor offset issues. You can also use `monospace` which will default to the default monospace font (usually Courier New) for Internet Explorer. For more info please the [Font Support](dm-topic://_5EA0SD8QX) topic.
 
 #### FontSize
 Font size in pixels and the default size is 18.

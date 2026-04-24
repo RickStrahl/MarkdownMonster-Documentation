@@ -1,4 +1,4 @@
-﻿RenderExtensions in Markdown Monster allow you to customize the HTML output that is created as part of the rendering pipeline by pre or post processing the generated markdown or html content.
+RenderExtensions in Markdown Monster allow you to customize the HTML output that is created as part of the rendering pipeline by pre or post processing the generated markdown or html content.
 
 You can do this implementing the `IMarkdownRenderExtension` interface, and adding the resulting RenderExtension to `RenderExtensionsManager.Current.RenderExtensions`.
 
@@ -53,7 +53,7 @@ Occurs after the final HTML document has been rendered and merged with the Previ
 The `args` parameter passed contains the input and output data and the updatability of the properties for each of those parameter values depends on the property's `readwrite` or `readonly` status. 
 
 ## Create an Addin and Hook up a Render Extension in `OnApplicationStart()`
-In order to add a Render Extension you need to be hooked into Markdown Monster's processing pipeline and so you need to create a [Markdown Monster addin](VFPS://Topic/_4NE0S0QOI). The addin is going to be very simple and needs to implements only the `OnApplicationStart()` method since the addin is non-visual. Use `OnApplicationStart()` as it also allows render extensions to be fired in the MM CLI.
+In order to add a Render Extension you need to be hooked into Markdown Monster's processing pipeline and so you need to create a [Markdown Monster addin](dm-topic://_4NE0S0QOI). The addin is going to be very simple and needs to implements only the `OnApplicationStart()` method since the addin is non-visual. Use `OnApplicationStart()` as it also allows render extensions to be fired in the MM CLI.
 
 In `OnApplicationStart()` you can then hook up the Render Extension for addition into the processing pipeline.
 

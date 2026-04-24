@@ -1,4 +1,4 @@
-﻿The editor can be run in several different display modes:
+The editor can be run in several different display modes:
 
 * Normal mode 
 * Distraction Free Mode
@@ -58,4 +58,4 @@ There are two settings that control this behavior in the **Tools -> Settings**:
 
 This allows you to keep a comfortable editing 'column' width for your editor content that isn't so wide that it's difficult to read and edit. The width is configurable and defaults to 970 pixels.
 
-For more info see [Editor Padding and Centered Layout](VFPS://Topic/_5ED0RJ891).
+For more info see [Editor Padding and Centered Layout](dm-topic://_5ED0RJ891).

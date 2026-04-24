@@ -1,4 +1,4 @@
-﻿You can integrate Markdown Monster with external applications in several ways:
+You can integrate Markdown Monster with external applications in several ways:
 
 * Open a document via command line (`mm "c:\path\filename.md"`)
 * Close an open document via command line (`mm -close "c:\path\filename.md"`) 
@@ -61,4 +61,4 @@ markdownmonster:untitled.base64,VGhpcyBpcyBhIHRlc3Qgc3RyaW5nIG9mIHRleHQu
 ```
 
 There are more options available for Application Protocols:  
-[Open from Browser with Application Protocols](VFPS://Topic/_5RJ1CKNRJ)
+[Open from Browser with Application Protocols](dm-topic://_5RJ1CKNRJ)

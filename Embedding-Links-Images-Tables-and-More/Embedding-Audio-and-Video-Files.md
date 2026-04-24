@@ -1,4 +1,4 @@
-﻿You can embed audio and video links into content using the Image markdown syntax using the Medial Links configuration switch which is enabled by default. 
+You can embed audio and video links into content using the Image markdown syntax using the Medial Links configuration switch which is enabled by default. 
 
 ![](/images/MediaLinks.png)
 
@@ -44,4 +44,4 @@ You can also embed YouTube links:
 ![You Tube](https://www.youtube.com/watch?v=m9oUu1wHsDM)
 ```
 
-> To get more control over YouTube embedding/linking use the dedicated [YouTube Embedding Dialog](VFPS://Topic/_69D0ZWCK0).
+> To get more control over YouTube embedding/linking use the dedicated [YouTube Embedding Dialog](dm-topic://_69D0ZWCK0).

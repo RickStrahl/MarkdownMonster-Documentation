@@ -1,4 +1,4 @@
-﻿Markdown Monster includes an optional local HTTP server that can be used to launch Markdown Monster with preset content remotely, when the server is running. The server has to be started in order for this to work, although you can request starting the server in a number of manual and automated ways.
+Markdown Monster includes an optional local HTTP server that can be used to launch Markdown Monster with preset content remotely, when the server is running. The server has to be started in order for this to work, although you can request starting the server in a number of manual and automated ways.
 
 
 The following demonstrates some of the external operation with an HTTP REST Client ([WebSurge](https://websurge.west-wind.com))
@@ -77,7 +77,7 @@ To access the server assuming it's running:
 * Make an HTTP POST request to `http://localhost:5009/`
 * JSON: `{ operation: "open", data: "untitled.base64,VGhpcyBpcyBhIHRlc3Qgc3RyaW5nIG9mIHRleHQu" }`
 
-This opens a new document with the base64 text content preset in the editor. This works with any of the single command [command line options](VFPS://Topic/_5FP0XP68P) in MM. 
+This opens a new document with the base64 text content preset in the editor. This works with any of the single command [command line options](dm-topic://_5FP0XP68P) in MM. 
 
 * Open a new blank document
 * Open new document with pre-set text

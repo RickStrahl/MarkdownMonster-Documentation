@@ -1,4 +1,4 @@
-﻿When you install Markdown Monster the installation folder is added to your current User path. To start Markdown Monster from the command line you can do:
+When you install Markdown Monster the installation folder is added to your current User path. To start Markdown Monster from the command line you can do:
 
 ```powershell
 markdownmonster readme.md
@@ -18,7 +18,7 @@ mm readme.md todo.md changelog.md
 ```
 
 #### Opening Folders
-You can also open a folder in the [FolderBrowser](VFPS://Topic/_4WU1CJYKA) by specifying a folder name from the command line:
+You can also open a folder in the [FolderBrowser](dm-topic://_4WU1CJYKA) by specifying a folder name from the command line:
 
 ```powershell
 mm .
@@ -97,4 +97,4 @@ csharp, html, css, javascript, typescript, xml, config, powershell, foxpro, yaml
 For a complete list check the `EditorExtensionMappings` key in **Tools -> Settings**.
 
 ### Additional Command Line Options
-There are a number of additional Command Line Operations available that let you configure Markdown Monster. Please see the [Command Line Operations](VFPS://Topic/_5FP0XP68P) topic for details.
+There are a number of additional Command Line Operations available that let you configure Markdown Monster. Please see the [Command Line Operations](dm-topic://_5FP0XP68P) topic for details.

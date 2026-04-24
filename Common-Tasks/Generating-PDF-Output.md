@@ -158,7 +158,7 @@ Please keep in mind that **PDF output generation is not pixel perfect** compared
 
 
 ### Also Consider Packaged HTML Output
-If you want true HTML representation of your Markdown Content you can also use the **Save to -> Save To Html** option and [Save Markdown Output as HTML](VFPS://Topic/_57W02I1F6).
+If you want true HTML representation of your Markdown Content you can also use the **Save to -> Save To Html** option and [Save Markdown Output as HTML](dm-topic://_57W02I1F6).
 
 There are options to create packaged HTML that is self contained in a single file, that makes it easy to create local content that can be viewed as HTML in any browser getting the same exact output that you are seeing in the preview without having to deal with Pdf page-break semantics. 
 

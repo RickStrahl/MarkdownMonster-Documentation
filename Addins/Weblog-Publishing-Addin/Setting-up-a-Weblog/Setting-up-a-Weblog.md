@@ -1,15 +1,15 @@
-﻿The first thing you need to do is set up one or more Web sites for your blog. In order to publish to the Weblog your blog has to support:
+The first thing you need to do is set up one or more Web sites for your blog. In order to publish to the Weblog your blog has to support:
 
-* **[WordPress API (classic)](VFPS://Topic/_4UW00NUIZ)**  
+* **[WordPress API (classic)](dm-topic://_4UW00NUIZ)**  
 This API is used by any WordPress blog. MM accesses WordPress via the old XmlRpc API since we only use basic features for posting and retrieving posts. This API uses a common endpoint (usually **XmlRpc.php**) and username and password authentication to send requests.
 
-* **[MetaWebLog API](VFPS://Topic/_4UW00NUIZ)**   
+* **[MetaWebLog API](dm-topic://_4UW00NUIZ)**   
 This API is commonly supported by 3rd party Weblog engines. Functionally it's very similar to WordPress's core API as it uses the same base XmlRpc structures. It uses username and password authentication with each request, but unlike WordPress, the endpoint URL is different for each configuration. 
 
-* **[Medium](VFPS://Topic/_4UW03TMCU)**  
+* **[Medium](dm-topic://_4UW03TMCU)**  
 Medium is a popular online blogging platform and Medium provides its own **very limited API** that only allows for **one time posting** of new *Stories* (posts). The [Medium API](https://github.com/Medium/medium-api-docs) has no support for re-posting, downloading or even loading existing posts. Still initial publishing support is very useful for getting initial content to Medium.
 
-* **[Jekyll Local Folder Publishing](VFPS://Topic/_5RV00RX4I)**  
+* **[Jekyll Local Folder Publishing](dm-topic://_5RV00RX4I)**  
 Jekyll is a popular static site generator used on Github and it has support for hosting Weblogs. This mechanism is a local file publishing mechanism that publishes a MM Weblog Post into the Jekyll folder structure copying both the Markdown content as well as the associated assets. It can optionally also build the Jekyll site and preview content.
 
 ### Add, Edit, Delete Weblogs

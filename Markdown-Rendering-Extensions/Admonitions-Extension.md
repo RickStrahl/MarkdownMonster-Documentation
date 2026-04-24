@@ -1,4 +1,4 @@
-﻿Admonitions renders styled note/alert/warning boxes for content using an easy to use syntax:
+Admonitions renders styled note/alert/warning boxes for content using an easy to use syntax:
 
 
 ```markdown
@@ -55,7 +55,7 @@ The Admonitions Render Extension is enabled by default using the **Tools -> Sett
 ```
 
 ### Styling
-Admonitions styling is handled via the[ Preview Theming styles in Theme.css](VFPS://Topic/_4NN17BFIC) for each preview theme.
+Admonitions styling is handled via the[ Preview Theming styles in Theme.css](dm-topic://_4NN17BFIC) for each preview theme.
 
 The relevant sections in `Theme.css` are:
 
@@ -164,4 +164,4 @@ You can customize these styles as needed.
 > ##### @icon-info-circle Create a new Theme for Changes
 > Remember that if you make changes to any theme to save the theme in a new folder as existing Themes are updated with each Markdown Monster update.
 > 
-> [More info...](VFPS://Topic/_4NN17BFIC)
+> [More info...](dm-topic://_4NN17BFIC)

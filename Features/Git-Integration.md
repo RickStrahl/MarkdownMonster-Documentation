@@ -1,6 +1,6 @@
-﻿Markdown Monster includes a number of helpful Git Integration features:
+Markdown Monster includes a number of helpful Git Integration features:
 
-* Shows Git Status in the [Folder Browser](VFPS://Topic/_4WU1CJYKA)
+* Shows Git Status in the [Folder Browser](dm-topic://_4WU1CJYKA)
 * Commit and push the active doc or all pending changes
 * Undo Changes
 * Ignore Files

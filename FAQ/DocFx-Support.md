@@ -1,4 +1,4 @@
-﻿Markdown Monster supports a subset of DocFx functionality for previewing, so that the preview reflects some of the features available in DocFx documents.
+Markdown Monster supports a subset of DocFx functionality for previewing, so that the preview reflects some of the features available in DocFx documents.
 
 * TIP, WARNING, NOTE, IMPORTANT box display support
 * File and Code includes (`[!include]` and `[!code-csharp]`)
@@ -54,7 +54,7 @@ or as 'site' relative paths (both work the same):
 ```
 
 > #### @icon-info-circle Root Folder Resolution for `~/` and `/`
-> Site Relative Paths are determined using the active documents `WebRootPreviewPath` which is set based on the document location and probing for specific files or settings in a project. Please see [this topic](VFPS://Topic/_5FZ0OZKLN) on how the root path is resolved for `~/` and `/`. For DocFx typically this is the `docfx.json` in the DocFx project's root folder.
+> Site Relative Paths are determined using the active documents `WebRootPreviewPath` which is set based on the document location and probing for specific files or settings in a project. Please see [this topic](dm-topic://_5FZ0OZKLN) on how the root path is resolved for `~/` and `/`. For DocFx typically this is the `docfx.json` in the DocFx project's root folder.
 
 #### Include Code Files
 Likewise you can also inject code files with  specific syntax:

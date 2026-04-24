@@ -1,11 +1,11 @@
-﻿Jekyll is a static Web Site generation engine that has support for blogs via a specific directory structure. It uses a Build server to generate the static site layout and Git to 'publish' the site to a Jekyll enabled hosting site.
+Jekyll is a static Web Site generation engine that has support for blogs via a specific directory structure. It uses a Build server to generate the static site layout and Git to 'publish' the site to a Jekyll enabled hosting site.
 
 Markdown Monster supports Jekyll via 'local' publishing, which means that you can create a Weblog post in Markdown Monster using **New Weblog Post** and then *'publish'* the post into your Jekyll Project's directory structure. MM also optionally can build and launch your Jekyll site, but it will not automatically 'push' to Git - that's left for you to do when you are ready to do your final deploy.
 
 > #### @icon-info-circle In-Place Jekyll Editing
 > What's described here as 'publishing' has a number of benefits, but it's optional. If you prefer to maintain Jekyll posts directly in-place in the Jekyll folders, MM can handle that too. 
 >
-> To make the in-place experience better for displaying images, it helps to **create an empty `.markdownmonster` file in your Jekyll Project root**. This helps resolve image paths like `/assets/postid-image1.png` and properly display images <small>see more info for [Site Relative Root Path Mapping](VFPS://Topic/_5FZ0OZKLN)</small>
+> To make the in-place experience better for displaying images, it helps to **create an empty `.markdownmonster` file in your Jekyll Project root**. This helps resolve image paths like `/assets/postid-image1.png` and properly display images <small>see more info for [Site Relative Root Path Mapping](dm-topic://_5FZ0OZKLN)</small>
 
 The Markdown Monster Local Jekyll Publishing process performs the following tasks:
 

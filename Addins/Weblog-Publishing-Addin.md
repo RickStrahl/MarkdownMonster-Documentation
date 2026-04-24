@@ -1,8 +1,8 @@
-﻿Markdown Monster supports publishing your Markdown content to various supported Weblog providers or tools. You can readily publish content from the active Markdown document to:
+Markdown Monster supports publishing your Markdown content to various supported Weblog providers or tools. You can readily publish content from the active Markdown document to:
 
-* [MetaWebLog API](VFPS://Topic/_4UW00NUIZ)
-* [WordPress](VFPS://Topic/_4UW00NUIZ)
-* [Medium](VFPS://Topic/_4UW03TMCU) 
+* [MetaWebLog API](dm-topic://_4UW00NUIZ)
+* [WordPress](dm-topic://_4UW00NUIZ)
+* [Medium](dm-topic://_4UW03TMCU) 
 * [Local Jekyll Project](dm-topic://_5RV00RX4I)
 
 The publishing process lets you publish a Post from **any Markdown document** to a configured Weblog with a simple Publishing operation:
@@ -39,7 +39,7 @@ More formally - you can use the **New Weblog Post** dialog to create a Post.
 
 ![](/images/NewWeblogPost.png)
 
-This option generates a file name from your title and creates a file on disk in a pre-configured location where Weblog posts are stored. These default to DropBox, OneDrive or the Documents folder, but the [location is configurable](VFPS://Topic/_4NK01YQ6Q). MM uses a `Markdown Monster Weblog Posts` folder with sub-folders broken down by year and month with individual posts inside of those folder. Each post has its own dedicated folder:
+This option generates a file name from your title and creates a file on disk in a pre-configured location where Weblog posts are stored. These default to DropBox, OneDrive or the Documents folder, but the [location is configurable](dm-topic://_4NK01YQ6Q). MM uses a `Markdown Monster Weblog Posts` folder with sub-folders broken down by year and month with individual posts inside of those folder. Each post has its own dedicated folder:
 
 ![](/images/JekyllNewBlogPostFolderStructure.png)
 
